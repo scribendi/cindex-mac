@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Splitting an index into part indexes</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="Explains how to break a master index into component indexes">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="_split0_Anchor-14210" id="_split0_Anchor-14210"></a>
+		<div id="mainbox" align="left">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td height="32">&nbsp;</td>
+	<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+	<td height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Splitting an index into part indexes</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+				<tr>
+					<td>
+						<p>Single volume works are sometimes broken into multiple (spinoff) volumes, each with its own index. In such cases one wants to extract from the index to the single volume the entries that will belong to the separate volumes (adjusting page references if the text pages have been renumbered).</p>
+						<p>Follow these steps to break out the appropriate records into separate indexes:</p>
+					</td>
+				</tr>
+			</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="7" bgcolor="#eeeeee">
+	<tr valign="top" bgcolor="#eeeeee">
+						<td bgcolor="#eeeeee">
+								<table border="0" cellspacing="0" cellpadding="4">
+									<tr valign="top">
+										<td>
+											<p>1.</p>
+										</td>
+										<td>
+											<p>Ensure that each record contains a single locator. If any records contain more than one page reference, choose Expand from the Tools menu.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>2.</p>
+										</td>
+										<td>
+											<p>Find page references that belong to each spinoff volume. With the view set to show all records, choose Find from the Edit menu. In the Find window set the pop-up menu under the search text to confine the search to the locator field (usually named Page field), and check Evaluate References. Enter as search text the range of page numbers that are to be included in the spinoff volume. Click Find All to locate all records that refer to these pages. Cindex will make a temporary group that holds the results of the search.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>3.</p>
+										</td>
+										<td>
+											<p>Choose Save Group&#x2026; from the Edit menu to create a permanent group from the results of the search. Use a name that helps you identify the spinoff volume.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>4.</p>
+										</td>
+										<td>
+											<p>Choose Groups&#x2026; from the Tools menu, then in the panel click Link Cross-References (ensure that the list shows the name of the group you have just made). When you click OK Cindex will examine all records in the index, and will add to the group any record that contains a cross-reference to a record already in the group.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>5.</p>
+										</td>
+										<td>
+											<p>Repeat steps 2 through 4 for each set of pages that will constitute a different spinoff volume.</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+					</tr>
+</table>
+			<p>The pages in a spinoff volume are usually numbered differently from their counterparts in the original volume (each spinoff volume is likely to have its first page numbered 1). You will therefore probably need to adjust the page references in the group of records that represent each component index.</p>
+			<p>If you are confident that no records in the parent index appear in more than one of the groups (a record might appear in more than one group if the spinoff volumes have some content in common), you can make the required page number adjustments on each group of records separately. However, it is generally advisable to <a href="_split1.html">make a completely new index</a> for the records in each group.</p>
+<div id="taskbox">
+</div>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>
+						<p><b>See also<br>
+							</b><a href="_split1.html">Creating a spinoff index from a group<br>
+								Cumulating and combining indexes</a><br>
+						</p>
+					</td>
+	</tr>
+</table>
+			<table width="100%" height="35" border="0" cellspacing="0" cellpadding="3">
+	<tr valign="bottom" height="35">
+	<td align="left" height="35"></td>
+	<td align="right" valign="top" height="35"><a href="help:search='splitting indexes' bookID='Cindex 4 Help'">Tell me more</a></td>
+	</tr>
+	<tr height="35">
+	<td></td>
+	<td>&nbsp;</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

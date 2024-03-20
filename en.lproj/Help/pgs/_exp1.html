@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Saving formatted indexes</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+	<meta name="Keywords" content="interchange, exchange, store, XML, Unicode, UTF-8, RTF, QuarkXPress, InDesign, Index-Manager">
+	<meta name="Description" content="Describes how to save formatted indexes in different kinds of documents">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="_imp5_Anchor-14210" id="_imp5_Anchor-14210"></a>
+		<div id="mainbox" align="left">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td height="32">&nbsp;</td>
+	<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+	<td height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Saving formatted indexes</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+				<tr>
+					<td>
+						<p>Cindex can save an index in several different formats, for use by typesetting systems or other document preparation systems.</p>
+						<p>To save an index as formatted document, choose Save To&#x2026; from the File menu. From the File Format pop-up menu choose the type of document you want to make.</p>
+						<p>Choose from among the following types of <i>formatted</i> document:</p>
+					</td>
+				</tr>
+			</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="7" bgcolor="#eeeeee">
+	<tr valign="top" bgcolor="#eeeeee">
+						<td bgcolor="#eeeeee">
+								<table border="0" cellspacing="0" cellpadding="4">
+									<tr valign="top">
+										<td>
+											<p>Plain&nbsp;Text</p>
+										</td>
+										<td>
+									  <p>Entries are formatted as you would view them on the screen, but contain no information about fonts or type styles. By default Cindex encodes text using the traditional Mac Roman character set. This character set cannot represent all Unicode characters, so the encoding may lose information. To ensure that all characters are encoded, you can export Plain Text using UTF-8 encoding. To do this choose Preferences&hellip; from the Cindex menu, then click the Export tab. When Cindex exports the document as UTF-8 encoded text, it places the standard UTF-8 signature  at the start of the file. This enables it to be read correctly by most text-handling programs on Windows and Mac.</p></td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>Rich Text Format (RTF)</p>
+										</td>
+										<td>
+											<p>RTF is a widely-used interchange format for text documents. Each level of index heading in the RTF document has a unique &lsquo;style&rsquo; attached to it. Cindex sets the initial properties of the document and its styles to reflect the settings you have given the index (number of columns, indentations of headings and runover lines, etc.), so that when the document is imported into a word-processor or page-layout program it will look much like it did when displayed by Cindex. The appearance of the index can be changed within a word-processor or page-layout program simply by re-defining the attributes of the styles associated with different levels of heading.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>QuarkXPress</p>
+										</td>
+										<td>
+											<p>QuarkXPress is a publishing program that uses its own of system of tags, called XPress tags, to identify styles that belong to different elements of a document. Cindex can save a formatted index as an XPress tagged document. Each level of heading has a unique &lsquo;style&rsquo; attached to it, and carries the attributes that belong to that heading. These attributes can be changed when the document is read by QuarkXPress.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>Index-Manager</p>
+										</td>
+										<td>
+											<p>Index-Manager is a program designed for embedding index entries in Microsoft Word and Adobe InDesign documents. Cindex can save a formatted index as an embedding-ready document that Index-Manager can import  directly.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>Adobe InDesign</p>
+										</td>
+										<td>
+											<p>InDesign is a publishing program that uses its own of system of tags to identify styles that belong to different elements of a document. Cindex can save a formatted index as an InDesign tagged document. Each level of heading has a unique &lsquo;style&rsquo; attached to it, and carries the attributes that belong to that heading. These attributes can be changed when the document is read by InDesign.</p>
+										</td>
+									</tr>									<tr valign="top">
+									  <td><p>XML Tagged text</p></td>
+									  <td><p>You can save fully formatted indexes as XML documents. These are marked-up plain text documents in an open format, and can be interpreted by any application program that can parse XML. <a href="_exp1a.html">More about text markup</a>.</p></td>
+								  </tr>
+									<tr valign="top">
+										<td>
+											<p>SGML Tagged text</p>
+										</td>
+										<td>
+											<p>Many document management systems work with documents in which the elements (such as headings and subheadings) and text attributes (such as boldface) are identified by tags that system uses when laying out the formatted document. <a href="_exp1a.html">More about text markup</a>.</p></td>
+									</tr>
+								</table>
+			  </td>
+					</tr>
+</table>
+			<p>When Cindex prepares an index as a document for a typesetting system or a word-processor, it always formats entries as they would appear in a fully formatted view (even if the current view is set to some draft format). Cindex includes in the document most of the information needed to make the index look like it did when viewed as a fully-formatted index on the screen.</p>
+			<p>Cindex normally saves all of the index that is accessible in the current view (either all records, or a group). To modify this behavior and others, click Options in the Save panel before you save the index.</p>
+			<p>If your index entries have used a special last subheading, when forming the exported entry Cindex formats the last subheading as though it were at the deepest level the index can accommodate, and applies the formatting associated with that level.</p>
+<div id="taskbox">
+</div>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>
+						<p><b>See also<br>
+							</b><a href="exopt2.html">Options for saving formatted documents</a><br>
+							<a href="exopt3.html">Options for saving tagged text documents</a><br>
+							<a href="_exp0.html">Embedding entries in other documents</a><br>
+						</p>
+					</td>
+	</tr>
+</table>
+			<table width="100%" height="35" border="0" cellspacing="0" cellpadding="3">
+	<tr valign="bottom" height="35">
+	<td align="left" height="35"></td>
+	<td align="right" valign="top" height="35"><a href="help:search='exporting entries' bookID='Cindex 4 Help'">Tell me more</a></td>
+	</tr>
+	<tr height="35">
+	<td></td>
+	<td>&nbsp;</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

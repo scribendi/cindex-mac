@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Page reference components</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+	<meta name="Keywords" content="compound locators, multi-part locators">
+	<meta name="Description" content="How Cindex detects and identifies the parts of complex locators">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="_pageref0_Anchor-14210" id="_pageref0_Anchor-14210"></a>
+		<div id="mainbox" align="left">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td height="32">&nbsp;</td>
+	<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+	<td height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Locator components</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+				<tr>
+					<td>
+						<p>Any text in the locator field of a record that is not specifically identified as a cross-reference, Cindex treats as a locator (generally a page reference). All of the following are legitimate locators:</p>
+						<blockquote>
+							<p>		Frontispiece, 89, 106&#150;108n., 202f<br>
+									vi, xiv, 9-15, illus. 45<br>
+									13:10:19-21, 20:46:5, 21:3:15<br>
+									mcmlxv, mcmlxx<br>
+									53(vii)A, 53(vii)B, 53(ix)A<br>
+									Jan. 6, 1975; May 2, 1977</p>
+						</blockquote>
+						<p>After identifying an individual reference, Cindex parses it into segments. There are two kinds of segments, those comprised of Arabic numerals, and those comprised of letters.</p>
+						<p>A simple locator consists of a single segment; a compound (multi-part) reference of the kind shown above can contain several. A digit or series of digits followed immediately by a letter or series of letters (e.g., 55f) is considered to be two segments; a reference of the form 67a2 would be treated as having three segments. Segments can also be separated by one or more spaces, symbols or punctuation marks. These separators are all treated as equivalent. A reference such as 10:xix 67 therefore has three segments.</p>
+						<p>After Cindex has identified segments of a reference it classifies them. A segment consisting of digits (e.g., 345) is always evaluated as a number. A segment comprised of letters can be evaluated as a number in Roman numerals (e.g., xiv), as the spelled-out name of a month (e.g., May) or as plain text (e.g., Plate), depending on settings you make.</p>
+						<p>When Cindex is first installed, it is set to recognize Arabic numerals, and to treat any letter sequence as a plain text segment (it does not recognize Roman numerals or names of months). When Cindex compares reference segments of different types, it assigns higher precedence to Arabic numerals, and lower precedence to segments made of letters.</p>
+					</td>
+				</tr>
+			</table>
+			<div id="taskbox">
+				
+			</div>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td bgcolor="#FFFFFF">
+						<p><b>See also<br>
+							</b><a href="refsyntax1.html">Specifying the structure of page references</a><br>
+						<a href="sort4.html">Evaluating and sorting page references<br>
+						</a><a href="alter0.html">Adjusting page references</a><br>
+	    </p></td>
+	</tr>
+</table>
+			<table width="100%" height="35" border="0" cellspacing="0" cellpadding="3">
+	<tr valign="bottom" height="35">
+	<td align="left" height="35"></td>
+	<td align="right" valign="top" height="35"><a href="help:search='page references' bookID='Cindex 4 Help'">Tell me more</a></td>
+	</tr>
+	<tr height="35">
+	<td></td>
+	<td>&nbsp;</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

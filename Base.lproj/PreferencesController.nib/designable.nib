@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PreferencesController">
+            <connections>
+                <outlet property="_tabView" destination="8" id="21"/>
+                <outlet property="autocompleteentries" destination="44" id="152"/>
+                <outlet property="autocompletetrack" destination="46" id="154"/>
+                <outlet property="autocompletignorestyle" destination="45" id="153"/>
+                <outlet property="autorange" destination="564" id="566"/>
+                <outlet property="badcrossrefaction" destination="567" id="572"/>
+                <outlet property="badlocatoraction" destination="56" id="158"/>
+                <outlet property="carrylocators" destination="43" id="151"/>
+                <outlet property="checkforupdates" destination="392" id="394"/>
+                <outlet property="closeaction" destination="49" id="157"/>
+                <outlet property="defaultfont" destination="85" id="160"/>
+                <outlet property="defaultsize" destination="90" id="161"/>
+                <outlet property="embedsort" destination="389" id="391"/>
+                <outlet property="exportformat" destination="108" id="164"/>
+                <outlet property="indentchar" destination="197" id="202"/>
+                <outlet property="indenttype" destination="118" id="165"/>
+                <outlet property="labelchangesdate" destination="575" id="577"/>
+                <outlet property="labelcolor1" destination="203" id="285"/>
+                <outlet property="labelcolor2" destination="262" id="286"/>
+                <outlet property="labelcolor3" destination="263" id="287"/>
+                <outlet property="labelcolor4" destination="264" id="288"/>
+                <outlet property="labelcolor5" destination="265" id="289"/>
+                <outlet property="labelcolor6" destination="266" id="290"/>
+                <outlet property="labelcolor7" destination="267" id="291"/>
+                <outlet property="mismatchaction" destination="66" id="159"/>
+                <outlet property="pasteaction" destination="wWN-Cd-lDY" id="85R-nQ-PEP"/>
+                <outlet property="propagatechanges" destination="47" id="155"/>
+                <outlet property="recordtextsize" destination="213" id="215"/>
+                <outlet property="returntoentryoint" destination="48" id="156"/>
+                <outlet property="saveinterval" destination="98" id="146"/>
+                <outlet property="showformattedlabels" destination="93" id="163"/>
+                <outlet property="smartflip" destination="259" id="261"/>
+                <outlet property="startaction" destination="101" id="144"/>
+                <outlet property="stripspaces" destination="41" id="149"/>
+                <outlet property="switchtodraft" destination="40" id="148"/>
+                <outlet property="textencoding" destination="555" id="563"/>
+                <outlet property="tracknewentries" destination="42" id="150"/>
+                <outlet property="unit" destination="140" id="147"/>
+                <outlet property="userid" destination="169" id="171"/>
+                <outlet property="userprompt" destination="107" id="145"/>
+                <outlet property="window" destination="5" id="19"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="5" userLabel="Preferences" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="412" y="166" width="465" height="418"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="3440" height="1415"/>
+            <value key="minSize" type="size" width="213" height="107"/>
+            <view key="contentView" id="6">
+                <rect key="frame" x="0.0" y="0.0" width="465" height="418"/>
+                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                <subviews>
+                    <tabView fixedFrame="YES" controlSize="small" initialItem="10" translatesAutoresizingMaskIntoConstraints="NO" id="8">
+                        <rect key="frame" x="13" y="39" width="439" height="362"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <tabViewItems>
+                            <tabViewItem label="General" identifier="1" id="10">
+                                <view key="view" id="11">
+                                    <rect key="frame" x="10" y="29" width="419" height="320"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="97">
+                                            <rect key="frame" x="348" y="290" width="47" height="14"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="minutes" id="499">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField toolTip="Interval at which Cindex automatially saves changes" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98">
+                                            <rect key="frame" x="310" y="288" width="33" height="19"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" title="999" drawsBackground="YES" id="500">
+                                                <numberFormatter key="formatter" formatterBehavior="custom10_4" positiveFormat="###" negativeFormat="-####" localizesFormat="NO" usesGroupingSeparator="NO" paddingCharacter="*" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="309" maximumFractionDigits="1" decimalSeparator="." groupingSeparator="," currencyDecimalSeparator="." plusSign="+" minusSign="-" notANumberSymbol="NaN" perMillSymbol="‰" percentSymbol="%" exponentSymbol="E" positivePrefix="" positiveSuffix="" negativePrefix="-" negativeSuffix="" id="104">
+                                                    <nil key="negativeInfinitySymbol"/>
+                                                    <nil key="positiveInfinitySymbol"/>
+                                                    <real key="minimum" value="0.0"/>
+                                                </numberFormatter>
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="102">
+                                            <rect key="frame" x="183" y="290" width="122" height="14"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Auto Save Index Every" id="501">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <box fixedFrame="YES" title="Startup" translatesAutoresizingMaskIntoConstraints="NO" id="105">
+                                            <rect key="frame" x="14" y="193" width="155" height="125"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <view key="contentView" id="fRN-px-O7P">
+                                                <rect key="frame" x="4" y="5" width="147" height="105"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <matrix toolTip="Action taken by Cindex when it starts up" verticalHuggingPriority="750" fixedFrame="YES" allowsEmptySelection="NO" autosizesCells="NO" translatesAutoresizingMaskIntoConstraints="NO" id="101">
+                                                        <rect key="frame" x="17" y="40" width="114" height="58"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        <size key="cellSize" width="114" height="18"/>
+                                                        <size key="intercellSpacing" width="4" height="2"/>
+                                                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" controlSize="small" inset="2" id="533">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                        <cells>
+                                                            <column>
+                                                                <buttonCell type="radio" title="No Action" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="100">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                </buttonCell>
+                                                                <buttonCell type="radio" title="Show Open Panel" imagePosition="left" alignment="left" controlSize="small" tag="1" inset="2" id="106">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                </buttonCell>
+                                                                <buttonCell type="radio" title="Open Last Index" imagePosition="left" alignment="left" controlSize="small" tag="2" inset="2" id="103">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                </buttonCell>
+                                                            </column>
+                                                        </cells>
+                                                    </matrix>
+                                                    <button toolTip="Prompt user for identifier" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="107">
+                                                        <rect key="frame" x="14" y="9" width="122" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <buttonCell key="cell" type="check" title="Prompt for User ID" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="502">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                        <popUpButton toolTip="Preferred unit for expressing sizes" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="140">
+                                            <rect key="frame" x="289" y="235" width="93" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <popUpButtonCell key="cell" type="push" title="Pica" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" tag="3" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="137" id="503">
+                                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <menu key="menu" title="OtherViews" id="136">
+                                                    <items>
+                                                        <menuItem title="Inch" id="139"/>
+                                                        <menuItem title="mm" tag="1" id="138"/>
+                                                        <menuItem title="Point" tag="2" id="141"/>
+                                                        <menuItem title="Pica" state="on" tag="3" id="137"/>
+                                                    </items>
+                                                </menu>
+                                            </popUpButtonCell>
+                                        </popUpButton>
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="142">
+                                            <rect key="frame" x="183" y="240" width="105" height="14"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Measurement Unit:" id="504">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField toolTip="User identifier (4 characters maximum)" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="169">
+                                            <rect key="frame" x="234" y="264" width="46" height="19"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="505">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <outlet property="delegate" destination="-2" id="172"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="170">
+                                            <rect key="frame" x="183" y="266" width="46" height="14"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" title="User ID:" id="506">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button toolTip="Check routinely whether an update to Cindex is available from CINDEX." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="392">
+                                            <rect key="frame" x="182" y="215" width="194" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <buttonCell key="cell" type="check" title="Automatically check for updates" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="507">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <connections>
+                                                    <binding destination="536" name="value" keyPath="automaticallyChecksForUpdates" id="541"/>
+                                                </connections>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="checkForUpdates:" target="536" id="537"/>
+                                                <binding destination="536" name="value" keyPath="automaticallyChecksForUpdates" id="VPT-bC-bBj"/>
+                                            </connections>
+                                        </button>
+                                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="542">
+                                            <rect key="frame" x="201" y="194" width="100" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <popUpButtonCell key="cell" type="push" title="Daily" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="86400" imageScaling="proportionallyDown" inset="2" selectedItem="545" id="543">
+                                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <menu key="menu" title="OtherViews" id="544">
+                                                    <items>
+                                                        <menuItem title="Daily" state="on" tag="86400" id="545"/>
+                                                        <menuItem title="Weekly" tag="604800" id="546"/>
+                                                        <menuItem title="Monthly" tag="2629800" id="547"/>
+                                                    </items>
+                                                </menu>
+                                            </popUpButtonCell>
+                                            <connections>
+                                                <binding destination="536" name="enabled" keyPath="automaticallyChecksForUpdates" id="552"/>
+                                                <binding destination="536" name="selectedTag" keyPath="updateCheckInterval" id="550"/>
+                                                <outlet property="nextKeyView" destination="18" id="gat-65-aWk"/>
+                                            </connections>
+                                        </popUpButton>
+                                    </subviews>
+                                </view>
+                                <connections>
+                                    <outlet property="initialFirstResponder" destination="101" id="nOm-r3-q4g"/>
+                                </connections>
+                            </tabViewItem>
+                            <tabViewItem label="Editing" identifier="2" id="9">
+                                <view key="view" id="7">
+                                    <rect key="frame" x="10" y="25" width="419" height="324"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <box toolTip="Action taken on attempt to enter record that does not match template" title="Mismatch to Template" translatesAutoresizingMaskIntoConstraints="NO" id="69">
+                                            <rect key="frame" x="192" y="88" width="213" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <view key="contentView" id="fP1-RU-j3k">
+                                                <rect key="frame" x="4" y="5" width="205" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <matrix toolTip="Action taken when record does not conform to template" verticalHuggingPriority="750" allowsEmptySelection="NO" autosizesCells="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66">
+                                                        <rect key="frame" x="10" y="5" width="196" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        <size key="cellSize" width="60" height="18"/>
+                                                        <size key="intercellSpacing" width="4" height="6"/>
+                                                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" controlSize="small" inset="2" id="530">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                        <cells>
+                                                            <column>
+                                                                <buttonCell type="radio" title="Accept" imagePosition="left" alignment="left" controlSize="small" inset="2" id="63">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                </buttonCell>
+                                                            </column>
+                                                            <column>
+                                                                <buttonCell type="radio" title="Warn" imagePosition="left" alignment="left" controlSize="small" state="on" tag="1" inset="2" id="afs-fb-E1A">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                </buttonCell>
+                                                            </column>
+                                                            <column>
+                                                                <buttonCell type="radio" title="Forbid" imagePosition="left" alignment="left" controlSize="small" tag="2" inset="2" id="dhj-Jr-ykA">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                </buttonCell>
+                                                            </column>
+                                                        </cells>
+                                                        <connections>
+                                                            <outlet property="nextKeyView" destination="18" id="kQp-ZZ-Y91"/>
+                                                        </connections>
+                                                    </matrix>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                        <box title="Bad Locator             Bad Cross-Ref" translatesAutoresizingMaskIntoConstraints="NO" id="71">
+                                            <rect key="frame" x="192" y="142" width="213" height="88"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <view key="contentView" id="rdj-dM-WEU">
+                                                <rect key="frame" x="4" y="5" width="205" height="68"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <matrix toolTip="Action taken on attempt to enter record with badly-formed locator" verticalHuggingPriority="750" allowsEmptySelection="NO" autosizesCells="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56">
+                                                        <rect key="frame" x="20" y="4" width="58" height="57"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        <size key="cellSize" width="58" height="15"/>
+                                                        <size key="intercellSpacing" width="4" height="4"/>
+                                                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" controlSize="small" inset="2" id="531">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                        <cells>
+                                                            <column>
+                                                                <buttonCell type="radio" title="Accept" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="58">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                </buttonCell>
+                                                                <buttonCell type="radio" title="Warn" imagePosition="left" alignment="left" controlSize="small" tag="1" inset="2" id="57">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                </buttonCell>
+                                                                <buttonCell type="radio" title="Forbid" imagePosition="left" alignment="left" controlSize="small" tag="2" inset="2" id="55">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                </buttonCell>
+                                                            </column>
+                                                        </cells>
+                                                    </matrix>
+                                                    <matrix toolTip="Action taken on attempt to enter record with badly-formed cross-reference" verticalHuggingPriority="750" allowsEmptySelection="NO" autosizesCells="NO" translatesAutoresizingMaskIntoConstraints="NO" id="567">
+                                                        <rect key="frame" x="125" y="4" width="58" height="57"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        <size key="cellSize" width="58" height="15"/>
+                                                        <size key="intercellSpacing" width="4" height="4"/>
+                                                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" controlSize="small" inset="2" id="571">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                        <cells>
+                                                            <column>
+                                                                <buttonCell type="radio" title="Accept" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="570">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                </buttonCell>
+                                                                <buttonCell type="radio" title="Warn" imagePosition="left" alignment="left" controlSize="small" tag="1" inset="2" id="569">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                </buttonCell>
+                                                                <buttonCell type="radio" title="Forbid" imagePosition="left" alignment="left" controlSize="small" tag="2" inset="2" id="568">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                </buttonCell>
+                                                            </column>
+                                                        </cells>
+                                                    </matrix>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                        <box title="Editing Records" translatesAutoresizingMaskIntoConstraints="NO" id="75">
+                                            <rect key="frame" x="14" y="-3" width="176" height="87"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <view key="contentView" id="nX8-YI-zJD">
+                                                <rect key="frame" x="4" y="5" width="168" height="67"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <button toolTip="Propagate changes to following records that previously matched original" translatesAutoresizingMaskIntoConstraints="NO" id="47">
+                                                        <rect key="frame" x="14" y="46" width="125" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <buttonCell key="cell" type="check" title="Propagate Changes" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="489">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button toolTip="After editing, show records visible at start" translatesAutoresizingMaskIntoConstraints="NO" id="48">
+                                                        <rect key="frame" x="14" y="28" width="133" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <buttonCell key="cell" type="check" title="Return to Entry Point" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="490">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button toolTip="Labeling or unlabeling a record marks it as changed" translatesAutoresizingMaskIntoConstraints="NO" id="575">
+                                                        <rect key="frame" x="14" y="10" width="145" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <buttonCell key="cell" type="check" title="Label Sets Change Flag" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="576">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                        <box title="Adding Recods" translatesAutoresizingMaskIntoConstraints="NO" id="77">
+                                            <rect key="frame" x="14" y="88" width="176" height="124"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <view key="contentView" id="cVr-Op-UZW">
+                                                <rect key="frame" x="4" y="5" width="168" height="104"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <button toolTip="Show new entries immediately in their sorted positions" translatesAutoresizingMaskIntoConstraints="NO" id="42">
+                                                        <rect key="frame" x="14" y="78" width="118" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="Track New Entries" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="491">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button toolTip="Pre-load new record with locator from last-entered one" translatesAutoresizingMaskIntoConstraints="NO" id="43">
+                                                        <rect key="frame" x="14" y="60" width="146" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="Carry Locators Forward" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="492">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button toolTip="Complete any record field that matches beginning text of an exisitng record" translatesAutoresizingMaskIntoConstraints="NO" id="44">
+                                                        <rect key="frame" x="14" y="42" width="145" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="Auto-Complete Entries" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="493">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="doSetAction:" target="-2" id="167"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button toolTip="Auto-compete entries without regard to matching style/case" translatesAutoresizingMaskIntoConstraints="NO" id="45">
+                                                        <rect key="frame" x="30" y="24" width="138" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="Ignore Style &amp; Case" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="494">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button toolTip="Show record that provides completion text" translatesAutoresizingMaskIntoConstraints="NO" id="46">
+                                                        <rect key="frame" x="30" y="6" width="91" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="Track Source" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="495">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                        <box title="General" translatesAutoresizingMaskIntoConstraints="NO" id="79">
+                                            <rect key="frame" x="14" y="216" width="176" height="105"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <view key="contentView" id="ZVx-UN-qIw">
+                                                <rect key="frame" x="4" y="5" width="168" height="85"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <button toolTip="Always display in draft view when adding/editing" translatesAutoresizingMaskIntoConstraints="NO" id="40">
+                                                        <rect key="frame" x="14" y="60" width="130" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="Switch to Draft View" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="496">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button toolTip="Automatically remove duplicate spaces after editing" translatesAutoresizingMaskIntoConstraints="NO" id="41">
+                                                        <rect key="frame" x="14" y="42" width="135" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="Remove Extra Spaces" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="497">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button toolTip="Rearrange prepositions, etc. as necessary when exchanging the contents of adjacent levels of heading" translatesAutoresizingMaskIntoConstraints="NO" id="259">
+                                                        <rect key="frame" x="14" y="24" width="135" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="Smart Flip" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="498">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button toolTip="Automatically generate the second number in a page range after you have typed the connecting character" translatesAutoresizingMaskIntoConstraints="NO" id="564">
+                                                        <rect key="frame" x="14" y="6" width="144" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="Complete Page Ranges" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="565">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                        <box title="On Closing Window" translatesAutoresizingMaskIntoConstraints="NO" id="73">
+                                            <rect key="frame" x="192" y="-3" width="213" height="87"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <view key="contentView" id="gxr-is-eXY">
+                                                <rect key="frame" x="4" y="5" width="205" height="67"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <matrix toolTip="Action on new/changed record when window closed" verticalHuggingPriority="750" allowsEmptySelection="NO" autosizesCells="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49">
+                                                        <rect key="frame" x="20" y="2" width="103" height="57"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        <size key="cellSize" width="103" height="15"/>
+                                                        <size key="intercellSpacing" width="4" height="4"/>
+                                                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" controlSize="small" inset="2" id="532">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                        <cells>
+                                                            <column>
+                                                                <buttonCell type="radio" title="Always Save" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="52">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                </buttonCell>
+                                                                <buttonCell type="radio" title="Ask" imagePosition="left" alignment="left" controlSize="small" tag="1" inset="2" id="53">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                </buttonCell>
+                                                                <buttonCell type="radio" title="Always Discard" imagePosition="left" alignment="left" controlSize="small" tag="2" inset="2" id="54">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                </buttonCell>
+                                                            </column>
+                                                        </cells>
+                                                    </matrix>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                        <box title="Paste and Drop Text" translatesAutoresizingMaskIntoConstraints="NO" id="gQ2-mv-LYy">
+                                            <rect key="frame" x="192" y="234" width="213" height="87"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <view key="contentView" id="9oy-WC-Lrz">
+                                                <rect key="frame" x="4" y="5" width="205" height="67"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autosizesCells="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWN-Cd-lDY">
+                                                        <rect key="frame" x="20" y="4" width="152" height="57"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                                        <string key="toolTip">Default behavior when pasting or dropping text from an external source into a record. Can be overridden when making the paste or drop</string>
+                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        <size key="cellSize" width="152" height="16"/>
+                                                        <size key="intercellSpacing" width="4" height="4"/>
+                                                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" controlSize="small" inset="2" id="UKC-b1-3S9">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                        <cells>
+                                                            <column>
+                                                                <buttonCell type="radio" title="With styles and fonts" imagePosition="left" alignment="left" controlSize="small" toolTip="When record text is copied or dragged from an external source, retain style and font information" inset="2" id="Y97-aU-vWE">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                </buttonCell>
+                                                                <buttonCell type="radio" title="With styles only" imagePosition="left" alignment="left" controlSize="small" state="on" toolTip="When record text is copied or dragged from an external source, retain style but not font information" tag="1" inset="2" id="Gqo-32-abA">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                </buttonCell>
+                                                                <buttonCell type="radio" title="As plain text" imagePosition="left" alignment="left" controlSize="small" toolTip="When record text is copied or dragged from an external source, discard style and font information" tag="2" inset="2" id="uV7-lh-Ke7">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                </buttonCell>
+                                                            </column>
+                                                        </cells>
+                                                    </matrix>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                    </subviews>
+                                </view>
+                                <connections>
+                                    <outlet property="initialFirstResponder" destination="79" id="Gr0-xB-u3G"/>
+                                </connections>
+                            </tabViewItem>
+                            <tabViewItem label="View" identifier="3" id="12">
+                                <view key="view" id="13">
+                                    <rect key="frame" x="10" y="25" width="419" height="324"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <box borderType="line" title="Label Colors" translatesAutoresizingMaskIntoConstraints="NO" id="283">
+                                            <rect key="frame" x="217" y="70" width="177" height="248"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <view key="contentView" id="7HB-89-SNz">
+                                                <rect key="frame" x="4" y="5" width="169" height="228"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <colorWell toolTip="Set color for display of labeled records" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="267">
+                                                        <rect key="frame" x="67" y="34" width="50" height="24"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <color key="color" red="0.60000001999999997" green="0.40000001000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="doSetAction:" target="-2" id="298"/>
+                                                        </connections>
+                                                    </colorWell>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="279">
+                                                        <rect key="frame" x="15" y="66" width="47" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Label 6:" id="514">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <colorWell toolTip="Set color for display of labeled records" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="203">
+                                                        <rect key="frame" x="67" y="198" width="50" height="24"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="doSetAction:" target="-2" id="292"/>
+                                                        </connections>
+                                                    </colorWell>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="273">
+                                                        <rect key="frame" x="15" y="148" width="47" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Label 3:" id="511">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="275">
+                                                        <rect key="frame" x="15" y="121" width="47" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Label 4:" id="512">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <colorWell toolTip="Set color for display of labeled records" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="263">
+                                                        <rect key="frame" x="67" y="143" width="50" height="24"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <color key="color" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="doSetAction:" target="-2" id="294"/>
+                                                        </connections>
+                                                    </colorWell>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="277">
+                                                        <rect key="frame" x="15" y="94" width="47" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Label 5:" id="513">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <colorWell toolTip="Set color for display of labeled records" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="266">
+                                                        <rect key="frame" x="67" y="61" width="50" height="24"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <color key="color" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="doSetAction:" target="-2" id="297"/>
+                                                        </connections>
+                                                    </colorWell>
+                                                    <button toolTip="Use color to identify labeled records in fully formatted view" translatesAutoresizingMaskIntoConstraints="NO" id="93">
+                                                        <rect key="frame" x="15" y="10" width="151" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <buttonCell key="cell" type="check" title="Show in Formatted View" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="508">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <outlet property="nextKeyView" destination="18" id="7H4-76-0ch"/>
+                                                        </connections>
+                                                    </button>
+                                                    <colorWell toolTip="Set color for display of labeled records" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="262">
+                                                        <rect key="frame" x="67" y="170" width="50" height="24"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <color key="color" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="doSetAction:" target="-2" id="293"/>
+                                                        </connections>
+                                                    </colorWell>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="271">
+                                                        <rect key="frame" x="15" y="175" width="47" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Label 2:" id="510">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="281">
+                                                        <rect key="frame" x="15" y="39" width="47" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Label 7:" id="515">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <colorWell toolTip="Set color for display of labeled records" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="264">
+                                                        <rect key="frame" x="67" y="116" width="50" height="24"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <color key="color" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="doSetAction:" target="-2" id="295"/>
+                                                        </connections>
+                                                    </colorWell>
+                                                    <colorWell toolTip="Set color for display of labeled records" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="265">
+                                                        <rect key="frame" x="67" y="89" width="50" height="24"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <color key="color" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="doSetAction:" target="-2" id="296"/>
+                                                        </connections>
+                                                    </colorWell>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="269">
+                                                        <rect key="frame" x="15" y="203" width="47" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Label 1:" id="509">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                        <box borderType="line" title="Default Font" translatesAutoresizingMaskIntoConstraints="NO" id="284">
+                                            <rect key="frame" x="14" y="215" width="201" height="103"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <view key="contentView" id="1gU-ls-yPw">
+                                                <rect key="frame" x="4" y="5" width="193" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="217">
+                                                        <rect key="frame" x="125" y="13" width="38" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="points" id="522">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <popUpButton toolTip="Font initially used to display index entries" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="85">
+                                                        <rect key="frame" x="15" y="56" width="169" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <popUpButtonCell key="cell" type="push" title="Item1" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="86" id="517">
+                                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <menu key="menu" title="OtherViews" id="87">
+                                                                <items>
+                                                                    <menuItem title="Item1" state="on" id="86"/>
+                                                                </items>
+                                                            </menu>
+                                                        </popUpButtonCell>
+                                                    </popUpButton>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="216">
+                                                        <rect key="frame" x="125" y="34" width="38" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="points" id="521">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <comboBox toolTip="Size of font initally used to display entries" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="90">
+                                                        <rect key="frame" x="80" y="31" width="40" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <comboBoxCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" title="99" drawsBackground="YES" completes="NO" numberOfVisibleItems="6" id="518">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            <objectValues>
+                                                                <string>9</string>
+                                                                <string>10</string>
+                                                                <string>12</string>
+                                                                <string>14</string>
+                                                                <string>18</string>
+                                                                <string>24</string>
+                                                            </objectValues>
+                                                        </comboBoxCell>
+                                                    </comboBox>
+                                                    <comboBox toolTip="Text size used for editing entries (set 0 to use font size from main display)" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="213">
+                                                        <rect key="frame" x="80" y="10" width="40" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <comboBoxCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" title="99" drawsBackground="YES" completes="NO" numberOfVisibleItems="6" id="520">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            <objectValues>
+                                                                <string>9</string>
+                                                                <string>10</string>
+                                                                <string>12</string>
+                                                                <string>14</string>
+                                                                <string>18</string>
+                                                                <string>24</string>
+                                                            </objectValues>
+                                                        </comboBoxCell>
+                                                    </comboBox>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="212">
+                                                        <rect key="frame" x="15" y="14" width="62" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Entry view:" id="519">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="83">
+                                                        <rect key="frame" x="15" y="35" width="60" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Main view:" id="516">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                    </subviews>
+                                </view>
+                                <connections>
+                                    <outlet property="initialFirstResponder" destination="85" id="rlm-vo-XBB"/>
+                                </connections>
+                            </tabViewItem>
+                            <tabViewItem label="Export" identifier="4" id="14">
+                                <view key="view" id="15">
+                                    <rect key="frame" x="10" y="25" width="419" height="324"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <matrix toolTip="Specifies character used to end lines of text" verticalHuggingPriority="750" allowsEmptySelection="NO" autosizesCells="NO" translatesAutoresizingMaskIntoConstraints="NO" id="108">
+                                            <rect key="frame" x="108" y="300" width="158" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="cellSize" width="77" height="18"/>
+                                            <size key="intercellSpacing" width="4" height="2"/>
+                                            <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="534">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <cells>
+                                                <column>
+                                                    <buttonCell type="radio" title="Mac" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="115">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                    </buttonCell>
+                                                </column>
+                                                <column>
+                                                    <buttonCell type="radio" title="Windows" imagePosition="left" alignment="left" controlSize="small" tag="1" inset="2" id="116">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                    </buttonCell>
+                                                </column>
+                                            </cells>
+                                        </matrix>
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="130">
+                                            <rect key="frame" x="14" y="302" width="67" height="14"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="File Format:" id="523">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <box title="RTF/Quark/In Design/Plain Text" translatesAutoresizingMaskIntoConstraints="NO" id="198">
+                                            <rect key="frame" x="14" y="230" width="380" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <view key="contentView" id="NP6-sH-FHL">
+                                                <rect key="frame" x="4" y="5" width="372" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <matrix toolTip="How indents are constructed in formatted entries" verticalHuggingPriority="750" allowsEmptySelection="NO" autosizesCells="NO" translatesAutoresizingMaskIntoConstraints="NO" id="118">
+                                                        <rect key="frame" x="115" y="13" width="164" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        <size key="cellSize" width="52" height="18"/>
+                                                        <size key="intercellSpacing" width="4" height="2"/>
+                                                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="535">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <cells>
+                                                            <column>
+                                                                <buttonCell type="radio" title="Style" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="126">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                </buttonCell>
+                                                            </column>
+                                                            <column>
+                                                                <buttonCell type="radio" title="Tab" imagePosition="left" alignment="left" controlSize="small" tag="1" inset="2" id="127">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                </buttonCell>
+                                                            </column>
+                                                            <column>
+                                                                <buttonCell type="radio" title="Other" imagePosition="left" alignment="left" controlSize="small" tag="2" inset="2" id="128">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                </buttonCell>
+                                                            </column>
+                                                        </cells>
+                                                    </matrix>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="129">
+                                                        <rect key="frame" x="14" y="15" width="96" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Define Indent by:" id="524">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="197">
+                                                        <rect key="frame" x="287" y="13" width="18" height="19"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="525">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="-2" id="201"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                        <button toolTip="Embed information about how the text of an entry should be sorted" translatesAutoresizingMaskIntoConstraints="NO" id="389">
+                                            <rect key="frame" x="14" y="211" width="304" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Include Sorting Information when Embedding Entries" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="526">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                        </button>
+                                        <matrix verticalHuggingPriority="750" tag="1" allowsEmptySelection="NO" translatesAutoresizingMaskIntoConstraints="NO" id="555">
+                                            <rect key="frame" x="185" y="188" width="172" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="cellSize" width="84" height="18"/>
+                                            <size key="intercellSpacing" width="4" height="2"/>
+                                            <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" controlSize="small" inset="2" id="556">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <cells>
+                                                <column>
+                                                    <buttonCell type="radio" title="UTF-8" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="557">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                    </buttonCell>
+                                                </column>
+                                                <column>
+                                                    <buttonCell type="radio" title="Mac Roman" imagePosition="left" alignment="left" controlSize="small" tag="1" inset="2" id="559">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                    </buttonCell>
+                                                </column>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="nextKeyView" destination="18" id="H1E-sk-gjg"/>
+                                            </connections>
+                                        </matrix>
+                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="561">
+                                            <rect key="frame" x="14" y="190" width="166" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Encode Plain Text Documents:" id="562">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                                <connections>
+                                    <outlet property="initialFirstResponder" destination="108" id="iKo-nK-ZYP"/>
+                                </connections>
+                            </tabViewItem>
+                        </tabViewItems>
+                        <connections>
+                            <outlet property="delegate" destination="-2" id="166"/>
+                        </connections>
+                    </tabView>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="-1" translatesAutoresizingMaskIntoConstraints="NO" id="16">
+                        <rect key="frame" x="363" y="15" width="76" height="28"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" tag="-1" inset="2" id="527">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="closePanel:" target="-1" id="26"/>
+                            <outlet property="nextKeyView" destination="8" id="c6i-Ty-lxR"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17">
+                        <rect key="frame" x="283" y="15" width="80" height="28"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="528">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="closePanel:" target="-1" id="25"/>
+                        </connections>
+                    </button>
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="18">
+                        <rect key="frame" x="16" y="17" width="25" height="25"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" controlSize="small" borderStyle="border" inset="2" id="529">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showHelp:" target="-1" id="24"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="20"/>
+            </connections>
+            <point key="canvasLocation" x="-135" y="142"/>
+        </window>
+        <customObject id="536" customClass="SUUpdater"/>
+        <userDefaultsController representsSharedInstance="YES" id="538"/>
+    </objects>
+</document>

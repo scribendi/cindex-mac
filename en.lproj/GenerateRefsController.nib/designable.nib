@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment defaultVersion="1060" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="GenerateRefsController">
+            <connections>
+                <outlet property="_accessory" destination="15" id="37"/>
+                <outlet property="_mode" destination="20" id="34"/>
+                <outlet property="_targetcount" destination="26" id="36"/>
+                <outlet property="window" destination="6" id="13"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <window title="Manage Cross-References" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="6" userLabel="Panel" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="328" y="299" width="238" height="142"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <value key="minSize" type="size" width="213" height="107"/>
+            <view key="contentView" id="5">
+                <rect key="frame" x="0.0" y="0.0" width="238" height="142"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" id="20">
+                        <rect key="frame" x="20" y="78" width="197" height="44"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        <size key="cellSize" width="197" height="18"/>
+                        <size key="intercellSpacing" width="4" height="8"/>
+                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" controlSize="small" inset="2" id="72">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <cells>
+                            <column>
+                                <buttonCell type="radio" title="Generate from File…" imagePosition="left" alignment="left" controlSize="small" toolTip="Generate cross-references by looking up headings in a special index" inset="2" id="22">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="radio" title="Convert to Fully Qualified Entries" imagePosition="left" alignment="left" controlSize="small" state="on" toolTip="Convert 'see' references to entries that contain full references" tag="1" inset="2" id="23">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                            </column>
+                        </cells>
+                        <connections>
+                            <action selector="doSetAction:" target="-1" id="64"/>
+                            <outlet property="nextKeyView" destination="26" id="pdB-ca-lRs"/>
+                        </connections>
+                    </matrix>
+                    <textField verticalHuggingPriority="750" id="24">
+                        <rect key="frame" x="55" y="56" width="126" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" controlSize="small" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="For fewer targets than:" id="66">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField toolTip="Convert references that have fewer than this number of target entries" verticalHuggingPriority="750" id="26">
+                        <rect key="frame" x="186" y="54" width="29" height="19"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="2" drawsBackground="YES" id="67">
+                            <numberFormatter key="formatter" formatterBehavior="custom10_4" allowsFloats="NO" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" id="38">
+                                <nil key="negativeInfinitySymbol"/>
+                                <nil key="positiveInfinitySymbol"/>
+                                <real key="minimum" value="2"/>
+                            </numberFormatter>
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <outlet property="nextKeyView" destination="32" id="WuU-ZL-t7O"/>
+                        </connections>
+                    </textField>
+                    <button verticalHuggingPriority="750" tag="-1" id="28">
+                        <rect key="frame" x="143" y="14" width="80" height="28"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" tag="-1" inset="2" id="68">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="closeSheet:" target="-1" id="40"/>
+                            <outlet property="nextKeyView" destination="20" id="mut-qE-qOg"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="29">
+                        <rect key="frame" x="61" y="14" width="80" height="28"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="69">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="closeSheet:" target="-1" id="39"/>
+                            <outlet property="nextKeyView" destination="28" id="OUY-Xd-Xgw"/>
+                        </connections>
+                    </button>
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="32">
+                        <rect key="frame" x="16" y="16" width="25" height="25"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" controlSize="small" borderStyle="border" inset="2" id="70">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showHelp:" target="-1" id="41"/>
+                            <outlet property="nextKeyView" destination="29" id="57X-5v-x4f"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="14"/>
+                <outlet property="initialFirstResponder" destination="20" id="Sdz-Mn-F5g"/>
+            </connections>
+        </window>
+        <customView id="15" userLabel="View">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="54"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <button id="16">
+                    <rect key="frame" x="18" y="18" width="221" height="18"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <buttonCell key="cell" type="check" title="Generate “See” References Only" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="71">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+            </subviews>
+        </customView>
+    </objects>
+</document>

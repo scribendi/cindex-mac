@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Problems with page references</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+		<meta name="Keywords" content="FAQ, locators">
+		<meta name="Description" content="Some frequenctly-asked questions about page references.">
+	</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="itns1006" id="itns1006"></a>
+<div id="mainbox" align="left">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td height="32">&nbsp;</td>
+	<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+	<td height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Problems with page references</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>
+						<p>Here are answers to some frequently-asked questions about page references entries. </p>
+					</td>
+	</tr>
+</table>
+			<div id="taskbox">
+				<table width="100%" border="0" cellspacing="0" cellpadding="7" bgcolor="#eeeeee">
+					<tr valign="top" bgcolor="#eeeeee">
+						<td bgcolor="#eeeeee">
+							<p><b>When I view entries in Fully Formatted View my page numbers are misordered. They are OK in Draft view. What is happening?</b> In a draft or unformatted view of the index, Cindex displays references exactly as you entered them in records. In a formatted view, Cindex normally sorts a series of references so that they appear in ascending order (you control this behavior by choosing <a href="pageform0.html">Page References</a> from the Document menu). If Cindex does not order references in the way you would wish, one of two things is probably happening:</p>
+							<blockquote>
+								<p>&#x2022; You might have references whose components are separated by different forms of punctuation. Cindex normally assumes that a comma separates one reference from the next. If you are using a comma to separate parts of a single reference, and some other character such as a semicolon to separate complete references, you must tell Cindex what character you are using. To do this choose <a href="refsyntax0.html">Reference Syntax</a> from the Document menu.<br>
+										&#x2022; If you have compound references containing letters and numbers, or even Roman numerals and month names, you will need to tell Cindex how it should prioritize the different components. To do this choose <a href="sort0.html">Sort</a> from the Tools menu, then under Character Priority on the Text tab, drag the items Letters, Numbers and Symbols to the positions that reflect the precedence you want (the one at the top of the list has highest precedence).</p>
+							</blockquote>
+							<p><b>I have to work with folioed, but unpaginated, pages for my next index. I know I can input the temporary pagination with an attached chapter number, using the construct 35%1 (meaning the first page of chapter 35), but how do I handle page spreads and do I need to put the chapter number before every single page number?</b> Enter page spreads with the chapter number and % before the first part only, e.g., 35%3-6. Each reference MUST have the chapter number and % in front of it (e.g., 35%4, 35%7, 35%10). To avoid constant re-keying of the 35%, you can place this sequence on a <a href="_add9.html">function key</a>, so that you need use only one keystroke.</p>
+							<p><b>I've just used <a href="alter0.html">Alter References</a> (Tools menu) to convert my temporary pagination to final form, and have discovered that entries for chapter 19 were altered twice.</b> You probably entered 9% to denote chapter 9 and 19% to denote chapter 19. When you set up to make adjustments for chapter 9 and specified a Matching Pattern of</p>
+							<blockquote>
+								<p><b>9%</b></p>
+							</blockquote>
+							<p>Cindex would have altered references to pages in chapters 9, 19, 29, 39 etc. because it was looking to match any sequence of characters that contained 9%. You can correct the error by subtracting the offset you unintentionally added to references for chapter 19. Set the Matching Pattern to</p>
+							<blockquote>
+								<p><b>19% </b></p>
+							</blockquote>
+							<p>and set Adjustment to the negative of the number you originally added. To avoid this kind of problem when dealing with temporary pagination of chapter numbers with single and multiple digits, you should always use leading zeros to ensure a uniform number of digits preceding the % (e.g., 009%, 019%, 109%).</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+</body>
+
+</html>

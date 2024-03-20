@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Importing records from Sky Index</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+	<meta name="Keywords" content="interchange, exchange">
+	<meta name="Description" content="How to import records from the SKY Index">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="_imp3_Anchor-14210" id="_imp3_Anchor-14210"></a>
+		<div id="mainbox" align="left">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td height="32">&nbsp;</td>
+	<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+	<td height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Importing records from SKY Index</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+				<tr>
+					<td>
+						<p>Cindex can import records in  the tab-delimited format used by SKY Index 7 and SKY Index 8, or the comma-delimited quoted format used by SKY Index 6.</p>
+                      <p>To import records into an existing index, choose Import from the File menu. Cindex assumes that documents with the filename extension '.txtsky8', '.sky7' or '.txtsky7' contain records from SKY Index. Cindex assumes that  documents from Sky Index 6 have the filename extension '.txt' (Cindex identfies the document as coming from SKY Index when it opens it).</p>
+                    <p>As Cindex imports records it captures bold, italic, underline, small caps, subscript and superscript styles (for SKY Index 7 it translates any strikeout text style to small caps). Cindex also translates the following attributes:</p>
+                    <ul>
+                      <li> Text to be ignored in sorting entries is enclosed in &lt;&nbsp;&gt;.
+                      </li>
+                      <li> Text to be used in sorting entries but to be hidden in a formatted display is enclosed in {&nbsp;}.
+                      </li>
+                      <li>'Note' text is enclosed in &lt;{&nbsp;}&gt;.</li>
+                    </ul>
+                    <p>For records imported from SKY Index 8, Cindex adopts any fonts used in the index. For   SKY Index versions 7 and 6, records may use up to three alternative fonts (two for Sky 6), but the exported document contains no information about what these fonts are. If the  records use alternative fonts, Cindex assumes the SKY Index default assignments:</p>
+                    <ul>
+                      <li>Alternative Font 1: Symbol
+                      </li>
+                      <li>Alternative Font 2: Courier New
+                      </li>
+                      <li>Alternative Font 3: Times New Roman</li>
+                    </ul>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="7" bgcolor="#eeeeee">
+                      <tr valign="top" bgcolor="#eeeeee">
+                        <td bgcolor="#eeeeee"><table border="0" cellspacing="0" cellpadding="4">
+                          <tr valign="top">
+                            <td><p>Characters in Alternative Font 1 (Symbol) are converted to their Unicode equivalents.</p></td>
+                          </tr>
+                        </table></td>
+                      </tr>
+                    </table></td>
+				</tr>
+			</table>
+		  <div id="taskbox">
+</div>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>
+						<p><b>See also<br>
+							</b><a href="_imp3a.html">Import errors</a><br>
+						  <a href="_imp0.html">Importing records</a><br>
+							<a href="_imp2.html">Importing records from delimited text</a><br>
+						</p>
+					</td>
+	</tr>
+</table>
+			<table width="100%" height="35" border="0" cellspacing="0" cellpadding="3">
+	<tr valign="bottom" height="35">
+	<td align="left" height="35"></td>
+	<td align="right" valign="top" height="35"><a href="help:search='importing records' bookID='Cindex 4 Help'">Tell me more</a></td>
+	</tr>
+	<tr height="35">
+	<td></td>
+	<td>&nbsp;</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

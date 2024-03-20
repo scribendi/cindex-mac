@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Removing unwanted records</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+	<meta name="Keywords" content="remove records, generated reocrds, duplicate records, deleted records, compress">
+	<meta name="Description" content="Specifies records that should be removed permanently from the index">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="compress0_Anchor-14210" id="compress0_Anchor-14210"></a>
+		<div id="mainbox" align="left">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td height="32">&nbsp;</td>
+	<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+	<td height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Removing unwanted records</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+				<tr>
+					<td>
+						<p>Use the Compress panel (Tools menu) to remove unwanted records from the index.</p>
+						<p>To remove records that contain no text check Remove Empty Records.</p>
+						<p>To remove deleted records check Remove Deleted Records.</p>
+						<p>To remove exact duplicates check Remove Duplicated Records.</p>
+						<p>To remove records that contain automatically-generated cross-references check Remove Generated Records.</p>
+						<p>As you build an index you might create several records that are identical except for their page references or cross-references. To simplify the organization of records, Cindex can merge the identical entries, putting all their page references and cross-references into as few records as possible, and deleting any unnecessary records that result. To consolidate references, and to remove records that are no longer needed, check Consolidate References. By default, Cindex does not consolidate references from otherwise identical records that carry different labels. To make Cindex ignore labels, check Ignore Different Labels. When this is checked, a merged record carries the label (if any) of the first of the merged set.</p>
+						<p>You need not consolidate references&#151;Cindex always merges duplicate entries when it displays or prints the formatted index&#151;but you can reduce the size of your index by doing so.</p>
+					</td>
+				</tr>
+			</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="7" bgcolor="#eeeeee">
+	<tr valign="top" bgcolor="#eeeeee">
+						<td bgcolor="#eeeeee">
+								<table border="0" cellspacing="0" cellpadding="4">
+									<tr valign="top">
+										<td>
+											<p>Cindex cannot consolidate references or remove duplicated records if the index is sorted in page number order, in which case these items are dimmed.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>When Cindex removes records from an index it renumbers those that remain. You should not rely on a record having the same number before and after you compress an index. Cindex uses a record&rsquo;s number to keep track of its membership in any <a href="group0.html">group</a>. Because record numbers often change when you compress an index, Cindex invalidates all the groups.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>Before you consolidate references, make sure that Cindex has been set correctly to recognize the character that <a href="refsyntax1.html">separates successive references</a> when more than one appears in the locator field.</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+					</tr>
+</table>
+<div id="taskbox">
+</div>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>
+						<p><b>See also<br>
+							</b><a href="crossmanage1.html">Generating cross-references</a><br>
+							<a href="expand0.html">Expanding index entries</a><br>
+							<a href="_add15.html">Deleting and restoring records</a><br>
+						</p>
+					</td>
+	</tr>
+</table>
+			<table width="100%" height="35" border="0" cellspacing="0" cellpadding="3">
+	<tr valign="bottom" height="35">
+	<td align="left" height="35"></td>
+	<td align="right" valign="top" height="35"><a href="help:search='deleting records' bookID='Cindex 4 Help'">Tell me more</a></td>
+	</tr>
+	<tr height="35">
+	<td></td>
+	<td>&nbsp;</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

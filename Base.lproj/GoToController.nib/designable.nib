@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="GoToController">
+            <connections>
+                <outlet property="gotostring" destination="13" id="17"/>
+                <outlet property="gototype" destination="8" id="16"/>
+                <outlet property="indicator" destination="KvT-hz-Kkr" id="dFb-fQ-TEw"/>
+                <outlet property="pagecount" destination="22" id="23"/>
+                <outlet property="window" destination="5" id="14"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Panel" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="5" userLabel="Panel" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="459" y="328" width="259" height="106"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <value key="minSize" type="size" width="259" height="99"/>
+            <view key="contentView" id="6">
+                <rect key="frame" x="0.0" y="0.0" width="259" height="106"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField verticalHuggingPriority="750" id="22">
+                        <rect key="frame" x="134" y="70" width="107" height="14"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" id="29">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autosizesCells="NO" id="8">
+                        <rect key="frame" x="16" y="68" width="216" height="18"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        <size key="cellSize" width="106" height="18"/>
+                        <size key="intercellSpacing" width="4" height="2"/>
+                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" controlSize="small" inset="2" id="30">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <cells>
+                            <column>
+                                <buttonCell type="radio" title="Record" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="7">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                            </column>
+                            <column>
+                                <buttonCell type="radio" title="Formatted Page" imagePosition="left" alignment="left" controlSize="small" tag="1" inset="2" id="11">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                            </column>
+                        </cells>
+                    </matrix>
+                    <button verticalHuggingPriority="750" tag="-1" id="9">
+                        <rect key="frame" x="164" y="13" width="80" height="28"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" tag="-1" inset="2" id="25">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="closeSheet:" target="-1" id="20"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="10">
+                        <rect key="frame" x="82" y="13" width="80" height="28"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="26">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="closeSheet:" target="-1" id="19"/>
+                        </connections>
+                    </button>
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="12">
+                        <rect key="frame" x="16" y="15" width="25" height="25"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" controlSize="small" borderStyle="border" inset="2" id="27">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showHelp:" target="-1" id="18"/>
+                        </connections>
+                    </button>
+                    <comboBox verticalHuggingPriority="750" id="13">
+                        <rect key="frame" x="16" y="42" width="226" height="22"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <comboBoxCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" drawsBackground="YES" numberOfVisibleItems="5" id="28">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </comboBoxCell>
+                        <connections>
+                            <outlet property="delegate" destination="-2" id="21"/>
+                        </connections>
+                    </comboBox>
+                    <progressIndicator wantsLayer="YES" maxValue="100" displayedWhenStopped="NO" style="bar" id="KvT-hz-Kkr">
+                        <rect key="frame" x="43" y="18" width="36" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </progressIndicator>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="15"/>
+                <outlet property="initialFirstResponder" destination="13" id="fTa-om-r6x"/>
+            </connections>
+            <point key="canvasLocation" x="-40.5" y="101"/>
+        </window>
+        <userDefaultsController representsSharedInstance="YES" id="nqt-gf-uGy"/>
+    </objects>
+</document>

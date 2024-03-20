@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Split headings</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+	<meta name="Keywords" content="person names, split headings">
+	<meta name="Description" content="Split headings that contain multiple names, or specified phrases, into records that each contain one name or phrase.">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="split0_Anchor-14210" id="split0_Anchor-14210"></a>
+		<div id="mainbox" align="left">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td height="32">&nbsp;</td>
+	<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+	<td height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><strong>Splitting Headings</strong></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+				<tr>
+					<td><p>Use the Split Headings panel (Tools menu) to break out multiple names, or multiple phrases of types you specify, into separate records.</p>
+					  <p>Cindex scans the index looking for main headings that contain specified terms (e.g., author names in the form <em>Surname, Forenames(s)</em>). If a heading contains multiple terms, Cindex creates a new record for each except the first. The first term is left in the original record. For every term, including the first, Cindex removes extraneous text around it, leaving the term unadorned.</p>
+					  <p>Use the Identify popup menu to choose the kind of term Cindex should find. The default, <em>Terms Separated by Punctuation</em> finds phrases. If you choose this option, Cindex will find strings of words separated by spaces. A comma in a phrase will be ignored if preceded by ~.</p>
+					  <p>When you choose <em>Surname, Forename(s)</em> or <em>Forename(s) Surname</em>, Cindex will correctly identify complex names in a wide variety of forms, as long as they are consistently of the type chosen (Surname first or Surname last). When parsing names, Cindex automatically excludes from consideration any conjunction or preposition that is contained in the list used in making smart flips (Document menu, Smart Flip Words…)<br>
+				      </p>
+					  <p>Cindex uses patterns to identify terms, and if you are comfortable using patterns you can define your own to find and extract terms that aren&rsquo;t of a standard type. To provide your own pattern, choose <em>User-defined pattern</em> from the popup, and enter the pattern text in the box. Cindex checks the validity of the text you enter.</p>
+					  <ul>
+					    <li>Cindex normally preserves the text style(s) associated with extracted terms. To remove any styles check <em>Remove Styles</em>.</li>
+					    <li>Cindex normally ignores records that contain no terms of the kind being sought. To make Cindex mark them, check <em>Mark Records With No Matches</em>.</li>
+				      </ul>
+						<p>For a preview (recommended) of how Cindex will split entries, click <em>Preview Splits</em>. Cindex opens a window that shows the terms found in every record. Each term that would  be in its own record is displayed inside brackets (the first term will be the new heading in the original record). In the preview list, Cindex also identifies records that contain no terms of the kind being sought. Click any row in the list to bring the corresponding record into view in the main index window.<br>
+				      </p>
+					  
+				  <p>Click OK when you are ready to split headings. Before proceeding Cindex will warn you that it will change records. It is wise to save the index (and also have a backup copy) before proceeding, so that you can <strong>Revert To Saved</strong> if you dislike the results of the split.</p></td>
+				</tr>
+			</table>
+			<div id="taskbox">
+</div>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>
+						<p></p>
+					</td>
+	</tr>
+</table>
+			<table width="100%" height="35" border="0" cellspacing="0" cellpadding="3">
+	<tr valign="bottom" height="35">
+	<td align="left" height="35"></td>
+	<td align="right" valign="top" height="35"><a href="help:search='splitting subheadings' bookID='Cindex 4 Help'">Tell me more</a></td>
+	</tr>
+	<tr height="35">
+	<td></td>
+	<td>&nbsp;</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

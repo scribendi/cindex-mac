@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Generating cross-references</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+	<meta name="Keywords" content="automatic cross-references, generate cross-references, see also references, see references">
+	<meta name="Description" content="Generate cross-references automatically for entries that contain particular terms">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="crossmanage1_Anchor-14210" id="crossmanage1_Anchor-14210"></a>
+		<div id="mainbox" align="left">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td height="32">&nbsp;</td>
+	<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+	<td height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Generating cross-references</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+				<tr>
+					<td>
+						<p>Cindex can generate cross-references automatically, so that the existence of a specified entry can automatically lead to the appearance of a cross-reference.</p>
+						<p>To generate automatically a set of cross-references to specified headings in your index, you must build a special reference index that identifies the target entries and the cross-references that should be made to them.</p>
+						<p>Each record in the special cross-reference index should be organized as follows:</p>
+					</td>
+				</tr>
+			</table>
+				<table width="100%" border="0" cellspacing="0" cellpadding="7" bgcolor="#eeeeee">
+					<tr valign="top" bgcolor="#eeeeee">
+						<td bgcolor="#eeeeee">
+								<table border="0" cellspacing="0" cellpadding="4">
+									<tr valign="top">
+										<td>
+											<p>&#x2022;</p>
+										</td>
+										<td>
+											<p>In the main heading field, enter the text that will be the main heading of the cross-reference.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>&#x2022;</p>
+										</td>
+										<td>
+											<p>In the first subheading field enter any subheading that accompanies the main heading. You can continue this to whatever depth of sub-subheading you wish.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>&#x2022;</p>
+										</td>
+										<td>
+											<p>In the locator field enter the text of the target entry, without any leading <i>See</i> or <i>See also</i>. Cindex will decide what form of introductory phrase is required when it includes the cross-reference in the destination index. If you want to refer to a subheading under a main heading, enter the main heading with the text of the subheading as a modifier, after a comma.</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+					</tr>
+				</table>
+			<p>To use the special index to generate cross-references for the active index, choose Manage Cross-References... from the Tools menu, then choose Generate from File&#x2026; Cindex will display a panel through which you open the index that is the source of cross-references that Cindex will automatically place in your current index whenever it encounters an appropriate target entry.</p>
+			<p>Cindex normally generates both <i>See</i> and <i>See also</i> references, as appropriate, but if you want to create only <i>See</i> references (omitting any <i>See also</i> references) check &ldquo;See&rdquo; References Only before opening the index.</p>
+			<p>Cindex knows which records contains automatically generated cross-references. To find these, choose Find, and check Generated Records. (If you edit and change a generated record, Cindex no longer considers it to have been generated automatically, and you will not be able to identify it with Find.) You can count generated records by choosing Count&hellip; from the Tools menu; you can remove them by choosing Compress&hellip; from the Tools menu.</p>
+			<div id="taskbox">
+		  </div>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>
+						<p><b>See also<br>
+							</b><a href="refsyntax3.html">Identifying cross-references</a><b><br>
+							</b><a href="crossmanage2.html">Converting cross-references</a><br>
+							<a href="fnd0.html">Using the Find panel</a><b><br>
+							</b><a href="compress0.html">Removing generated records</a><br>
+						</p>
+					</td>
+	</tr>
+</table>
+			<table width="100%" height="35" border="0" cellspacing="0" cellpadding="3">
+	<tr valign="bottom" height="35">
+	<td align="left" height="35"></td>
+	<td align="right" valign="top" height="35"><a href="help:search='automatic cross-references' bookID='Cindex 4 Help'">Tell me more</a></td>
+	</tr>
+	<tr height="35">
+	<td></td>
+	<td>&nbsp;</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

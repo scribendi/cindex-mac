@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Importing records from delimited text</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+	<meta name="Keywords" content="interchange, exchange">
+	<meta name="Description" content="How to import records from text editors and database programs">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="_imp2_Anchor-14210" id="_imp2_Anchor-14210"></a>
+		<div id="mainbox" align="left">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td height="32">&nbsp;</td>
+	<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+	<td height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Importing records from delimited text</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+				<tr>
+					<td>
+						<p>Cindex can import plain text records that have been prepared elsewhere (for example, by a word-processing program or text editor, or database program).</p>
+						<p>To import records into an existing index, choose Import from the File menu. Cindex assumes that documents with the filename extension &lsquo;.txt&rsquo; or &lsquo;.text&rsquo; are potential sources of delimited records, and the Open panel shows all such files as readable.</p>
+						<p>Records must conform to a simple specification:  </p>
+					</td>
+				</tr>
+			</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="7" bgcolor="#eeeeee">
+	<tr valign="top" bgcolor="#eeeeee">
+						<td bgcolor="#eeeeee">
+								<table border="0" cellspacing="0" cellpadding="4">
+								  <tr valign="top">
+								    <td><p>&#x2022;</p></td>
+								    <td><p>If the document begins with the standard signature of a UTF-8 document, Cindex will recognize the Unicode character encoding. Otherwise Cindex assumes that characters are from the Mac Roman character set.</p></td>
+							      </tr>
+									<tr valign="top">
+										<td>
+											<p>&#x2022;</p>
+										</td>
+										<td>
+											<p>Each record must be contained in a paragraph terminated by a carriage-return character, or a line-feed character, or a carriage-return/line-feed character pair.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>&#x2022;</p>
+										</td>
+										<td>
+										<p>Each record can contain up to fifteen tab-separated fields that hold the text of headings, plus a field that contains the locator.										</p></td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>&#x2022;</p>
+										</td>
+										<td>
+											<p>The fields of the record must be separated from each other by a &lsquo;tab&rsquo; character, and the locator field, which contains page references or cross-references, must be the last field. </p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>&#x2022;</p>
+										</td>
+										<td>
+											<p>Cindex assumes that the last field in any record is the locator field, so you should ensure that any record that has no locator (page reference or cross-reference) has a blank last field (i.e., one with nothing after the last tab character). You need not include empty fields between headings and the locator field: if you import records into an index in which records have a fixed number of fields, Cindex will automatically add empty fields when necessary.</p>
+										</td>
+									</tr>
+								</table>
+			  </td>
+	</tr>
+</table>
+<p>If Cindex encounters any of the  characters { } &lt; &gt; ~ \ in the imported text, it places a \ before it  (e.g., { in the imported text becomes \{ in the Cindex record) to ensure that it is treated as a literal character, rather than  a special function character.</p>
+<div id="taskbox">
+</div>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>
+						<p><b>See also<br>
+							</b><a href="_imp4.html">Import errors</a><br>
+						  <a href="_imp0.html">Importing records</a><br>
+						  <a href="_imp3a.html">Importing records from Sky Index</a><br>
+							<a href="_imp3.html">Importing records from Macrex</a><br>
+						</p>
+					</td>
+	</tr>
+</table>
+			<table width="100%" height="35" border="0" cellspacing="0" cellpadding="3">
+	<tr valign="bottom" height="35">
+	<td align="left" height="35"></td>
+	<td align="right" valign="top" height="35"><a href="help:search='importing records' bookID='Cindex 4 Help'">Tell me more</a></td>
+	</tr>
+	<tr height="35">
+	<td></td>
+	<td>&nbsp;</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[IRDisplayString _makeDictionaryForHeading:]:IRDisplayString.m">
+      </ContextState>
+      <ContextState
+         contextName = "Uconvertheader:v3handler.m">
+      </ContextState>
+      <ContextState
+         contextName = "Uconvertfontmap:v3handler.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "(FONTMAP)$6">
+            </PersistentString>
+            <PersistentString
+               value = "(FONTMAP )fm[32]">
+            </PersistentString>
+            <PersistentString
+               value = "(FONTMAP *)fm[1]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "astr_fromUTF8string:attributedstrings.m">
+      </ContextState>
+      <ContextState
+         contextName = "loadtranslationset:import.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "char dest[500]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "convertV2fontmap:v3handler.m">
+      </ContextState>
+      <ContextState
+         contextName = "v3_convertindex:v3handler.m">
+      </ContextState>
+      <ContextState
+         contextName = "convertV2header:v3handler.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

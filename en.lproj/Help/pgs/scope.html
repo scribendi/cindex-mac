@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Specifying the scope of a command</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="Specify which records are to be included in the specified action">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="scope_Anchor-11481" id="scope_Anchor-11481"></a>
+		<div id="mainbox" align="left">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td height="32">&nbsp;</td>
+	<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+	<td height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Specifying the scope of a command</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>
+						<p>When you initiate some global action on the index (for example replacing text, or checking spelling), Cindex generally acts on all records accessible in the current view. For example, if the view is set to show only a group of records, the action affects only records that group. Certain actions can be undertaken only when the view shows all records.</p>
+						<p>You can restrict the scope of many actions to a subset of the records accessible in the current view.</p>
+					</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="7" bgcolor="#eeeeee">
+					<tr valign="top" bgcolor="#eeeeee">
+	<td bgcolor="#eeeeee">
+								<table border="0" cellspacing="0" cellpadding="4">
+									<tr valign="top">
+										<td>
+												<p>&#149;</p>
+											</td>
+										<td>
+											<p>To permit the operation on all records accessible in the current view, click All Records in View.</p>
+										</td>
+									</tr>
+								</table>
+								<table border="0" cellspacing="0" cellpadding="4">
+									<tr valign="top">
+										<td>
+												<p>&#149;</p>
+											</td>
+										<td>
+											<p>To confine the operation to records you have selected, click Selected Records (this is dimmed if no records are selected). </p>
+										</td>
+									</tr>
+								</table>
+								<table border="0" cellspacing="0" cellpadding="4">
+									<tr valign="top">
+										<td>
+											<p>&#149;</p>
+										</td>
+										<td>
+											<p>To confine the operation to a range of records in the view, specify the starting and ending records in From and To. You can specify a range of headings by entering leading text, e.g., Abr through Doc. You can also specify a range of record numbers (e.g., 55 through 79) within which Cindex should confine the operation. If you want to look among specified headings, you need only provide as much of the beginning text as will identify a record uniquely. You can specify leading text from a subheading by appending a semicolon to the heading text then adding subheading text. If you want to specify a heading that begins with digits, place a \ before the first digit; Cindex will otherwise interpret leading digits as a record number.</p>
+											<p>If you omit the first part of the range Cindex will start at the first record in the view and stop at the record at the end of the range. If you omit the second part of the range, Cindex will start at the specified record and continue until it reaches the last record in the view.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>&#149;</p>
+										</td>
+										<td>
+											<p>When you save a formatted document, or use Index Statistics&#x2026; you can confine the operation to records that would fall on specified printed pages. To specify a range, set at from and to the range of pages for which you want to include entries.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>&#149;</p>
+										</td>
+										<td>
+											<p>When you use Find or Replace, you can confine the operation to records last modified on a particular date/time or between specified dates/times. Type the starting and ending dates in the boxes labeled From and To.</p>
+											<p>Cindex interprets dates and times in whatever form is standard in the country you are working in (e.g., month, day, year or day, month, year) and can accept dates in a wide variety of forms (e.g., today, yesterday, 10 am, Jan 1 96, 1/1/96, 1 January 96, January 1 1996, ). If you omit the year Cindex assumes the current year; if you omit the month, Cindex assumes the current month; if you omit the date (specifying only a time), Cindex assumes today. If you specify a date but no time, Cindex assumes the time to 00:00. You can use simple English expressions as shortcuts, for example: 'today' ;  'tomorrow'.</p>
+										<p>If you provide no starting date or time, Cindex assumes January 1, 1970; if you provide no ending date or time, Cindex assumes a date far in the future.</p>
+									</td>
+									</tr>
+								</table>
+							
+	</td>
+	</tr>
+				</table>
+<div id="taskbox">
+</div>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>
+						<p><b>See also<br>
+							</b><a href="_views7.html">Viewing subsets of records</a><b><br>
+							</b><a href="fnd0.html">Finding records that contain specified text or attributes</a><br>
+							<a href="rep0.html">Replacing text and attributes in records</a><br>
+							<a href="spell0.html">Checking spelling</a><br>
+							<a href="_indexinfo0.html">Getting information about indexes</a><br>
+						</p>
+					</td>
+	</tr>
+</table>
+<table width="100%" height="35" border="0" cellspacing="0" cellpadding="3">
+	<tr valign="bottom" height="35">
+	<td align="left" height="35"></td>
+	<td align="right" valign="top" height="35"><a href="help:search='scope of commands' bookID='Cindex 4 Help'">Tell me more</a></td>
+	</tr>
+	<tr height="35">
+	<td></td>
+	<td>&nbsp;</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

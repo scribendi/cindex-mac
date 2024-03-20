@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sorting locators</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+		<style type="text/css" media="screen"><!--
+#mainbox { background-color: #fff; visibility: visible; position: absolute; top: 9px }
+--></style>
+		<meta name="Keywords" content="multi-part references, compound">
+	<meta name="Description" content="Specify how locators are evaluated and sorted">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="sort4_Anchor-14210" id="sort4_Anchor-14210"></a>
+		<div id="mainbox" align="left">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td height="32">&nbsp;</td>
+	<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+	<td height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Sorting locators</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+				<tr>
+					<td>
+						<p>Use the Sort panel (Tools menu) to specify how Cindex should sort locators.</p>
+						<p>Settings in the Locators tab specify the how locators should be sorted.</p>
+						<p>Cindex evaluates page references under the following conditions:</p>
+						<ul>
+						  <li>When a single entry has multiple references, and these have to be ordered when the formatted index is displayed or printed.</li>
+						  <li>When entries are ordered alphabetically, but are identical at all levels of heading that are being evaluated.</li>
+						  <li>When you want entries ordered by page reference.</li>
+					  </ul>
+						<p>You can specify how Cindex should recognize locators (or parts of them) comprised of letters (as Roman numerals, spelled out months, or plain text), and what precedence it should assign to different classes of components. Through the Type Precedence list you specify whether or not Cindex will recognize a locator of a particular class, and (if it does recognize it) what precedence it should have. Cindex recognizes only segments corresponding to the classes that are checked with + marks. To check or uncheck a member of the list, double-click it. Cindex uses the order in which recognized classes appear in the list to determine the precedence of the components they represent. To change the precedence of a class drag it in the list.</p>
+						<p>If your locators have multiple parts, Cindex can ignore specified components and can evaluate the others in any order you choose. Use the Segment Order list to specify this. Cindex evaluates only reference segments associated with checked items in the list. Double-click an item to make Cindex evaluate (or ignore) the corresponding segment of a reference. The order in which the checked items appear in the list is the order in which Cindex evaluates their corresponding segments. Drag items to achieve the order you want.</p>
+						<p>Sometimes a text style (bold, italic, underline) is used to distinguish different types of references to the same page. Use the Style Precedence list to set the precedence of different text styles. Cindex uses the setting when the text style is the only attribute that distinguishes two page references (or the least significant parts of multi-part references).</p>
+						<p>If Cindex needs to use the value of a locator when positioning a record in the index (it generally does this only when positioning otherwise identical records), and the locator field contains more than one page reference, Cindex normally uses the lowest-valued one. To make Cindex use the highest-valued locator, uncheck Ascending Order. To make Cindex use the first locator, regardless of its value, uncheck Examine All.</p>
+						<p>When index entries contain bi-directional text (e.g., English and Arabic), the reading order of locators normally follows that of the script immediately preceding the locators. To force left-to-right reading order of locators, regardless of script, check Force left-right reading order.</p>
+					</td>
+				</tr>
+			</table>
+			<div id="taskbox">	
+			</div>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>
+						<p><b>See also<br>
+							</b><a href="refsyntax1.html">Specifying the structure of page references</a><br>
+							<a href="_pageref0.html">Components of page references</a><b><br>
+							</b><a href="sort1.html">Sorting record fields</a><b><br>
+							</b><a href="sort2.html">Alphabetizing entries</a><b><br>
+							</b></p>
+					</td>
+	</tr>
+</table>
+			<table width="100%" height="35" border="0" cellspacing="0" cellpadding="3">
+	<tr valign="bottom" height="35">
+	<td align="left" height="35"></td>
+	<td align="right" valign="top" height="35"><a href="help:search='sorting entries' bookID='Cindex 4 Help'">Tell me more</a></td>
+	</tr>
+	<tr height="35">
+	<td></td>
+	<td>&nbsp;</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

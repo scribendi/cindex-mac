@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Alphabetizing entries</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+		<style type="text/css" media="screen"><!--
+#mainbox { background-color: #fff; visibility: visible; position: absolute; top: 9px }
+--></style>
+		<meta name="Keywords" content="language, reading order">
+	<meta name="Description" content="Specify how entries are alphabetized">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="sort2_Anchor-14210" id="sort2_Anchor-14210"></a>
+  <div id="mainbox" align="left">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td height="32">&nbsp;</td>
+	<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+	<td height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Alphabetizing entries</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+				<tr>
+					<td>
+						<p>Use the Sort panel (Tools menu) to specify how Cindex should alphabetize entries.</p>
+						<p>Settings in the Text tab specify the alphabetizing principles to be used.</p>
+						<p>From the Language popup menu choose the language rules Cindex will use to alphabetize entries. Different languages have different rules for ordering characters.</p>
+						<table border="0" cellspacing="0" cellpadding="4" bgcolor="#eeeeee">
+						  <tr valign="top">
+						    <td><p>Setting the language also ensures that Cindex will correctly lay out entries for right-to-left reading languages such as Arabic and Hebrew.</p></td>
+					      </tr>
+					  </table>
+						<p>From the Alphabetizing Rule popup menu choose the basic method of alphabetizing:</p>
+					</td>
+				</tr>
+			</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="7" bgcolor="#eeeeee">
+	<tr valign="top" bgcolor="#eeeeee">
+						<td bgcolor="#eeeeee">
+								<table border="0" cellspacing="0" cellpadding="4">
+									<tr valign="top">
+										<td>
+											<p>Simple</p>
+										</td>
+										<td>
+											<p>Simple alphabetizing does not ignore numerals, symbols or punctuation. It is often the best sort for working on an index, but it is inadequate for production of the final index.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>Word&#150;by&#150;Word</p>
+<p>[CMS]</p>
+										<p>[ISO]</p>
+										<p>[SBL]</p>
+								      </td>
+										<td>
+											<p>Letters are compared up to the end of the first word. If records match up to that point, the comparison starts again at the second word, and so on. Numbers and symbols are ignored unless these are the only character that distinguish records.</p>
+											<p>Cindex provides special variants of word-by-word sorting recommended  by the Chicago Manual of Style (15th Edition), by the International Standards Organization (ISO 999), and by the Society of Biblical Literature. The SBL variant follows special rules for ordering chapters and verses.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>Letter&#150;by&#150;Letter</p>
+<p>[CMS]</p>
+										<p>[ISO]</p>
+										<p>[SBL]</p>
+								      </td>
+										<td>
+											<p>Spaces between words are ignored, and records are compared one letter at a time up to the first mark of punctuation. If the records match up to this point, the comparison continues to the next punctuation mark, and so on. Numbers and symbols are ignored unless these are the only characters that distinguish records.</p>
+											<p>Cindex provides special variants of letter-by-letter sorting recommended  by the Chicago Manual of Style (15th Edition), by the International Standards Organization (ISO 999), and by the Society of Biblical Literature. The SBL variant follows special rules for ordering chapters and verses.</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+					</tr>
+</table>
+			<p>When you use standard Word-By-Word or Letter-by-Letter alphabetizing, you can modify the basic rules with settings in the <a href="sort3.html">Exceptions</a> box. (When you use the preset rules for the Chicago Manual of Style or ISO 999, most options are disabled.)</p>
+			<p>For sorting purposes Cindex recognizes three classes of characters: letters (more generally language characters),  numerals and symbols. Numerals and symbols are normally ignored, but if Cindex attends to them it normally treats all symbols as having higher precedence than all numbers, and all numbers as having higher precedence than all letters. You can specify a different precedence through the list labeled Character Priority. Drag the item corresponding to a character class to the position you want it to occupy in the list. The order in which these items appear in the list determines the precedence of the classes they represent&#151;the item at the top of the list has the highest precedence.</p>
+			<p>When an index  uses multiple scripts the precedence of characters normally follows a Unicode standard (Latin script comes before all others). If you are sorting entries for a language that uses some other script, you can check Language Script has Precedence to make Cindex assign the highest precedence to the script for that language.</p>
+			<p>Cindex can alphabetize specified words, or prefixes to words, as if they were other words (e.g., St. as Saint, or Mc as Mac). To set up substitutions of this kind, click <a href="sortsubstitute.html">Substitutions…</a></p>
+			<p>When alphabetizing subheadings Cindex ignores all words at the start of a subheading until it finds one that is not in the set Ignore Subheading Prefixes. Cindex does not ignore leading words when you choose Simple alphabetizing.</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>
+						<p><b>See also<br>
+							</b><a href="sort1.html">Sorting record fields</a><b><br>
+							</b><a href="sort4.html">Sorting locators</a><br>
+							<a href="_sortoverride4.html">Sorting with multiple scripts</a><br>
+							<a href="_sortoverride0.html">Overriding automatic sorting</a><br>
+							<a href="_sortoverride1.html">Filing entries under numbers and symbols</a><br>
+							<a href="_sortoverride2.html">Case-sensitive alphabetizing</a></p>
+					</td>
+	</tr>
+</table>
+			<table width="100%" height="35" border="0" cellspacing="0" cellpadding="3">
+	<tr valign="bottom" height="35">
+	<td align="left" height="35"></td>
+	<td align="right" valign="top" height="35"><a href="help:search='sorting entries' bookID='Cindex 4 Help'">Tell me more</a></td>
+	</tr>
+	<tr height="35">
+	<td></td>
+	<td>&nbsp;</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

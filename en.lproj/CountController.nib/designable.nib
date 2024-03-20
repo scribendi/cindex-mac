@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1036" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CountController">
+            <connections>
+                <outlet property="among" destination="36" id="53"/>
+                <outlet property="countview" destination="51" id="58"/>
+                <outlet property="locatorend" destination="44" id="57"/>
+                <outlet property="locatorstart" destination="45" id="56"/>
+                <outlet property="rangeend" destination="20" id="60"/>
+                <outlet property="rangestart" destination="25" id="54"/>
+                <outlet property="scope" destination="18" id="52"/>
+                <outlet property="window" destination="6" id="13"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Count" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="6" userLabel="Panel" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="375" y="300" width="518" height="340"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <value key="minSize" type="size" width="518" height="340"/>
+            <value key="maxSize" type="size" width="518" height="680"/>
+            <view key="contentView" id="5">
+                <rect key="frame" x="0.0" y="0.0" width="518" height="340"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="9">
+                        <rect key="frame" x="16" y="16" width="25" height="25"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" controlSize="small" borderStyle="border" inset="2" id="103">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showHelp:" target="-1" id="17"/>
+                            <outlet property="nextKeyView" destination="7" id="WhN-dt-qk3"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="7">
+                        <rect key="frame" x="341" y="14" width="80" height="28"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="push" title="Done" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="101">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="closeSheet:" target="-1" id="16"/>
+                            <outlet property="nextKeyView" destination="8" id="gHD-05-lzo"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" tag="-1" id="8">
+                        <rect key="frame" x="423" y="14" width="80" height="28"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="push" title="Count" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" tag="-1" inset="2" id="102">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="closeSheet:" target="-1" id="15"/>
+                            <outlet property="nextKeyView" destination="18" id="8eO-sn-ftI"/>
+                        </connections>
+                    </button>
+                    <box title="Scope" id="32">
+                        <rect key="frame" x="17" y="231" width="333" height="103"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                        <view key="contentView" id="sGr-6N-Xho">
+                            <rect key="frame" x="2" y="2" width="329" height="86"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autosizesCells="NO" id="18">
+                                    <rect key="frame" x="13" y="15" width="124" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    <size key="cellSize" width="124" height="15"/>
+                                    <size key="intercellSpacing" width="4" height="7"/>
+                                    <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" controlSize="small" inset="2" id="111">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="smallSystem"/>
+                                    </buttonCell>
+                                    <cells>
+                                        <column>
+                                            <buttonCell type="radio" title="All Records in View" imagePosition="left" alignment="left" controlSize="small" state="on" toolTip="Count among all records accessible in the current view" inset="2" id="29">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <buttonCell type="radio" title="Selected Records" imagePosition="left" alignment="left" controlSize="small" toolTip="Count among selected records" tag="1" inset="2" id="30">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <buttonCell type="radio" title="Range:  From" imagePosition="left" alignment="left" controlSize="small" toolTip="Count among records in this range" tag="2" inset="2" id="31">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                        </column>
+                                    </cells>
+                                    <connections>
+                                        <outlet property="nextKeyView" destination="25" id="DRL-vP-icI"/>
+                                    </connections>
+                                </matrix>
+                                <textField toolTip="Count among records in this range" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="25">
+                                    <rect key="frame" x="111" y="13" width="91" height="19"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="105">
+                                        <font key="font" metaFont="smallSystem"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                    <connections>
+                                        <outlet property="delegate" destination="-2" id="61"/>
+                                        <outlet property="nextKeyView" destination="20" id="oAN-lK-thV"/>
+                                    </connections>
+                                </textField>
+                                <textField toolTip="Count among records in this range" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="20">
+                                    <rect key="frame" x="229" y="13" width="91" height="19"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="104">
+                                        <font key="font" metaFont="smallSystem"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                    <connections>
+                                        <outlet property="delegate" destination="-2" id="62"/>
+                                        <outlet property="nextKeyView" destination="45" id="fkm-ob-Lnw"/>
+                                    </connections>
+                                </textField>
+                                <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="26">
+                                    <rect key="frame" x="207" y="16" width="15" height="14"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="to" id="106">
+                                        <font key="font" metaFont="smallSystem"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                        </view>
+                    </box>
+                    <box title="Containing Locators" id="48">
+                        <rect key="frame" x="17" y="168" width="333" height="59"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                        <view key="contentView" id="Jaj-hg-IKB">
+                            <rect key="frame" x="2" y="2" width="329" height="42"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textField toolTip="Count among records containing locators equal to or greater than this value" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="45">
+                                    <rect key="frame" x="108" y="13" width="91" height="19"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="108">
+                                        <font key="font" metaFont="smallSystem"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                    <connections>
+                                        <outlet property="nextKeyView" destination="44" id="sOC-uN-mPk"/>
+                                    </connections>
+                                </textField>
+                                <textField toolTip="Count among records containing locators equal to or less than this value" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="44">
+                                    <rect key="frame" x="226" y="13" width="91" height="19"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="107">
+                                        <font key="font" metaFont="smallSystem"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                    <connections>
+                                        <outlet property="nextKeyView" destination="36" id="5ou-MX-eXW"/>
+                                    </connections>
+                                </textField>
+                                <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="46">
+                                    <rect key="frame" x="204" y="16" width="15" height="14"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="to" id="109">
+                                        <font key="font" metaFont="smallSystem"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="47">
+                                    <rect key="frame" x="68" y="15" width="35" height="14"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="From:" id="110">
+                                        <font key="font" metaFont="smallSystem"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                        </view>
+                    </box>
+                    <box title="Only Among" id="42">
+                        <rect key="frame" x="352" y="168" width="149" height="166"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                        <view key="contentView" id="zcR-D6-shn">
+                            <rect key="frame" x="2" y="2" width="145" height="149"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <matrix verticalHuggingPriority="750" mode="track" allowsEmptySelection="NO" autosizesCells="NO" id="36">
+                                    <rect key="frame" x="12" y="17" width="123" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    <size key="cellSize" width="123" height="16"/>
+                                    <size key="intercellSpacing" width="4" height="10"/>
+                                    <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" controlSize="small" inset="2" id="112">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="smallSystem"/>
+                                    </buttonCell>
+                                    <cells>
+                                        <column>
+                                            <buttonCell type="check" title="Modified Records" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="37">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <buttonCell type="check" title="Deleted Records" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" tag="1" inset="2" id="38">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <buttonCell type="check" title="Marked Records" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" tag="2" inset="2" id="39">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <buttonCell type="check" title="Generated Records" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" tag="3" inset="2" id="40">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <buttonCell type="check" title="Labeled Records" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" tag="4" inset="2" id="41">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                        </column>
+                                    </cells>
+                                    <connections>
+                                        <outlet property="nextKeyView" destination="9" id="XqK-Wa-Z0w"/>
+                                    </connections>
+                                </matrix>
+                            </subviews>
+                        </view>
+                    </box>
+                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="50">
+                        <rect key="frame" x="20" y="48" width="478" height="116"/>
+                        <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                        <clipView key="contentView" id="VK1-Jt-fFe">
+                            <rect key="frame" x="1" y="1" width="461" height="114"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" usesRuler="YES" spellingCorrection="YES" smartInsertDelete="YES" id="51">
+                                    <rect key="frame" x="0.0" y="0.0" width="461" height="114"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <size key="minSize" width="461" height="114"/>
+                                    <size key="maxSize" width="530" height="10000000"/>
+                                    <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-2" id="59"/>
+                                    </connections>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="114">
+                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="113">
+                            <rect key="frame" x="462" y="1" width="15" height="114"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="14"/>
+                <outlet property="initialFirstResponder" destination="18" id="H9X-D0-gVC"/>
+            </connections>
+        </window>
+    </objects>
+</document>

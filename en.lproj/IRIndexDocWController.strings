@@ -1,0 +1,210 @@
+
+/* Class = "NSWindow"; title = "Main Window"; ObjectID = "5"; */
+"5.title" = "Main Window";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "235"; */
+"235.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "236"; */
+"236.title" = "Copy";
+
+/* Class = "NSMenuItem"; title = "Paste"; ObjectID = "237"; */
+"237.title" = "Paste";
+
+/* Class = "NSMenuItem"; title = "Deleted"; ObjectID = "238"; */
+"238.title" = "Deleted";
+
+/* Class = "NSMenuItem"; title = "Select All"; ObjectID = "261"; */
+"261.title" = "Select All";
+
+/* Class = "NSMenuItem"; title = "New Record"; ObjectID = "264"; */
+"264.title" = "New Record";
+
+/* Class = "NSMenuItem"; title = "Remove Mark"; ObjectID = "265"; */
+"265.title" = "Remove Mark";
+
+/* Class = "NSMenuItem"; title = "Duplicate"; ObjectID = "266"; */
+"266.title" = "Duplicate";
+
+/* Class = "NSMenuItem"; title = "New Group"; ObjectID = "314"; */
+"314.title" = "New Group";
+
+/* Class = "NSMenuItem"; title = "Save Group…"; ObjectID = "320"; */
+"320.title" = "Save Group…";
+
+/* Class = "NSMenuItem"; title = "Labeled"; ObjectID = "335"; */
+"335.title" = "Labeled";
+
+/* Class = "NSMenu"; title = "Labeled"; ObjectID = "336"; */
+"336.title" = "Labeled";
+
+/* Class = "NSMenuItem"; title = "No Label"; ObjectID = "337"; */
+"337.title" = "No Label";
+
+/* Class = "NSMenuItem"; title = "Label 1"; ObjectID = "345"; */
+"345.title" = "Label 1";
+
+/* Class = "NSMenuItem"; title = "Label 2"; ObjectID = "346"; */
+"346.title" = "Label 2";
+
+/* Class = "NSMenuItem"; title = "Label 3"; ObjectID = "347"; */
+"347.title" = "Label 3";
+
+/* Class = "NSMenuItem"; title = "Label 4"; ObjectID = "348"; */
+"348.title" = "Label 4";
+
+/* Class = "NSMenuItem"; title = "Label 5"; ObjectID = "349"; */
+"349.title" = "Label 5";
+
+/* Class = "NSMenuItem"; title = "Label 6"; ObjectID = "350"; */
+"350.title" = "Label 6";
+
+/* Class = "NSMenuItem"; title = "Label 7"; ObjectID = "351"; */
+"351.title" = "Label 7";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "390"; */
+"390.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "No Label"; ObjectID = "391"; */
+"391.title" = "No Label";
+
+/* Class = "NSMenuItem"; title = "Label 1"; ObjectID = "392"; */
+"392.title" = "Label 1";
+
+/* Class = "NSMenuItem"; title = "Label 2"; ObjectID = "393"; */
+"393.title" = "Label 2";
+
+/* Class = "NSMenuItem"; title = "Label 3"; ObjectID = "396"; */
+"396.title" = "Label 3";
+
+/* Class = "NSMenuItem"; title = "Label 4"; ObjectID = "397"; */
+"397.title" = "Label 4";
+
+/* Class = "NSMenuItem"; title = "Label 5"; ObjectID = "398"; */
+"398.title" = "Label 5";
+
+/* Class = "NSMenuItem"; title = "Label 6"; ObjectID = "399"; */
+"399.title" = "Label 6";
+
+/* Class = "NSMenuItem"; title = "Label 7"; ObjectID = "400"; */
+"400.title" = "Label 7";
+
+/* Class = "NSComboBoxCell"; title = "Helvetica"; ObjectID = "453"; */
+"453.title" = "Helvetica";
+
+/* Class = "NSComboBoxCell"; title = "99"; ObjectID = "454"; */
+"454.title" = "99";
+
+/* Class = "NSComboBoxCell"; 454.ibShadowedObjectValues[0] = "8"; ObjectID = "454"; */
+"454.ibShadowedObjectValues[0]" = "8";
+
+/* Class = "NSComboBoxCell"; 454.ibShadowedObjectValues[1] = "9"; ObjectID = "454"; */
+"454.ibShadowedObjectValues[1]" = "9";
+
+/* Class = "NSComboBoxCell"; 454.ibShadowedObjectValues[2] = "10"; ObjectID = "454"; */
+"454.ibShadowedObjectValues[2]" = "10";
+
+/* Class = "NSComboBoxCell"; 454.ibShadowedObjectValues[3] = "11"; ObjectID = "454"; */
+"454.ibShadowedObjectValues[3]" = "11";
+
+/* Class = "NSComboBoxCell"; 454.ibShadowedObjectValues[4] = "12"; ObjectID = "454"; */
+"454.ibShadowedObjectValues[4]" = "12";
+
+/* Class = "NSComboBoxCell"; 454.ibShadowedObjectValues[5] = "14"; ObjectID = "454"; */
+"454.ibShadowedObjectValues[5]" = "14";
+
+/* Class = "NSComboBoxCell"; 454.ibShadowedObjectValues[6] = "18"; ObjectID = "454"; */
+"454.ibShadowedObjectValues[6]" = "18";
+
+/* Class = "NSComboBoxCell"; 454.ibShadowedObjectValues[7] = "24"; ObjectID = "454"; */
+"454.ibShadowedObjectValues[7]" = "24";
+
+/* Class = "NSToolbarItem"; label = "New Record"; ObjectID = "81S-v1-14G"; */
+"81S-v1-14G.label" = "New Record";
+
+/* Class = "NSToolbarItem"; paletteLabel = "New Record"; ObjectID = "81S-v1-14G"; */
+"81S-v1-14G.paletteLabel" = "New Record";
+
+/* Class = "NSButton"; ibShadowedToolTip = "New record"; ObjectID = "B0Q-cg-hkv"; */
+"B0Q-cg-hkv.ibShadowedToolTip" = "New record";
+
+/* Class = "NSToolbarItem"; label = "Font"; ObjectID = "CdS-ga-SRP"; */
+"CdS-ga-SRP.label" = "Font";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Font"; ObjectID = "CdS-ga-SRP"; */
+"CdS-ga-SRP.paletteLabel" = "Font";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Show all records"; ObjectID = "FPx-ei-gKt"; */
+"FPx-ei-gKt.ibShadowedToolTip" = "Show all records";
+
+/* Class = "NSToolbarItem"; label = "All Records"; ObjectID = "Mvw-I5-eSv"; */
+"Mvw-I5-eSv.label" = "All Records";
+
+/* Class = "NSToolbarItem"; paletteLabel = "All Records"; ObjectID = "Mvw-I5-eSv"; */
+"Mvw-I5-eSv.paletteLabel" = "All Records";
+
+/* Class = "NSMenuItem"; title = "Demote Headings"; ObjectID = "NiM-la-6Vh"; */
+"NiM-la-6Vh.title" = "Demote Headings";
+
+/* Class = "NSSegmentedCell"; PkU-n4-EVp.ibShadowedToolTips[0] = "Indented format"; ObjectID = "PkU-n4-EVp"; */
+"PkU-n4-EVp.ibShadowedToolTips[0]" = "Indented format";
+
+/* Class = "NSSegmentedCell"; PkU-n4-EVp.ibShadowedToolTips[1] = "Run-in format"; ObjectID = "PkU-n4-EVp"; */
+"PkU-n4-EVp.ibShadowedToolTips[1]" = "Run-in format";
+
+/* Class = "NSToolbarItem"; label = "Style"; ObjectID = "Qt3-Q4-L9o"; */
+"Qt3-Q4-L9o.label" = "Style";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Style"; ObjectID = "Qt3-Q4-L9o"; */
+"Qt3-Q4-L9o.paletteLabel" = "Style";
+
+/* Class = "NSMenuItem"; title = "Edit Record"; ObjectID = "StM-y2-r68"; */
+"StM-y2-r68.title" = "Edit Record";
+
+/* Class = "NSSegmentedCell"; TAN-g3-2na.ibShadowedToolTips[0] = "Alphabetical sort"; ObjectID = "TAN-g3-2na"; */
+"TAN-g3-2na.ibShadowedToolTips[0]" = "Alphabetical sort";
+
+/* Class = "NSSegmentedCell"; TAN-g3-2na.ibShadowedToolTips[1] = "Page number sort"; ObjectID = "TAN-g3-2na"; */
+"TAN-g3-2na.ibShadowedToolTips[1]" = "Page number sort";
+
+/* Class = "NSSegmentedCell"; TAN-g3-2na.ibShadowedToolTips[2] = "Unsorted"; ObjectID = "TAN-g3-2na"; */
+"TAN-g3-2na.ibShadowedToolTips[2]" = "Unsorted";
+
+/* Class = "NSToolbarItem"; label = "Size"; ObjectID = "YTH-RZ-o70"; */
+"YTH-RZ-o70.label" = "Size";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Size"; ObjectID = "YTH-RZ-o70"; */
+"YTH-RZ-o70.paletteLabel" = "Size";
+
+/* Class = "NSToolbarItem"; label = "Deleted"; ObjectID = "e1i-sf-4GB"; */
+"e1i-sf-4GB.label" = "Deleted";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Deleted"; ObjectID = "e1i-sf-4GB"; */
+"e1i-sf-4GB.paletteLabel" = "Deleted";
+
+/* Class = "NSSegmentedCell"; g2o-36-VzZ.ibShadowedToolTips[0] = "Full format"; ObjectID = "g2o-36-VzZ"; */
+"g2o-36-VzZ.ibShadowedToolTips[0]" = "Full format";
+
+/* Class = "NSSegmentedCell"; g2o-36-VzZ.ibShadowedToolTips[1] = "Draft format"; ObjectID = "g2o-36-VzZ"; */
+"g2o-36-VzZ.ibShadowedToolTips[1]" = "Draft format";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Delete/Undelete"; ObjectID = "i5U-sq-SfW"; */
+"i5U-sq-SfW.ibShadowedToolTip" = "Delete/Undelete";
+
+/* Class = "NSToolbarItem"; label = "Labeled"; ObjectID = "lro-kA-lyA"; */
+"lro-kA-lyA.label" = "Labeled";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Labeled"; ObjectID = "lro-kA-lyA"; */
+"lro-kA-lyA.paletteLabel" = "Labeled";
+
+/* Class = "NSToolbarItem"; label = "Format"; ObjectID = "vX8-eB-VeW"; */
+"vX8-eB-VeW.label" = "Format";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Format"; ObjectID = "vX8-eB-VeW"; */
+"vX8-eB-VeW.paletteLabel" = "Format";
+
+/* Class = "NSToolbarItem"; label = "Sort Type"; ObjectID = "yuL-bA-0wm"; */
+"yuL-bA-0wm.label" = "Sort Type";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Sort Type"; ObjectID = "yuL-bA-0wm"; */
+"yuL-bA-0wm.paletteLabel" = "Sort Type";

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE index >
+<!ELEMENT index (fonts, records) >
+<!ELEMENT fonts (font+) >
+<!ELEMENT font (name, aname) >
+<!ATTLIST font
+	id CDATA #REQUIRED >
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT aname (#PCDATA) >
+<!ELEMENT records (record)* >
+<!ATTLIST records
+	type CDATA #IMPLIED >
+<!ELEMENT record (field+) >
+<!ATTLIST record
+	time CDATA #REQUIRED
+	user CDATA #IMPLIED
+	label CDATA #IMPLIED
+	deleted (yes | no) #IMPLIED
+	generated CDATA #IMPLIED >
+<!ELEMENT field (#PCDATA | text)* >
+<!ATTLIST field
+	class CDATA #IMPLIED >
+<!-- style attribute specification needs attention-->
+<! ATTLIST text
+	font CDATA #IMPLIED
+	color CDATA #IMPLIED
+	style ( b | i | u | l | s | u | d | bi | bu | iu | biu ) #IMPLIED
+	>

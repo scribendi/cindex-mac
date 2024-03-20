@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Exporting index records</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+	<meta name="Keywords" content="interchange, exchange, UTF-8, Unicode, XML">
+	<meta name="Description" content="Describes how to export index records in different kinds of documents">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="_imp6_Anchor-14210" id="_imp6_Anchor-14210"></a>
+		<div id="mainbox" align="left">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr valign="bottom" height="32">
+					<td height="32">&nbsp;</td>
+					<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+					<td height="32">&nbsp;&nbsp;</td>
+					<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Exporting index records</b></font></td>
+				</tr>
+				<tr height="10">
+					<td colspan="4" height="10">&nbsp;</td>
+				</tr>
+			</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+				<tr>
+					<td>
+						<p>Cindex can save documents that contain just the contents of index records (without information about the style or layout of the index).</p>
+						<p>To save index records, choose Save To&#x2026; from the File menu, then from the File Format pop-up menu select one of the following types of unformatted document:</p>
+					</td>
+				</tr>
+			</table>
+				<table width="100%" border="0" cellspacing="0" cellpadding="7" bgcolor="#eeeeee">
+					<tr valign="top" bgcolor="#eeeeee">
+						<td bgcolor="#eeeeee">
+								<table border="0" cellspacing="0" cellpadding="4">
+								  <tr valign="top">
+								    <td><p>Cindex&nbsp;XML records</p></td>
+								    <td><p>Cindex can save records in an <a href="_imp1a.html">XML document</a>. This is a plain text document, suitable for interchange with other indexing software. The XML document also includes information about fonts and styles used in entries.</p></td>
+							      </tr>
+									<tr valign="top">
+										<td>
+											<p>Cindex&nbsp;archive</p>
+										</td>
+										<td>
+											<p>A Cindex <a href="_imp1.html">archive</a> is a document that contains all the index records (including information about fonts and styles used in entries). Because an archive cannot represent all the characters that might be used in an index, this format is deprecated except for interchange with earlier versions of Cindex.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>Tab-delimited text</p>
+										</td>
+										<td>
+											<p>Cindex can save the text of index records (the contents of the record fields, including the locator field) in a form that is widely used by database management programs. In this form all the fields of an index record lie on a single line, each  separated from the next by a &lsquo;tab&rsquo; character. When imported into a database program, each field in the index record will occupy a different field in the database. The saved document contains only  plain text; Cindex saves no information about fonts or styles. Cindex does not export text in {&nbsp;} used to control sorting, nor does it export any of the characters {&nbsp;} &lt;&nbsp;&gt; ~ \ unless they have been used literally in records.</p>
+                                        <p>Cindex  by default  uses UTF-8 (Unicode) character encoding. You can change the encoding to the Windows character set via Options&hellip; when the Save panel is displayed.</p></td>
+									</tr>
+								</table>
+							</td>
+					</tr>
+				</table>
+			<p>Cindex normally saves all of the index that is accessible in the current view (either all records, or a group). Cindex does not save empty records, and it normally does not save the text of deleted records. To modify this behavior, click Options in the Save panel before you save the records.</p>
+			<div id="taskbox">
+			</div>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+				<tr>
+					<td>
+						<p><b>See also<br>
+						</b><a href="exopt0a.html">Options for saving XML records<br>
+						Options for saving archives						</a><b><br>
+					    </b><a href="exopt1.html">Options for saving delimited records</a><br>
+				    </p></td>
+				</tr>
+			</table>
+			<table width="100%" height="35" border="0" cellspacing="0" cellpadding="3">
+				<tr valign="bottom" height="35">
+					<td align="left" height="35"></td>
+					<td align="right" valign="top" height="35"><a href="help:search='exporting records' bookID='Cindex 4 Help'">Tell me more</a></td>
+				</tr>
+				<tr height="35">
+					<td></td>
+					<td>&nbsp;</td>
+				</tr>
+			</table>
+		</div>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Backing-up and transferring indexes</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+		<meta name="Keywords" content="FAQ">
+		<meta name="Description" content="Explains how to backup and move files">
+	</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="itns1006" id="itns1006"></a>
+<div id="mainbox" align="left">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td height="32">&nbsp;</td>
+	<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+	<td height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Backing-up and transferring indexes</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>
+						<p>Here are answers to some frequently-asked questions about backing-up and moving files. </p>
+					</td>
+	</tr>
+</table>
+			<div id="taskbox">
+<table width="100%" border="0" cellspacing="0" cellpadding="7" bgcolor="#eeeeee">
+	<tr valign="top" bgcolor="#eeeeee">
+						<td bgcolor="#eeeeee">
+							<p><b>How can I back-up my index?</b> There are several ways to make a backup copy of the index you are working on:</p>
+							<blockquote>
+								<p>&#x2022; From within Cindex, choose Save A Copy from the File menu.<br>
+					      &#x2022; To save an archival copy of an index (from which you can later reconstruct a full working index), save XML records. Choose Save To... from the File menu, then in the panel that Cindex displays, choose XML Records as the file type.<br>
+									&#x2022; From the Finder you can duplicate any index document.</p>
+							</blockquote>
+							<p>Whichever method you use, you should save the backup copy on some disk other than the one that contains the original.</p>
+							<p><b>I received an index as an email attachment and Cindex could not open it. Why?</b> There are a several possible causes:</p>
+							<blockquote>
+								<p>&#x2022; Check that the email attachment has not had its name changed. Cindex recognizes files it can open by the presence of a filename extension as the last part of the name (for example '.ucdx' or or '.ixml' or '.arc'). If the extension has been changed or removed, or has had additional text appended to it, Cindex will not be able to identify and open the file.<br>
+&#x2022; Check that the file is in a format that Cindex can open directly. Cindex 4 can open index files (those with the filename extension '.ucdx', or '.cdxf'), and archive files. Cindex 4 can read archive files made by any version of Cindex for Windows, but cannot read  index files made by Cindex for Windows version2 or earlier.  For more information on moving files between platforms see the answer to the next question.<br>
+&#x2022; If you received a file with the filename extension '.dat' (an obsolete format used by Cindex for DOS) you must first create a new index, then import the contents of the file by choosing Import... from the File menu.</p>
+							</blockquote>
+							<p><b>I'll be collaborating with another indexer, and we will need to exchange indexes for incorporation into a master index. What kind of files should we send each other?</b> If your colleague uses Cindex version 3 or higher, you and she  should share index files (those with the filename extension '.ucdx') or XML Records ('.ixml'). To save XML records choose Save To... from the File menu, then in the panel that Cindex displays, choose XML Records as the file type. The file types 'ucdx' and '.ixml' are interchangeable between  Cindex for Windows version 3 and higher and  Cindex for Mac version 3 and higher.</p>
+						</td>
+					</tr>
+</table></div>
+		</div>
+</body>
+
+</html>

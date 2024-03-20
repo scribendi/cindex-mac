@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="IRIndexDocWController">
+            <connections>
+                <outlet property="_clipView" destination="Lic-fg-K1r" id="Wal-T5-MbN"/>
+                <outlet property="_indexView" destination="0Z3-YD-YAy" id="LnP-8W-NOR"/>
+                <outlet property="_scrollView" destination="eEK-L5-svk" id="UDo-9h-RCG"/>
+                <outlet property="_scrollingView" destination="F5o-f4-vCo" id="mbO-n1-89B"/>
+                <outlet property="defaultFont" destination="251" id="253"/>
+                <outlet property="defaultSize" destination="252" id="254"/>
+                <outlet property="label" destination="388" id="n0g-8S-m7U"/>
+                <outlet property="progress" destination="275" id="276"/>
+                <outlet property="searchString" destination="444" id="446"/>
+                <outlet property="viewError" destination="371" id="373"/>
+                <outlet property="viewStats" destination="240" id="242"/>
+                <outlet property="window" destination="5" id="18"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Main Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="5" userLabel="Main Window">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="64" y="197" width="656" height="668"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
+            <value key="minSize" type="size" width="94" height="86"/>
+            <view key="contentView" id="6">
+                <rect key="frame" x="0.0" y="0.0" width="656" height="668"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <scrollView fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEK-L5-svk">
+                        <rect key="frame" x="1" y="20" width="656" height="649"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <clipView key="contentView" copiesOnScroll="NO" id="Lic-fg-K1r">
+                            <rect key="frame" x="0.0" y="0.0" width="641" height="649"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F5o-f4-vCo">
+                                    <rect key="frame" x="0.0" y="0.0" width="626" height="634"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Z3-YD-YAy" customClass="IRIndexView">
+                                            <rect key="frame" x="0.0" y="0.0" width="626" height="634"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-2" id="cyh-qd-ZEK"/>
+                                                <outlet property="menu" destination="235" id="HNy-nE-UA3"/>
+                                            </connections>
+                                        </customView>
+                                    </subviews>
+                                </view>
+                            </subviews>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="ICY-7T-igf">
+                            <rect key="frame" x="-100" y="-100" width="639" height="15"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="f6X-5i-jfe">
+                            <rect key="frame" x="641" y="0.0" width="15" height="649"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="240">
+                        <rect key="frame" x="112" y="3" width="455" height="14"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" id="449">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <progressIndicator verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" displayedWhenStopped="NO" bezeled="NO" controlSize="small" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="275">
+                        <rect key="frame" x="585" y="2" width="53" height="12"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                    </progressIndicator>
+                    <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="371">
+                        <rect key="frame" x="1" y="3" width="580" height="14"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" id="451">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="444">
+                        <rect key="frame" x="1" y="1" width="106" height="19"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" enabled="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" bezelStyle="round" id="452">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="CCBE57C9-59A6-4790-AFD8-81793A6D9A3D" displayMode="iconOnly" sizeMode="regular" id="1SF-G1-bdW">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="400CDBF5-FA91-4574-871D-9B3C0364E19B" explicitItemIdentifier="IRFontItemIdentifier" label="Font" paletteLabel="Font" tag="814" id="CdS-ga-SRP" customClass="IRToolbarItem">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="75" height="22"/>
+                        <size key="maxSize" width="150" height="22"/>
+                        <comboBox key="view" verticalHuggingPriority="750" tag="814" id="251">
+                            <rect key="frame" x="0.0" y="14" width="75" height="22"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <comboBoxCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" title="Helvetica" drawsBackground="YES" numberOfVisibleItems="20" id="453">
+                                <font key="font" metaFont="smallSystem"/>
+                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </comboBoxCell>
+                            <connections>
+                                <action selector="setTextFont:" target="-1" id="4hG-jv-fEb"/>
+                                <outlet property="delegate" destination="-2" id="316"/>
+                                <outlet property="nextKeyView" destination="0Z3-YD-YAy" id="tFX-Lo-2ot"/>
+                            </connections>
+                        </comboBox>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="DFDA18A4-37F4-4E82-864C-90E491AE66BB" explicitItemIdentifier="IRSizeItemIdentifier" label="Size" paletteLabel="Size" tag="815" id="YTH-RZ-o70" customClass="IRToolbarItem">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="48" height="22"/>
+                        <size key="maxSize" width="48" height="22"/>
+                        <comboBox key="view" verticalHuggingPriority="750" tag="815" id="252">
+                            <rect key="frame" x="0.0" y="14" width="48" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <comboBoxCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" title="99" drawsBackground="YES" numberOfVisibleItems="9" id="454">
+                                <font key="font" metaFont="smallSystem"/>
+                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <objectValues>
+                                    <string>8</string>
+                                    <string>9</string>
+                                    <string>10</string>
+                                    <string>11</string>
+                                    <string>12</string>
+                                    <string>14</string>
+                                    <string>18</string>
+                                    <string>24</string>
+                                </objectValues>
+                            </comboBoxCell>
+                            <connections>
+                                <action selector="setTextSize:" target="-1" id="m94-c8-EOC"/>
+                                <outlet property="delegate" destination="-2" id="317"/>
+                                <outlet property="nextKeyView" destination="0Z3-YD-YAy" id="aLS-fE-8Rh"/>
+                            </connections>
+                        </comboBox>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="0BD05CBA-D337-42A4-90D4-B945C751561A" explicitItemIdentifier="IRlabelTBIdentifier" label="Labeled" paletteLabel="Labeled" tag="801" title="No Label" sizingBehavior="auto" id="lro-kA-lyA" customClass="IRToolbarItem">
+                        <nil key="toolTip"/>
+                        <popUpButton key="view" tag="801" id="388">
+                            <rect key="frame" x="0.0" y="14" width="75" height="16"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <popUpButtonCell key="cell" type="bevel" title="No Label" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="bezel" tag="1000" inset="2" autoenablesItems="NO" selectedItem="391" id="455">
+                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="menu"/>
+                                <menu key="menu" title="OtherViews" autoenablesItems="NO" id="390">
+                                    <items>
+                                        <menuItem title="No Label" state="on" tag="1000" id="391">
+                                            <attributedString key="attributedTitle"/>
+                                            <connections>
+                                                <action selector="labeled:" target="-1" id="416"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Label 1" tag="1001" id="392">
+                                            <connections>
+                                                <action selector="labeled:" target="-1" id="417"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Label 2" tag="1002" id="393">
+                                            <connections>
+                                                <action selector="labeled:" target="-1" id="418"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Label 3" tag="1003" id="396">
+                                            <connections>
+                                                <action selector="labeled:" target="-1" id="419"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Label 4" tag="1004" id="397">
+                                            <connections>
+                                                <action selector="labeled:" target="-1" id="420"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Label 5" tag="1005" id="398">
+                                            <connections>
+                                                <action selector="labeled:" target="-1" id="421"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Label 6" tag="1006" id="399">
+                                            <connections>
+                                                <action selector="labeled:" target="-1" id="422"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Label 7" tag="1007" id="400">
+                                            <connections>
+                                                <action selector="labeled:" target="-1" id="423"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </popUpButtonCell>
+                            <connections>
+                                <action selector="labeled:" target="-1" id="S9m-cC-qQL"/>
+                            </connections>
+                        </popUpButton>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="6E328033-E8EA-43D2-ACA8-AE99FE19A53E" explicitItemIdentifier="IRDeleteTBIdentifier" label="Deleted" paletteLabel="Deleted" tag="802" image="delete" sizingBehavior="auto" id="e1i-sf-4GB" customClass="IRToolbarItem">
+                        <nil key="toolTip"/>
+                        <button key="view" toolTip="Delete/Undelete" verticalHuggingPriority="750" tag="802" id="i5U-sq-SfW">
+                            <rect key="frame" x="11" y="14" width="26" height="19"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <buttonCell key="cell" type="roundRect" bezelStyle="roundedRect" image="delete" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VKb-Yy-pOg">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="cellTitle"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="deleted:" target="-1" id="Qny-L8-e7P"/>
+                            </connections>
+                        </button>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="B8D75DC9-9C84-4BA5-A77E-FF6859F32B9E" explicitItemIdentifier="IRNewRecordTBIdentifier" label="New Record" paletteLabel="New Record" tag="800" image="newrecord" sizingBehavior="auto" id="81S-v1-14G" customClass="IRToolbarItem">
+                        <nil key="toolTip"/>
+                        <button key="view" toolTip="New record" verticalHuggingPriority="750" tag="800" id="B0Q-cg-hkv">
+                            <rect key="frame" x="23" y="14" width="26" height="19"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <buttonCell key="cell" type="roundRect" bezelStyle="roundedRect" image="newrecord" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SbO-it-ef8">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="cellTitle"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="newRecord:" target="-1" id="P42-2B-VcE"/>
+                            </connections>
+                        </button>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="9A1EA0F9-91C5-4DB2-854D-4CB4FB188AB0" explicitItemIdentifier="IRAllRecordsTBIdentifier" label="All Records" paletteLabel="All Records" tag="803" image="allrecords" sizingBehavior="auto" id="Mvw-I5-eSv" customClass="IRToolbarItem">
+                        <nil key="toolTip"/>
+                        <button key="view" toolTip="Show all records" verticalHuggingPriority="750" tag="803" id="FPx-ei-gKt">
+                            <rect key="frame" x="21" y="14" width="26" height="19"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <buttonCell key="cell" type="roundRect" bezelStyle="roundedRect" image="allrecords" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZMU-9J-tae">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="cellTitle"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="changeView:" target="-1" id="KXj-fF-iGn"/>
+                            </connections>
+                        </button>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="BCB02D5A-A202-4104-A0BB-679BD9E0FA69" explicitItemIdentifier="IRFormatTBIdentifier" label="Format" paletteLabel="Format" tag="804" sizingBehavior="auto" id="vX8-eB-VeW" customClass="IRToolbarItem">
+                        <nil key="toolTip"/>
+                        <segmentedControl key="view" verticalHuggingPriority="750" tag="804" id="Wlu-o0-hJn">
+                            <rect key="frame" x="0.0" y="14" width="71" height="20"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <segmentedCell key="cell" borderStyle="border" alignment="left" style="roundRect" trackingMode="selectOne" id="g2o-36-VzZ">
+                                <font key="font" metaFont="cellTitle"/>
+                                <segments>
+                                    <segment toolTip="Full format" image="fullformat" imageScaling="none" width="32" tag="804"/>
+                                    <segment toolTip="Draft format" image="draftformat" width="32" tag="806"/>
+                                </segments>
+                            </segmentedCell>
+                            <connections>
+                                <action selector="changeViewFormat:" target="-1" id="Ppr-V4-4QQ"/>
+                            </connections>
+                        </segmentedControl>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="415FA75C-2EE6-40A1-9257-24D04A219CFE" explicitItemIdentifier="IRStyleTBIdentifier" label="Style" paletteLabel="Style" tag="807" sizingBehavior="auto" id="Qt3-Q4-L9o" customClass="IRToolbarItem">
+                        <nil key="toolTip"/>
+                        <segmentedControl key="view" verticalHuggingPriority="750" tag="807" id="54J-Id-baY">
+                            <rect key="frame" x="0.0" y="14" width="71" height="20"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <segmentedCell key="cell" borderStyle="border" alignment="left" style="roundRect" trackingMode="selectOne" id="PkU-n4-EVp">
+                                <font key="font" metaFont="cellTitle"/>
+                                <segments>
+                                    <segment alignment="natural" toolTip="Indented format" image="indented" width="32" tag="806"/>
+                                    <segment alignment="natural" toolTip="Run-in format" image="runin" width="32" tag="809"/>
+                                </segments>
+                            </segmentedCell>
+                            <connections>
+                                <action selector="toolbarAction:" target="-1" id="pib-lg-dOv"/>
+                            </connections>
+                        </segmentedControl>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="614BBB0A-BA05-4A7B-A546-9FAF6B999BB8" explicitItemIdentifier="IRSortTBIdentifier" label="Sort Type" paletteLabel="Sort Type" tag="810" sizingBehavior="auto" id="yuL-bA-0wm" customClass="IRToolbarItem">
+                        <nil key="toolTip"/>
+                        <segmentedControl key="view" verticalHuggingPriority="750" tag="810" id="W4l-eS-LP6">
+                            <rect key="frame" x="0.0" y="14" width="106" height="20"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <segmentedCell key="cell" borderStyle="border" alignment="left" style="roundRect" trackingMode="selectOne" id="TAN-g3-2na">
+                                <font key="font" metaFont="cellTitle"/>
+                                <segments>
+                                    <segment alignment="natural" toolTip="Alphabetical sort" image="alphasort" width="32" tag="808"/>
+                                    <segment alignment="natural" toolTip="Page number sort" image="pagesort" width="32" tag="809"/>
+                                    <segment alignment="natural" toolTip="Unsorted" image="nosort" width="32" tag="813"/>
+                                </segments>
+                            </segmentedCell>
+                            <connections>
+                                <action selector="toolbarAction:" target="-1" id="OHj-mX-7wA"/>
+                            </connections>
+                        </segmentedControl>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="CIQ-1h-2tH"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="rc4-sJ-igh"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="jBd-a3-21f"/>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="CdS-ga-SRP"/>
+                    <toolbarItem reference="YTH-RZ-o70"/>
+                    <toolbarItem reference="Mvw-I5-eSv"/>
+                    <toolbarItem reference="vX8-eB-VeW"/>
+                    <toolbarItem reference="Qt3-Q4-L9o"/>
+                    <toolbarItem reference="yuL-bA-0wm"/>
+                </defaultToolbarItems>
+                <connections>
+                    <outlet property="delegate" destination="-2" id="jSI-mD-ush"/>
+                </connections>
+            </toolbar>
+            <connections>
+                <outlet property="delegate" destination="-2" id="17"/>
+                <outlet property="initialFirstResponder" destination="0Z3-YD-YAy" id="N9b-7l-E1W"/>
+            </connections>
+            <point key="canvasLocation" x="85" y="147"/>
+        </window>
+        <menu title="Menu" id="235" userLabel="ContextMenu">
+            <items>
+                <menuItem title="Copy" tag="204" id="236">
+                    <connections>
+                        <action selector="copy:" target="-1" id="267"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Paste" tag="205" id="237">
+                    <connections>
+                        <action selector="paste:" target="-1" id="268"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Select All" tag="207" id="261">
+                    <connections>
+                        <action selector="selectAll:" target="-1" id="269"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="263">
+                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                </menuItem>
+                <menuItem title="New Group" tag="111" id="314">
+                    <connections>
+                        <action selector="newGroup:" target="-1" id="315"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Save Group…" tag="112" id="320">
+                    <connections>
+                        <action selector="saveGroup:" target="-1" id="322"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="313">
+                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                </menuItem>
+                <menuItem title="New Record" tag="208" id="264">
+                    <connections>
+                        <action selector="newRecord:" target="-1" id="270"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Edit Record" tag="209" id="StM-y2-r68">
+                    <connections>
+                        <action selector="editRecord:" target="-1" id="CjV-Qe-pmk"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Remove Mark" tag="219" id="265" userLabel="Remove Mark">
+                    <connections>
+                        <action selector="removeMark:" target="-1" id="eEN-zM-h8k"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Duplicate" tag="210" id="266">
+                    <connections>
+                        <action selector="duplicate:" target="-1" id="272"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="6Q4-pQ-Kba">
+                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                </menuItem>
+                <menuItem title="Demote Headings" tag="218" id="NiM-la-6Vh">
+                    <connections>
+                        <action selector="demote:" target="-1" id="jEe-eZ-Rg2"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="262">
+                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                </menuItem>
+                <menuItem title="Deleted" tag="211" id="238">
+                    <connections>
+                        <action selector="deleted:" target="-1" id="273"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Labeled" tag="212" id="335">
+                    <menu key="submenu" title="Labeled" id="336">
+                        <items>
+                            <menuItem title="No Label" tag="1000" id="337">
+                                <connections>
+                                    <action selector="labeled:" target="-1" id="344"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Label 1" tag="1001" id="345">
+                                <connections>
+                                    <action selector="labeled:" target="-1" id="352"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Label 2" tag="1002" id="346">
+                                <connections>
+                                    <action selector="labeled:" target="-1" id="353"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Label 3" tag="1003" id="347">
+                                <connections>
+                                    <action selector="labeled:" target="-1" id="354"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Label 4" tag="1004" id="348">
+                                <connections>
+                                    <action selector="labeled:" target="-1" id="355"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Label 5" tag="1005" id="349">
+                                <connections>
+                                    <action selector="labeled:" target="-1" id="356"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Label 6" tag="1006" id="350">
+                                <connections>
+                                    <action selector="labeled:" target="-1" id="357"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Label 7" tag="1007" id="351">
+                                <connections>
+                                    <action selector="labeled:" target="-1" id="358"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="161" y="-144"/>
+        </menu>
+    </objects>
+    <resources>
+        <image name="allrecords" width="16" height="16"/>
+        <image name="alphasort" width="16" height="16"/>
+        <image name="delete" width="16" height="16"/>
+        <image name="draftformat" width="16" height="16"/>
+        <image name="fullformat" width="16" height="16"/>
+        <image name="indented" width="16" height="16"/>
+        <image name="newrecord" width="16" height="16"/>
+        <image name="nosort" width="16" height="16"/>
+        <image name="pagesort" width="16" height="16"/>
+        <image name="runin" width="16" height="16"/>
+    </resources>
+</document>

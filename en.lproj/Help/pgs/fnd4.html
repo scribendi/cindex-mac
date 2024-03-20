@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Searching for locators</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="Find records that refer to particular pages or ranges of pages">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="fnd4_Anchor-14210" id="fnd4_Anchor-14210"></a>
+		<div id="mainbox" align="left">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr valign="bottom" height="32">
+					<td height="32">&nbsp;</td>
+					<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+					<td height="32">&nbsp;&nbsp;</td>
+					<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Searching for locators</b></font></td>
+				</tr>
+				<tr height="10">
+					<td colspan="4" height="10">&nbsp;</td>
+				</tr>
+			</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+				<tr>
+					<td>
+						<p>Use the Find panel (Edit menu) to find records that contain references to specified pages or range of pages.</p>
+						<p>To ensure that Cindex confines the search to the locator field, and evaluates locators correctly, do the following:</p>
+					</td>
+				</tr>
+			</table>
+				<table width="100%" border="0" cellspacing="0" cellpadding="7" bgcolor="#eeeeee">
+					<tr valign="top" bgcolor="#eeeeee">
+						<td bgcolor="#eeeeee">
+								<table border="0" cellspacing="0" cellpadding="4">
+									<tr valign="top">
+										<td>
+											<p>&#x2022;</p>
+										</td>
+										<td>
+											<p>Enter the locator or locator range in the box for search text. (To find records that contain no locators or badly formed ones, leave the search text empty.)</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>&#x2022;</p>
+										</td>
+										<td>
+											<p>Choose the name of the locator field (usually <i>Page</i>) from the popup menu under Not.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+												<p>&#x2022;</p>
+											</td>
+										<td>
+											<p>Check Evaluate References. This ensures that Cindex ignores cross-references, and will correctly evaluate numbers and multi-part locators. (If Evaluate References is unchecked, Cindex treats the contents of the locator field as ordinary text.)</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+					</tr>
+				</table>
+			<p>When searching for locators Cindex understands page ranges. If Cindex sees two locators separated by a hyphen (for example: 57-66) it understands that it should search for locators that fall within a range. It will also find a record in which the locator field contains a sequence such as 50&#150;58, or 63-67.</p>
+			<p>You may use a character other than hyphen to denote an inclusive range, but only if you have told Cindex what this character is. See <a href="refsyntax1.html">Specifying the structure of page references</a> to change the standard connecting character.</p>
+			<div id="taskbox">
+			</div>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+				<tr>
+					<td>
+						<p><b>See also</b><br>
+							<a href="_pageref0.html">Locator components<br>
+							</a><a href="sort4.html">Evaluating and sorting page references</a><br>
+						</p>
+					</td>
+				</tr>
+			</table>
+			<table width="100%" height="35" border="0" cellspacing="0" cellpadding="3">
+				<tr valign="bottom" height="35">
+					<td align="left" height="35"></td>
+					<td align="right" valign="top" height="35"><a href="help:search='finding entries' bookID='Cindex 4 Help'">Tell me more</a></td>
+				</tr>
+				<tr height="35">
+					<td></td>
+					<td>&nbsp;</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+
+</html>

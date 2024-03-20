@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Pattern character sets</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+	<meta name="Keywords" content="regular expression, diacritic">
+	<meta name="Description" content="Character sets for patterns">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff">
+		<a name="pat2_Anchor-14210" id="pat2_Anchor-14210"></a>
+	  <div id="mainbox" align="left">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td height="32">&nbsp;</td>
+	<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+	<td height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Character sets in patterns</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>
+						<p>Cindex can  match a character that is a member of a set. Sets can represent scripts, such as Hebrew, or Greek, or they  can represent character properties, such as symbols, or numbers.</p>
+                        <p>To specify a character that is a member of a set, type the set name between [: :], for example [:hebrew:], for a Hebrew character. To specify a character that<em> is no</em>t a member of the set, place a ^ immediately after the opening [, thus: [^:hebrew:].</p>
+                        <p> Cindex recognizes many script sets, such as [:arabic:], [:devanagari:], [:cyrillic:], [:greek:], [:han:], [:hangul:], [:hebrew:], [:katakana:], [:latin:].  Cindex recognizes additional <a href="http://www.unicode.org/charts/#scripts">Unicode scripts</a>.</p>
+      <p>To specify a character that has a certain property (e.g., letter, or symbol) use a set  from the following table.</p></td>
+	</tr>
+</table>
+			<div id="taskbox">
+<table width="100%" border="0" cellspacing="0" cellpadding="7" bgcolor="#eeeeee">
+	<tr valign="top" bgcolor="#eeeeee">
+						<td bgcolor="#eeeeee"><table cellspacing="0" cellpadding="0">
+						  <col width="142">
+						  <col width="102">
+						  <col width="528">
+						  <tr>
+						    <td><p><strong>Set Name</strong></p></td>
+						    <td><p><strong>Abbrev</strong></p></td>
+						    <td><p><strong>Description</strong></p></td>
+					      </tr>
+						  <tr>
+						    <td><p>[:ascii:]</p></td>
+						    <td><p>&nbsp;</p></td>
+						    <td><p>An ASCII character</p></td>
+					      </tr>
+						  <tr>
+						    <td><p>[:letter:]</p></td>
+						    <td><p>[:l:]</p></td>
+						    <td><p>Any letter (any language)</p></td>
+					      </tr>
+						  <tr>
+						    <td><p>[:lowercase letter:]</p></td>
+						    <td><p>[:ll:]</p></td>
+						    <td><p>A lowercase letter that has an uppercase counterpart</p></td>
+					      </tr>
+						  <tr>
+						    <td><p>[:uppercase letter:]</p></td>
+						    <td><p>[:lu:]</p></td>
+						    <td><p>An uppercase letter that has a lowercase counterpart</p></td>
+					      </tr>
+						  <tr>
+						    <td><p>[:mark:]</p></td>
+						    <td><p>[:m:]</p></td>
+						    <td><p>A diacritical mark or character that is combined with a letter</p></td>
+					      </tr>
+						  <tr>
+						    <td><p>[:separator:]</p></td>
+						    <td><p>[:z:]</p></td>
+						    <td><p>A whitespace or invisible separator</p></td>
+					      </tr>
+						  <tr>
+						    <td><p>[:symbol:]</p></td>
+						    <td><p>[:s:]</p></td>
+						    <td><p>Any symbol, including, math, currency, dingbats, etc.</p></td>
+					      </tr>
+						  <tr>
+						    <td><p>[:math symbol:]</p></td>
+						    <td><p>[:sm:]</p></td>
+						    <td><p>Any math symbol</p></td>
+					      </tr>
+						  <tr>
+						    <td><p>[:currency symbol:]</p></td>
+						    <td><p>[:sc:]</p></td>
+						    <td><p>Any currency symbol</p></td>
+					      </tr>
+						  <tr>
+						    <td><p>[:other symbol:]</p></td>
+						    <td><p>[:so:]</p></td>
+						    <td><p>Other symbol (none of the above)</p></td>
+					      </tr>
+						  <tr>
+						    <td><p>[:number:]</p></td>
+						    <td><p>[:n:]</p></td>
+						    <td><p>Any numeric character in any script</p></td>
+					      </tr>
+						  <tr>
+						    <td><p>[:decimal digit number:]</p></td>
+						    <td><p>[:nd:]</p></td>
+						    <td><p>Digits 0 through 9</p></td>
+					      </tr>
+						  <tr>
+						    <td><p>[:punctuation:]</p></td>
+						    <td><p>[:p:]</p></td>
+						    <td><p>Any punctuation character</p></td>
+					      </tr>
+						  <tr>
+						    <td><p>[:dash punctuation:]</p></td>
+						    <td><p>[:pd:]</p></td>
+						    <td><p>Any kind of hyphen or dash</p></td>
+					      </tr>
+						  <tr>
+						    <td><p>[:open punctuation:]</p></td>
+						    <td><p>[:ps:]</p></td>
+						    <td><p>Any kind of opening bracket</p></td>
+					      </tr>
+						  <tr>
+						    <td><p>[:close punctuation:]</p></td>
+						    <td><p>[:pe:]</p></td>
+						    <td><p>Any kind of closing bracket</p></td>
+					      </tr>
+						  <tr>
+						    <td><p>[:initial punctuation:]</p></td>
+						    <td><p>[:pi:]</p></td>
+						    <td><p>Any kind of opening quote</p></td>
+					      </tr>
+						  <tr>
+						    <td><p>[:final punctuation:]</p></td>
+						    <td><p>[:pf:]</p></td>
+						    <td><p>Any kind of closing quote</p></td>
+					      </tr>
+						  <tr>
+						    <td><p>[:connector punctuation:]</p></td>
+						    <td><p>[:pc:]</p></td>
+						    <td><p>Any character  that connects words</p></td>
+					      </tr>
+						  <tr>
+						    <td><p>[:other punctuation:]</p></td>
+						    <td><p>[:po:]</p></td>
+						    <td><p>Any punctuation not in the above sets</p></td>
+					      </tr>
+						  <tr>
+						    <td><p>[:private use:]</p></td>
+						    <td><p>[:co:]</p></td>
+						    <td><p>Special characters (e.g., Apple logo)</p></td>
+					      </tr>
+</table></td>
+					</tr>
+</table></div>
+			<p>You can form new sets by combining existing sets.</p>
+            <ul>
+              <li>To make a set that is the union of other sets, just concatenate them:<br>
+                [:letter:][:symbol:] (or [:l:][:s:]) is the set of all letters and all symbols.</li>
+              <li>To make a set that is the difference of two sets, connect them with -<br>
+                [:letter:]-[:latin:] is the set of all letters that come from scripts other than latin.</li>
+              <li>To make a set that is the intersection of two sets (the set of characters common to both), connect them with &amp; :<br>
+                [:letter:]&amp;[^:han:] is the set of all letters that are not Han.</li>
+            </ul>
+        <div id="taskbox2">
+</div>			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>  
+	  <p><b>See also</b><br>
+								<a href="pat0.html">Defining patterns</a><br>
+								<a href="pat1.html">Replacing text that matches a pattern</a><br>
+							</p></td>
+	</tr>
+</table>
+			<table width="100%" height="35" border="0" cellspacing="0" cellpadding="3">
+	<tr valign="bottom" height="35">
+	<td align="left" height="35"></td>
+	<td align="right" valign="top" height="35"><a href="help:search='searching with patterns' bookID='Cindex 4 Help'">Tell me more</a></td>
+	</tr>
+	<tr height="35">
+	<td></td>
+	<td>&nbsp;</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

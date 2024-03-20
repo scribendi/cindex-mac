@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Verifying cross-references</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+	<meta name="Keywords" content="verify, cross-references, check, circular cross-reference, missing cross-reference">
+	<meta name="Description" content="Find missing or incorrectly-formed cross-references">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff">
+		<div id="mainbox" align="left">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td height="32">&nbsp;</td>
+	<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+	<td height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Verifying cross-references</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+				<tr>
+					<td>
+						<p>Verifying cross-references is available as part  of a comprehensive check via <b>Check Index&hellip;</b> (Tools menu).</p>
+                        <p> Open the panel, click the References tab, then check <b>Verify Cross-References</b>.</p>
+						<p>Cindex normally accepts a shortened form of the main entry as a legitimate cross-reference. To insist that Cindex find an exact match (including accent and letter case) between a cross-reference and its target entry, check Require Exact Matches. When you insist on exact matches, Cindex requires only that the text of the cross-reference matches that of the target; styles and fonts are ignored.</p>
+						<p>Cindex can flag cross-references made to fewer than a certain number of entries. (Cindex must always find at least one target of a cross-reference, otherwise it flags a reference as missing.) Set Require at Least <i>N</i> Matches to the minimum number of target entries Cindex must find for each cross-reference.</p>
+						<p>If Cindex finds  errors it  displays them in the check results. Each entry in the list identifies the source record, the intended target, and the nature of the error, which can be one or more of: </p>
+					</td>
+				</tr>
+			</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="7" bgcolor="#eeeeee">
+	<tr valign="top" bgcolor="#eeeeee">
+						<td bgcolor="#eeeeee">
+								<table border="0" cellspacing="0" cellpadding="4">
+									<tr valign="top">
+										<td width="105">
+											<p>missing target</p>
+										</td>
+										<td width="670">
+											<p>The cross-reference points to a heading that is not in the index, or to a heading that lacks a locator.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+									  <td><p>inexact match</p></td>
+									  <td><p>The cross-reference and its target differ in letter case or accent.</p></td>
+								  </tr>
+									<tr valign="top">
+										<td>
+											<p>circular or open</p>
+										</td>
+										<td>
+											<p>The cross-reference points to another cross-reference.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>too&nbsp;few targets</p>
+										</td>
+										<td>
+											<p>The cross-reference points to a heading with fewer than the stipulated minimum number of subentries.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>wrong type</p>
+										</td>
+										<td>
+											<p>A <i>See</i> cross-reference should have been a <i>See also</i> cross-reference (or vice-versa). This indicator can accompany any of the others.</p>
+										</td>
+									</tr>
+								</table>
+			  </td>
+					</tr>
+</table>
+			<p>Click any item in the list to bring its record into view in the main document window; double-click an item (or hit <small>RETURN</small>) to open a window in which to edit its record.</p>
+<div id="taskbox">
+</div>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>
+						<p><b>See also<br>
+							</b><a href="refsyntax3.html">Identifying cross-references<br>
+							</a><a href="checkpagerefs.html">Checking page references</a><b><br>
+							</b></p>
+					</td>
+	</tr>
+</table>
+			<table width="100%" height="35" border="0" cellspacing="0" cellpadding="3">
+	<tr valign="bottom" height="35">
+	<td align="left" height="35"></td>
+	<td align="right" valign="top" height="35"><a href="help:search='checking entries' bookID='Cindex 4 Help'">Tell me more</a></td>
+	</tr>
+	<tr height="35">
+	<td></td>
+	<td>&nbsp;</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

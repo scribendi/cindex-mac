@@ -1,0 +1,45 @@
+//
+// Prefix header for all source files of the 'Cindex' target in the 'Cindex' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
+
+#define CIN_MAC_OS
+
+#import "unicode/ustring.h"
+#import "unicode/uchar.h"
+#import "unicode/ucol.h"
+#import "unicode/ustdio.h"
+
+#import "osdependencies.h"
+
+#import "cintypes.h"
+#import "stringtypes.h"
+#import "fontmap.h"
+#import "referenceparams.h"
+#import "formatparams.h"
+#import "indexparams.h"
+#import "sortparams.h"
+#import "recordparams.h"
+#import "headparams.h"
+
+
+#import "searchparams.h"
+#import "groupparams.h"
+
+#import "printformat.h"
+
+#import "globals.h"
+#import "utilities.h"
+
+#import "NSMutableAttributedString+NSMutableAttributedString.h"
+#import "AttributedStringCategories.h"
+#import "StringCategories.h"
+#import "TextViewCategories.h"
+#import "StorageCategories.h"
+#import "NSDocument+NSDocument.h"
+#import "NSArray+NSArray.h"
+#import "NSColor+NSColor.h"
+

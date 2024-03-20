@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sorting locators</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+		<style type="text/css" media="screen"><!--
+#mainbox { background-color: #fff; visibility: visible; position: absolute; top: 9px }
+--></style>
+		<meta name="Keywords" content="alphabetizing, spelled-out forms">
+	<meta name="Description" content="Automatically alphabetize text as if it were other text">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="sort2a_Anchor-14210" id="sort2a_Anchor-14210"></a>
+		<div id="mainbox" align="left">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td height="32">&nbsp;</td>
+	<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+	<td height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Alphabetizing text as some other text</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+				<tr>
+					<td>
+						<p>If you know that you will always want to spell out certain words (e.g., St. as Saint), or will always want to ignore certain words or phrases, you can set Cindex to do this automatically, without needing to insert <a href="_sortoverride0.html">override text</a> in {&hellip;} or &lt;&hellip;&gt;. You manage this by specifying a set of text pairs: <em>target</em> text that Cindex looks for in records, and <em>substitute</em> text used in its stead when alphabetizing.</p>
+                        <p>To manage substitutions  click Substitutions&hellip; on the Text tab of the Sort panel. A new panel presents a list of substitution pairs.</p>
+                        <p data_temp_dwid="1">Double-click an item in the left side of the list to  enter or edit the target text (e.g., St.) that should be alphabetized as something else (e.g, Saint). To the right  enter or edit the substitute. If  the target text is to be ignored entirely, provide no substitute text. To add a row, click <strong data_temp_dwid="2">+</strong>. To delete a row, select it, then click <strong data_temp_dwid="3">&ndash;</strong>.</p>
+                        <p>There are some restrictions on text you can enter in the list:</p>
+                        <ul>
+                          <li>Target text (on the left) must be a complete word or the start of a word (i.e., it must begin with a letter or a number). It may be a prefix to its own substitute (on the right), but it may not match, or be a prefix to, any other text in the list.</li>
+                          <li>The substitute text (on the right) may not begin with text that matches any target except its own. It may be empty, which causes Cindex to ignore the target text when  alphabetizing entries.</li>
+                        </ul>
+                        <p>If  you provide an invalid target or substitute, Cindex will beep, and will require you to correct the error before it completes the edit.</p>
+                        <p>When Cindex alphabetizes records, it  will find a target  only when the target text begins a word, or matches a whole word. Cindex will not find a match if the target text sits within {&hellip;} or &lt;&hellip;&gt;.</p>
+                        <p>For each target found, Cindex treats its  text as if it were the substitute. For example, with 'Saint' set as the substitute for 'St.' this record field: </p>
+                        <blockquote> 
+                          <p>St. George&rsquo;s Cross </p>
+                        </blockquote>
+                        <p>would be alphabetized as though its text were</p>
+                        <blockquote> 
+                          <p>Saint George&rsquo;s Cross</p>
+                        </blockquote>
+					</td>
+				</tr>
+			</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="7" bgcolor="#eeeeee">
+	<tr valign="top" bgcolor="#eeeeee">
+						<td bgcolor="#eeeeee">
+								<table width="100%" border="0" cellspacing="0" cellpadding="4">
+									<tr valign="top">
+										<td>
+											<p>Cindex attends to substitutions only in letter-by-letter or word-by-word alphabetizing. Substitutions are ignored in a simple sort.</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+					</tr>
+</table>
+			<div id="taskbox">	
+			</div>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>
+						<p><b>See also<br>
+							</b><a href="sort2.html">Alphabetizing entries</a><br>
+							<a href="_sortoverride0.html">Overriding automatic sorting</a><br>
+							<a href="_sortoverride1.html">Filing entries under numbers and symbols</a><br>
+							<a href="_sortoverride2.html">Case-sensitive alphabetizing</a><br>
+                <a href="_sortoverride3.html">Sorting reserved characters</a><br>
+							</p>
+					</td>
+	</tr>
+</table>
+			<table width="100%" height="35" border="0" cellspacing="0" cellpadding="3">
+	<tr valign="bottom" height="35">
+	<td align="left" height="35"></td>
+	<td align="right" valign="top" height="35"><a href="help:search='sorting entries' bookID='Cindex 4 Help'">Tell me more</a></td>
+	</tr>
+	<tr height="35">
+	<td></td>
+	<td>&nbsp;</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

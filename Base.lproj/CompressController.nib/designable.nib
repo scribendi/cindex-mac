@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CompressController">
+            <connections>
+                <outlet property="compressmode" destination="19" id="24"/>
+                <outlet property="ignorelabel" destination="30" id="32"/>
+                <outlet property="window" destination="6" id="14"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Compress" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="6" userLabel="Panel" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="547" y="112" width="231" height="201"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <value key="minSize" type="size" width="213" height="107"/>
+            <view key="contentView" id="5">
+                <rect key="frame" x="0.0" y="0.0" width="231" height="201"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <matrix verticalHuggingPriority="750" mode="highlight" allowsEmptySelection="NO" autosizesCells="NO" id="19">
+                        <rect key="frame" x="20" y="70" width="176" height="111"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        <size key="cellSize" width="176" height="15"/>
+                        <size key="intercellSpacing" width="4" height="9"/>
+                        <buttonCell key="prototype" type="check" title="Switch" bezelStyle="regularSquare" imagePosition="left" alignment="left" tag="-1" inset="2" id="38">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <cells>
+                            <column>
+                                <buttonCell type="check" title="Remove Deleted Records" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="18">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="check" title="Remove Empty Records" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" tag="1" inset="2" id="20">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="check" title="Remove Duplicated Records" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" tag="2" inset="2" id="21">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="check" title="Remove Generated Records" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" tag="3" inset="2" id="22">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                                <buttonCell type="check" title="Consolidate References" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" tag="4" inset="2" id="23">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="smallSystem"/>
+                                </buttonCell>
+                            </column>
+                        </cells>
+                        <connections>
+                            <outlet property="nextKeyView" destination="30" id="5DM-mT-DuN"/>
+                        </connections>
+                    </matrix>
+                    <button id="30">
+                        <rect key="frame" x="39" y="46" width="144" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                        <buttonCell key="cell" type="check" title="Ignore Different Labels" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="37">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <outlet property="nextKeyView" destination="8" id="vQU-rt-ftD"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="7">
+                        <rect key="frame" x="54" y="14" width="80" height="28"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="34">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="closeSheet:" target="-1" id="10"/>
+                            <outlet property="nextKeyView" destination="9" id="aCf-Fg-eKQ"/>
+                        </connections>
+                    </button>
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="8">
+                        <rect key="frame" x="16" y="16" width="25" height="25"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" controlSize="small" borderStyle="border" inset="2" id="35">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showHelp:" target="-1" id="12"/>
+                            <outlet property="nextKeyView" destination="7" id="eWK-uQ-Vt2"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" tag="-1" id="9">
+                        <rect key="frame" x="136" y="14" width="80" height="28"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" tag="-1" inset="2" id="36">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="closeSheet:" target="-1" id="11"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="13"/>
+                <outlet property="initialFirstResponder" destination="19" id="2yj-dF-dYg"/>
+            </connections>
+            <point key="canvasLocation" x="139.5" y="147.5"/>
+        </window>
+    </objects>
+</document>

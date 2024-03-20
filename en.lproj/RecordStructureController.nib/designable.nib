@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment defaultVersion="1060" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="RecordStructureController">
+            <connections>
+                <outlet property="field" destination="60" id="78"/>
+                <outlet property="fieldcurrent" destination="148" id="150"/>
+                <outlet property="fieldmax" destination="65" id="81"/>
+                <outlet property="fieldmin" destination="64" id="80"/>
+                <outlet property="fieldname" destination="61" id="79"/>
+                <outlet property="maxchars" destination="15" id="74"/>
+                <outlet property="maxfields" destination="23" id="77"/>
+                <outlet property="minfields" destination="49" id="76"/>
+                <outlet property="pattern" destination="68" id="82"/>
+                <outlet property="required" destination="116" id="119"/>
+                <outlet property="usedchars" destination="17" id="75"/>
+                <outlet property="window" destination="5" id="14"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <window title="Record Structure" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="5" userLabel="Panel" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="461" y="341" width="303" height="249"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <value key="minSize" type="size" width="213" height="107"/>
+            <view key="contentView" id="6">
+                <rect key="frame" x="0.0" y="0.0" width="303" height="249"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="7">
+                        <rect key="frame" x="16" y="16" width="21" height="24"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" controlSize="small" borderStyle="border" inset="2" id="203">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showHelp:" target="-1" id="12"/>
+                            <outlet property="nextKeyView" destination="8" id="6vi-nG-g1R"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="8">
+                        <rect key="frame" x="134" y="13" width="80" height="28"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="204">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="closePanel:" target="-1" id="11"/>
+                            <outlet property="nextKeyView" destination="9" id="ND2-ae-gVc"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" tag="-1" id="9">
+                        <rect key="frame" x="212" y="13" width="76" height="28"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" tag="-1" inset="2" id="205">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="closePanel:" target="-1" id="10"/>
+                            <outlet property="nextKeyView" destination="15" id="lVd-Iy-IbJ"/>
+                        </connections>
+                    </button>
+                    <textField toolTip="Maximum number of characters a record may contain" verticalHuggingPriority="750" id="15">
+                        <rect key="frame" x="193" y="210" width="41" height="19"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" title="9999" drawsBackground="YES" id="206">
+                            <numberFormatter key="formatter" formatterBehavior="custom10_4" positiveFormat="####" negativeFormat="" localizesFormat="NO" allowsFloats="NO" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="309" decimalSeparator="." groupingSeparator="," id="71">
+                                <nil key="negativeInfinitySymbol"/>
+                                <nil key="positiveInfinitySymbol"/>
+                                <decimal key="minimum" value="2"/>
+                                <decimal key="maximum" value="2000"/>
+                            </numberFormatter>
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <outlet property="nextKeyView" destination="49" id="pdH-Cx-0af"/>
+                        </connections>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="16">
+                        <rect key="frame" x="17" y="212" width="171" height="14"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Maximum characters in record:" id="207">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField toolTip="Number of characters currently used by the longest record" verticalHuggingPriority="750" id="17">
+                        <rect key="frame" x="242" y="210" width="41" height="19"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" enabled="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="208">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="18">
+                        <rect key="frame" x="17" y="186" width="60" height="14"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Min fields:" id="209">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <popUpButton toolTip="Maximum number of fields a record may contain" verticalHuggingPriority="750" id="23">
+                        <rect key="frame" x="224" y="181" width="62" height="22"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <popUpButtonCell key="cell" type="push" title="16" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" tag="16" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" autoenablesItems="NO" selectedItem="22" id="210">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                            <menu key="menu" title="OtherViews" autoenablesItems="NO" id="20">
+                                <items>
+                                    <menuItem title="2" tag="2" id="24"/>
+                                    <menuItem title="3" tag="3" id="25"/>
+                                    <menuItem title="4" tag="4" id="26"/>
+                                    <menuItem title="5" tag="5" id="27"/>
+                                    <menuItem title="6" tag="6" id="28"/>
+                                    <menuItem title="7" tag="7" id="29"/>
+                                    <menuItem title="8" tag="8" id="30"/>
+                                    <menuItem title="9" tag="9" id="31"/>
+                                    <menuItem title="10" tag="10" id="32"/>
+                                    <menuItem title="11" tag="11" id="33"/>
+                                    <menuItem title="12" tag="12" id="34"/>
+                                    <menuItem title="13" tag="13" id="35"/>
+                                    <menuItem title="14" tag="14" id="36"/>
+                                    <menuItem title="15" tag="15" id="19"/>
+                                    <menuItem title="16" state="on" tag="16" id="22"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                        <connections>
+                            <action selector="changeNumberOfFields:" target="-2" id="86"/>
+                            <outlet property="nextKeyView" destination="116" id="eD5-f6-vl6"/>
+                        </connections>
+                    </popUpButton>
+                    <popUpButton toolTip="Minimum number of fields a record must contain" verticalHuggingPriority="750" id="49">
+                        <rect key="frame" x="79" y="181" width="62" height="22"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <popUpButtonCell key="cell" type="push" title="16" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" tag="16" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" autoenablesItems="NO" selectedItem="40" id="211">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                            <menu key="menu" title="OtherViews" autoenablesItems="NO" id="37">
+                                <items>
+                                    <menuItem title="2" tag="2" id="43"/>
+                                    <menuItem title="3" tag="3" id="54"/>
+                                    <menuItem title="4" tag="4" id="53"/>
+                                    <menuItem title="5" tag="5" id="47"/>
+                                    <menuItem title="6" tag="6" id="44"/>
+                                    <menuItem title="7" tag="7" id="45"/>
+                                    <menuItem title="8" tag="8" id="38"/>
+                                    <menuItem title="9" tag="9" id="42"/>
+                                    <menuItem title="10" tag="10" id="46"/>
+                                    <menuItem title="11" tag="11" id="41"/>
+                                    <menuItem title="12" tag="12" id="52"/>
+                                    <menuItem title="13" tag="13" id="51"/>
+                                    <menuItem title="14" tag="14" id="50"/>
+                                    <menuItem title="15" tag="15" id="48"/>
+                                    <menuItem title="16" state="on" tag="16" id="40"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                        <connections>
+                            <action selector="changeNumberOfFields:" target="-2" id="87"/>
+                            <outlet property="nextKeyView" destination="23" id="9Pk-fS-58X"/>
+                        </connections>
+                    </popUpButton>
+                    <textField verticalHuggingPriority="750" id="55">
+                        <rect key="frame" x="159" y="186" width="63" height="14"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Max fields:" id="212">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <popUpButton toolTip="Level of field to which settings will apply" verticalHuggingPriority="750" id="60">
+                        <rect key="frame" x="17" y="126" width="148" height="22"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <popUpButtonCell key="cell" type="push" title="Fourteenth Field" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" autoenablesItems="NO" selectedItem="57" id="213">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                            <menu key="menu" title="OtherViews" autoenablesItems="NO" id="59">
+                                <items>
+                                    <menuItem title="Fourteenth Field" state="on" id="57"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                        <connections>
+                            <action selector="changeField:" target="-2" id="85"/>
+                            <outlet property="nextKeyView" destination="61" id="b2A-NY-xkR"/>
+                        </connections>
+                    </popUpButton>
+                    <button toolTip="Every record will contain an obligatory last subheading field" id="116">
+                        <rect key="frame" x="17" y="162" width="197" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Last subheading field is required" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="222">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <outlet property="nextKeyView" destination="60" id="l5S-XC-dqY"/>
+                        </connections>
+                    </button>
+                    <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="118">
+                        <rect key="frame" x="20" y="153" width="260" height="5"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <font key="titleFont" metaFont="system"/>
+                    </box>
+                    <textField toolTip="Name used to identify the field" verticalHuggingPriority="750" id="61">
+                        <rect key="frame" x="82" y="103" width="145" height="19"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="214">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <outlet property="delegate" destination="-2" id="83"/>
+                            <outlet property="nextKeyView" destination="64" id="r91-4g-6uM"/>
+                        </connections>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="62">
+                        <rect key="frame" x="17" y="105" width="39" height="14"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Name:" id="215">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="63">
+                        <rect key="frame" x="17" y="78" width="60" height="14"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Min chars:" id="216">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField toolTip="Minimum number of characters required (0 = no limit)" verticalHuggingPriority="750" id="64">
+                        <rect key="frame" x="82" y="76" width="36" height="19"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" title="0" drawsBackground="YES" id="217">
+                            <numberFormatter key="formatter" formatterBehavior="custom10_4" positiveFormat="####" negativeFormat="" localizesFormat="NO" allowsFloats="NO" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="309" decimalSeparator="." groupingSeparator="," id="72">
+                                <nil key="negativeInfinitySymbol"/>
+                                <nil key="positiveInfinitySymbol"/>
+                                <decimal key="minimum" value="0"/>
+                                <real key="maximum" value="1997"/>
+                            </numberFormatter>
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <outlet property="delegate" destination="-2" id="89"/>
+                            <outlet property="nextKeyView" destination="65" id="aMR-Se-7Uh"/>
+                        </connections>
+                    </textField>
+                    <textField toolTip="Maximum number of characters permitted (0 = no limit)" verticalHuggingPriority="750" id="65">
+                        <rect key="frame" x="191" y="76" width="36" height="19"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" title="0" drawsBackground="YES" id="218">
+                            <numberFormatter key="formatter" formatterBehavior="custom10_4" positiveFormat="####" negativeFormat="" localizesFormat="NO" allowsFloats="NO" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="4" decimalSeparator="." groupingSeparator="," id="73">
+                                <nil key="negativeInfinitySymbol"/>
+                                <nil key="positiveInfinitySymbol"/>
+                                <decimal key="minimum" value="0"/>
+                                <real key="maximum" value="1997"/>
+                            </numberFormatter>
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <outlet property="delegate" destination="-2" id="90"/>
+                            <outlet property="nextKeyView" destination="68" id="PzU-ju-gHn"/>
+                        </connections>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="66">
+                        <rect key="frame" x="124" y="78" width="62" height="14"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Max chars:" id="219">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="67">
+                        <rect key="frame" x="17" y="50" width="40" height="14"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" title="Match:" id="220">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField toolTip="Pattern to which text in field must conform (blank = none)" verticalHuggingPriority="750" id="68">
+                        <rect key="frame" x="82" y="48" width="201" height="19"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="221">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <outlet property="delegate" destination="-2" id="84"/>
+                            <outlet property="nextKeyView" destination="7" id="o2z-uB-pBV"/>
+                        </connections>
+                    </textField>
+                    <textField toolTip="Number of characters currently used by the longest field" verticalHuggingPriority="750" id="148">
+                        <rect key="frame" x="247" y="76" width="36" height="19"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" enabled="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="223">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="13"/>
+                <outlet property="initialFirstResponder" destination="61" id="eUV-AL-KKg"/>
+            </connections>
+        </window>
+    </objects>
+</document>

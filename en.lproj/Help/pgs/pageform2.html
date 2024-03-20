@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Formatting multi-part page references</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+	<meta name="Keywords" content="suppress, hide, compound">
+	<meta name="Description" content="Specify how compound locators are formatted">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="pageform2_Anchor-14210" id="pageform2_Anchor-14210"></a>
+		<div id="mainbox" align="left">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td height="32">&nbsp;</td>
+	<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+	<td height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Formatting multi-part locators</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+				<tr>
+					<td>
+						<p>Use the Page References panel (Document menu) to specify the formatting and punctuation of multi-part locators.</p>
+						<p>When formatting compound locators such as 1986 a(ii):55, Cindex can suppress the display of repeated leading parts that are common to successive references, so that in the second and subsequent reference only the least significant, and changing, part of a locator is actually displayed. For example:</p>
+						<blockquote>
+							<p>	XIV 55:10; XIV 55:62; XIV 55:79; XV 56:108-9; XVI 57:232; XVI 57:240</p>
+						</blockquote>
+						<p>can be formatted as:</p>
+						<blockquote>
+							<p>	XIV 55:10, 62, 79; XV 56:108-9; XVI 57:232, 240</p>
+						</blockquote>
+						<p>Settings in the Multi-Part References box control the formatting of compound locators.</p>
+						<p>Check Suppress Repeated Parts to enable the suppression of repeated early parts of successive references. When you do this you must also provide Cindex with information about how much of the leading part of a complex reference it should suppress, and you must tell Cindex what characters it should insert in the formatted display to denote a concatenated reference.</p>
+						<p>Enter at Suppress to a marking character or set of marking characters that Cindex must encounter in the parts of references it will suppress. The point in the reference at which Cindex finds the last marking character is the point up to which it will suppress repeated leading components.</p>
+						<p>Enter at Concatenate with the sequence of characters that Cindex should use to replace the suppressed parts of the reference. The concatenating sequence should not contain the character you use to separate successive complete references.</p>
+					</td>
+				</tr>
+			</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="7" bgcolor="#eeeeee">
+	<tr valign="top" bgcolor="#eeeeee">
+						<td bgcolor="#eeeeee">
+								<table border="0" cellspacing="0" cellpadding="4">
+									<tr valign="top">
+										<td>
+											<p>&#x2022;</p>
+										</td>
+										<td>
+											<p>When comparing characters in a reference against the marking characters in a suppression template, Cindex ignores leading spaces at the beginning of any reference. You should therefore not count these when forming a template.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>&#x2022;</p>
+										</td>
+										<td>
+											<p>Cindex will suppress repeated leading components of a reference only when the references are correctly ordered. To ensure proper ordering of page references, you should check Arrange in Sorted Order.</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>&#x2022;</p>
+										</td>
+										<td>
+											<p>If Cindex is set to conflate references, it will conflate them before it suppresses any repeated leading components.</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+					</tr>
+</table>
+<div id="taskbox">
+</div>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>
+						<p><b>See also<br>
+							</b><a href="pageform1.html">Formatting Page Ranges</a><b><br>
+							</b><a href="pageform4.html">Page reference typography</a><b><br>
+							</b><a href="pageform3.html">Punctuating page references</a><br>
+							<a href="stylelayout3.html">Adjusting punctuation</a><br>
+							<a href="refsyntax1.html">Specifying the structure of page references</a></p>
+					</td>
+	</tr>
+</table>
+			<table width="100%" height="35" border="0" cellspacing="0" cellpadding="3">
+	<tr valign="bottom" height="35">
+	<td align="left" height="35"></td>
+	<td align="right" valign="top" height="35"><a href="help:search='formatting page references' bookID='Cindex 4 Help'">Tell me more</a></td>
+	</tr>
+	<tr height="35">
+	<td></td>
+	<td>&nbsp;</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

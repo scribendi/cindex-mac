@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Conditional (Boolean) searches</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+	<meta name="Keywords" content="logical">
+	<meta name="Description" content="Use conditional (Boolean) searches to find text that meets multiple search criteria.">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="fnd3_Anchor-14210" id="fnd3_Anchor-14210"></a>
+		<div id="mainbox" align="left">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr valign="bottom" height="32">
+					<td height="32">&nbsp;</td>
+					<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+					<td height="32">&nbsp;&nbsp;</td>
+					<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Conditional (Boolean) searches</b></font></td>
+				</tr>
+				<tr height="10">
+					<td colspan="4" height="10">&nbsp;</td>
+				</tr>
+			</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+				<tr>
+					<td>
+						<p>Cindex lets you look for combinations of words or phrases, e.g., the occurrence of the word &ldquo;university&rdquo; <i>and</i> the word &ldquo;finance&rdquo; in the same record; it can also find an occurrence of a particular word or phrase without some other word or phrase, e.g., a reference to &ldquo;Warsaw Pact&rdquo; and no reference to &ldquo;Soviet Union.&rdquo;</p>
+						<p>The first step in finding such records is to form a simple statement of the conditions, e.g., Find university <i>and</i> finance, or Find Warsaw Pact <i>and not</i> Soviet Union, or Find cars <i>or</i> automobiles. When you do this it becomes clear that to make a conditional search you need to be able to represent the entities <i>and</i>, <i>or</i> and <i>not</i>. Cindex provides these entities (known as conditional or Boolean operators) for you to use in specifying conditions that a record must meet before it can be displayed.</p>
+						<p>In the Find panel, configure your search as follows:</p>
+					</td>
+				</tr>
+			</table>
+				<table width="100%" border="0" cellspacing="0" cellpadding="7" bgcolor="#eeeeee">
+					<tr valign="top" bgcolor="#eeeeee">
+						<td bgcolor="#eeeeee">
+								<table border="0" cellspacing="0" cellpadding="4">
+									<tr valign="top">
+										<td>
+											<p>&#x2022;</p>
+										</td>
+										<td>
+											<p>To find records that <i>do not</i> contain the specified text, check Not. </p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+												<p>&#x2022;</p>
+											</td>
+										<td>
+											<p>To find records that contain the specified text and/or some other text, select <i>and</i> or <i>or</i> from the pop-up menu to the far right of the text.</p>
+											<p>Cindex will extend the window so that you can specify a second word or phrase to search for (and other attributes to be associated with it, such as a style or a whole word, etc.) By choosing <i>and</i> or <i>or</i> you can extend the window repeatedly for up to four search sequences.</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+					</tr>
+				</table>
+			<p>A search expression that contains several components might be interpreted in a number of ways. For example, a search for</p>
+			<blockquote>
+				<p>NATO <i>and not</i> Warsaw Pact <i>or</i> China <i>or</i> Japan</p>
+			</blockquote>
+			<p>could mean &ldquo;find a record that refers to Nato and not to the Warsaw pact, or a record that refers to China or a record that refers to Japan,&rdquo; or it could mean &ldquo;find a record that refers to Nato and does not refer to the Warsaw Pact or to China or to Japan.&rdquo;</p>
+			<p>Cindex interprets the expression in the first way, as a result of following these simple rules:</p>
+	      <blockquote>
+		      <p><i>not</i> applies only to the component immediately following, because it takes precedence over the other operators.</p>
+		      <p>Cindex then groups the components connected by <i>and</i> because <i>and</i> has a higher precedence than <i>or</i>.<br>
+	        </p>
+	      </blockquote>
+			<div id="taskbox">
+	    </div>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+				<tr>
+					<td>
+						<p><b>See also<br>
+							</b><a href="fnd0.html">Using the Find panel<br>
+							</a></p>
+					</td>
+				</tr>
+			</table>
+			<table width="100%" height="35" border="0" cellspacing="0" cellpadding="3">
+				<tr valign="bottom" height="35">
+					<td align="left" height="35"></td>
+					<td align="right" valign="top" height="35"><a href="help:search='finding entries' bookID='Cindex 4 Help'">Tell me more</a></td>
+				</tr>
+				<tr height="35">
+					<td></td>
+					<td>&nbsp;</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+
+</html>

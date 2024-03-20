@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Adding a head note</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="Explains how to add a note at the start of an index">
+	</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="itns1006" id="itns1006"></a>
+<div id="mainbox" align="left">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td height="32">&nbsp;</td>
+	<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+	<td height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Adding a head note</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>
+						<p>The following notes explain how to add a head note to an index. </p>
+					</td>
+	</tr>
+</table>
+			<div id="taskbox">
+<table width="100%" border="0" cellspacing="0" cellpadding="7" bgcolor="#eeeeee">
+	<tr valign="top" bgcolor="#eeeeee">
+	<td bgcolor="#eeeeee">
+							<p>You create one or more index entries that contain the text of the note, then you make Cindex place these at the head of the index. First, ensure that your sort is set to letter-by-letter or word-by-word alphabetizing. Create an index entry (or entries) that contains the text of your introductory note. Each entry will contain information that forces its placement at the beginning of your index. If you want empty lines to follow the note, you will need to create entries with hidden text that you force into position after the note. For example, if you wanted the introduction to your index to look like this:</p>
+							<blockquote>
+								<p>Index entries reference volume, then page.<br>
+									For full information, please see individual entries in the index at the end of each volume.<br>
+									<br>
+									Abacus, 12:8<br>
+									Abracadabra, 6:7<br>
+									. . . .</p>
+							</blockquote>
+							<p>You would make a series of separate entries that in draft view looked like this (record numbers in blue are merely for illustration; do not type them in records):</p>
+							<blockquote>
+								<p><font color="#0000ee">1</font> { a}&lt;Index entries reference volume, then page.&gt;<br>
+									<font color="#0000ee">2</font> { b}&lt;For full information, please see individual entries in the index at the end of each volume.&gt;<br>
+									<font color="#0000ee">3</font> { c}&lt; &gt;</p>
+							</blockquote>
+							<p>The contents of the braces in records #1 and #2 in the example&#151;a leading space followed by a letter: { a} &#151; force the sort of your introductory material, but will not appear on screen or in a print. The angle brackets (&lt; &gt;) enclosing your text will allow it to appear normally, but will ensure that it does not affect the sort. Since Cindex does not print or display completely blank lines or entries, to make it display an apparently blank entry you must use the angle brackets enclosing a space (as in record #3 in the example).</p>
+						</td>
+	</tr>
+</table></div>
+		</div>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+
+/* Class = "NSWindow"; title = "Record Entry"; ObjectID = "6"; */
+"6.title" = "Record Entry";
+
+/* Class = "NSMenuItem"; title = "Cut"; ObjectID = "29"; */
+"29.title" = "Cut";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "30"; */
+"30.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "31"; */
+"31.title" = "Copy";
+
+/* Class = "NSMenuItem"; title = "Paste"; ObjectID = "32"; */
+"32.title" = "Paste";
+
+/* Class = "NSMenuItem"; title = "Default Font"; ObjectID = "33"; */
+"33.title" = "Default Font";
+
+/* Class = "NSMenuItem"; title = "Plain"; ObjectID = "34"; */
+"34.title" = "Plain";
+
+/* Class = "NSMenuItem"; title = "Bold"; ObjectID = "35"; */
+"35.title" = "Bold";
+
+/* Class = "NSMenuItem"; title = "Italic"; ObjectID = "36"; */
+"36.title" = "Italic";
+
+/* Class = "NSMenuItem"; title = "Underline"; ObjectID = "37"; */
+"37.title" = "Underline";
+
+/* Class = "NSMenuItem"; title = "Small Caps"; ObjectID = "38"; */
+"38.title" = "Small Caps";
+
+/* Class = "NSMenuItem"; title = "Superscript"; ObjectID = "39"; */
+"39.title" = "Superscript";
+
+/* Class = "NSMenuItem"; title = "Subscript"; ObjectID = "40"; */
+"40.title" = "Subscript";
+
+/* Class = "NSMenuItem"; title = "New Abbreviation"; ObjectID = "41"; */
+"41.title" = "New Abbreviation";
+
+/* Class = "NSMenuItem"; title = "{ … }"; ObjectID = "46"; */
+"46.title" = "{ … }";
+
+/* Class = "NSMenuItem"; title = "< … >"; ObjectID = "47"; */
+"47.title" = "< … >";
+
+/* Class = "NSMenuItem"; title = "Swap Text in Parens"; ObjectID = "111"; */
+"111.title" = "Swap Text in Parens";
+
+/* Class = "NSToolbarItem"; label = "Next"; ObjectID = "0w9-9R-bfe"; */
+"0w9-9R-bfe.label" = "Next";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Next"; ObjectID = "0w9-9R-bfe"; */
+"0w9-9R-bfe.paletteLabel" = "Next";
+
+/* Class = "NSToolbarItem"; toolTip = "Enter record and move to next [Page Down]"; ObjectID = "0w9-9R-bfe"; */
+"0w9-9R-bfe.toolTip" = "Enter record and move to next [Page Down]";
+
+/* Class = "NSToolbarItem"; label = "Previous"; ObjectID = "4GB-fp-xfp"; */
+"4GB-fp-xfp.label" = "Previous";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Previous"; ObjectID = "4GB-fp-xfp"; */
+"4GB-fp-xfp.paletteLabel" = "Previous";
+
+/* Class = "NSToolbarItem"; toolTip = "Enter record and move to previous [Page Up]"; ObjectID = "4GB-fp-xfp"; */
+"4GB-fp-xfp.toolTip" = "Enter record and move to previous [Page Up]";
+
+/* Class = "NSToolbarItem"; label = "Swap Text"; ObjectID = "5KQ-nn-cyZ"; */
+"5KQ-nn-cyZ.label" = "Swap Text";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Swap Text"; ObjectID = "5KQ-nn-cyZ"; */
+"5KQ-nn-cyZ.paletteLabel" = "Swap Text";
+
+/* Class = "NSToolbarItem"; toolTip = "Swap Text in Parens [Control P]"; ObjectID = "5KQ-nn-cyZ"; */
+"5KQ-nn-cyZ.toolTip" = "Swap Text in Parens [Control P]";
+
+/* Class = "NSToolbarItem"; label = "Hide Text"; ObjectID = "Hgn-5A-04q"; */
+"Hgn-5A-04q.label" = "Hide Text";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Hide Text"; ObjectID = "Hgn-5A-04q"; */
+"Hgn-5A-04q.paletteLabel" = "Hide Text";
+
+/* Class = "NSToolbarItem"; toolTip = "Hide selected text from sort [Control A]"; ObjectID = "Hgn-5A-04q"; */
+"Hgn-5A-04q.toolTip" = "Hide selected text from sort [Control A]";
+
+/* Class = "NSToolbarItem"; label = "Enter & Copy"; ObjectID = "UKG-er-0Xp"; */
+"UKG-er-0Xp.label" = "Enter & Copy";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Enter & Copy"; ObjectID = "UKG-er-0Xp"; */
+"UKG-er-0Xp.paletteLabel" = "Enter & Copy";
+
+/* Class = "NSToolbarItem"; toolTip = "Enter record and leave copy [Option Page Down]"; ObjectID = "UKG-er-0Xp"; */
+"UKG-er-0Xp.toolTip" = "Enter record and leave copy [Option Page Down]";
+
+/* Class = "NSToolbarItem"; label = "Spell Out"; ObjectID = "bdv-E1-QK0"; */
+"bdv-E1-QK0.label" = "Spell Out";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Spell Out"; ObjectID = "bdv-E1-QK0"; */
+"bdv-E1-QK0.paletteLabel" = "Spell Out";
+
+/* Class = "NSToolbarItem"; toolTip = "Sort on hidden text [Control B]\""; ObjectID = "bdv-E1-QK0"; */
+"bdv-E1-QK0.toolTip" = "Sort on hidden text [Control B]\"";
+
+/* Class = "NSToolbarItem"; label = "Propagate"; ObjectID = "jsR-p7-f1A"; */
+"jsR-p7-f1A.label" = "Propagate";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Propagate"; ObjectID = "jsR-p7-f1A"; */
+"jsR-p7-f1A.paletteLabel" = "Propagate";
+
+/* Class = "NSToolbarItem"; toolTip = "Propagate changes to succeeding records"; ObjectID = "jsR-p7-f1A"; */
+"jsR-p7-f1A.toolTip" = "Propagate changes to succeeding records";
+
+/* Class = "NSToolbarItem"; label = "Revert"; ObjectID = "sp7-DX-7Uo"; */
+"sp7-DX-7Uo.label" = "Revert";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Revert"; ObjectID = "sp7-DX-7Uo"; */
+"sp7-DX-7Uo.paletteLabel" = "Revert";
+
+/* Class = "NSToolbarItem"; toolTip = "Restore record to original state [Option ESC]"; ObjectID = "sp7-DX-7Uo"; */
+"sp7-DX-7Uo.toolTip" = "Restore record to original state [Option ESC]";
+
+/* Class = "NSToolbarItem"; label = "Flip"; ObjectID = "vmp-X9-dF9"; */
+"vmp-X9-dF9.label" = "Flip";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Flip"; ObjectID = "vmp-X9-dF9"; */
+"vmp-X9-dF9.paletteLabel" = "Flip";
+
+/* Class = "NSToolbarItem"; toolTip = "Full Flip [Control +]"; ObjectID = "vmp-X9-dF9"; */
+"vmp-X9-dF9.toolTip" = "Full Flip [Control +]";
+
+/* Class = "NSToolbarItem"; label = "Default Font"; ObjectID = "ya1-w1-USl"; */
+"ya1-w1-USl.label" = "Default Font";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Default Font"; ObjectID = "ya1-w1-USl"; */
+"ya1-w1-USl.paletteLabel" = "Default Font";
+
+/* Class = "NSToolbarItem"; toolTip = "Set font to default [Control F]"; ObjectID = "ya1-w1-USl"; */
+"ya1-w1-USl.toolTip" = "Set font to default [Control F]";
+
+/* Class = "NSToolbarItem"; label = "Half Flip"; ObjectID = "zYW-Bu-gyU"; */
+"zYW-Bu-gyU.label" = "Half Flip";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Half Flip"; ObjectID = "zYW-Bu-gyU"; */
+"zYW-Bu-gyU.paletteLabel" = "Half Flip";
+
+/* Class = "NSToolbarItem"; toolTip = "Half flip [Control -]"; ObjectID = "zYW-Bu-gyU"; */
+"zYW-Bu-gyU.toolTip" = "Half flip [Control -]";

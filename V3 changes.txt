@@ -1,0 +1,344 @@
+BUG Fixes from V2
+	1. in checkintegrity() && in index_repair() [same code]:
+			bad if statement		if (index < FF->head.indexpars.recsize-1);
+	2. fixed printing: messy continuation breaks
+-------------
+full-support for unicode
+	converts latin chars, and characters from Symbols, windings, dingbats fonts; others treated as latin
+full support for multi-lingual sorting
+much faster statistics, goto (silent page formatting)
+index files interchangeable between mac and windows (index, template, style sheet)
+richer conversion of archives (no intermediate translation to native charset)
+-----------
+Patterns
+	new pattern options | + (and others)
+	case-insensitive pattern matching
+	handles unicode character sets
+	*** changed special chars in patterns: () instead of {}; . instead of ?
+----------------
+hunspell  as spell-checker -- multilingual
+	unlimited size of user dictionaries
+	can edit user dictionaries
+convert for unicode
+	off font and color codes introduced by FONTCHR
+	all text strings converted to UTF-8
+---------------
+Formatting
+	Crossrefs: option to inhibit auto style on crossref lead if auto style matches body style
+	Much improved rendering of small caps and sub/superscript when displaying on screen or printing
+---------------
+New updating mechanisms: Sparkle and WinSparkle
+---------------
+Multi-lingual sorting
+more flexible handling of text in parens
+-----------------
+more accurate Verify as a result of better lookup
+easier entry/management of styled strings
+XML export/import for records
+-----------------
+new management of tagged text files [always used current default xml or sgml tag set-- set by Markup Tags]
+xml markup tags
+new markup tag for group
+new options for nesting tags and tagging indivdual references
+new coding of non ascii chars
+new markup tags for start/end unicode char
+--------
+changed representation of font/style codes
+	font and color introduced by new code
+	color & font bits now independent (no longer FX_FONT|FX_COLOR) for color
+	'off' style code moved to bit 6 from bit 7
+-------
+Editing
+	labels now toggle (if first selected has label matching new, then that label removd from all selected records; otherwise label applied to sel recs
+------
+simpler window for managing abbreviatioons
+----------
+shortcut for incrementing and decrementing last numerical component of last page ref (ctrl ] ctrl [)
+----------
+Verify: full match now catches and flags case/accent errors
+--------
+Font management:
+	all visible manipulations (find/replace) work on preferred font not alt font
+--------
+groups
+	now carry more detail about search used to build them -- better reconstruction if have to be rebuilt.
+---------
+Files
+	New sky7 import
+	New protection of {}<>~\ on plain text record import; strip on plain text record export
+	No longer export DOS dat format
+	Cleanup of plain text file naming (Win: no longer recognizes distinct .tab type)
+-----------
+3.0.5(win)/3.0.4 (Mac)
+1. Better check for circular crossrefs
+2. Strip control characters that might be pasted dropped in records
+3. (Win) Hot Keys fully accept Unicode text (esp relevant to Symbols)
+4. (Win) fix spurious introduction of boldface when using accented chars in abbrevs
+5. (Win) Fixed display of character map for regions outside US.
+------------
+3.0.6/3.0.5
+1. fix in parseref to prevent crash when individual ref being parsed exceeds REFMAX chars. Also increased REFMAX from 200 to 300
+2. Change labels on structure tags for headings: start at level 1 (formerly 0). Also changes to level attributes
+3. Better check for circular crossrefs
+4. Didn't form XML properly when saving selected records or range of records (formatted export options)
+	Now makes group of the records to be saved (applies to all formatted types)
+5. Fixed hang resulting from replacing .* with nothing (rcommand in replaceset.c).
+6. (Mac) fixed autocomplete so that CR correctly accepts highlighted text (keyDown in IRRecordView)
+7. (Mac) didn't set range properly in formatted export options for tagged text
+8. (Win) when displaying/printing (not exporting) would double-space runover lines in main headings if format setting called for extra space between main headings
+-----
+3.0.7/3.0.6
+Mac: (Item 5 from 3.0.5 introduced bug [replace in replacecontroller.m] in handling complex patterns replacements)
+Win: (publisher only--released as 3.0.6.1) fix file sharing permissions for shared read-ony access mfile_open().
+Both: col_loadUTF8string didn't correctly handle ESCCHR -- sorted on the character following
+	convertV2formpars didn't convert group title
+-------
+Mac 3.0.7
+1. Spelling panel on reactivate would have change button enabled when no replacement position defined.
+2. Built-in XML set didn't have readonly flag enabled.
+3. Built-in tag sets could be hidden by user-defined sets with same name.
+4. Propagate button not enabled properly on reactivation of record window.
+-------
+3.0.8
+1. Both: Fixed import of plain text delimited records. imp_readrecords() would always treat text as native charset encoding even if had UTF8 BOM.
+2. Win: in record window, deleting whole main heading when followed by empty page field would leave only page field. Fixed in checkdeletions().
+-------
+3.0.9
+1. Both: Fixed more problems in import of plain text delimited records. imp_findtexttype() didn't default to plain text (defaulted to ARCHIVE) if couldn't recognize file type.
+2. Both: fixed bug in str_getline() where it would run past end of input buffer if last char were Return on Newline.
+-------
+3.0.10
+1. Both: unicode normalization now done on recovering text from records, via astr_normalize(). Ensures all characters are composed even if pasted decomposed.
+2. Both: str_swapparen() didn't properly handle swapping of any character preceded by ESCCHR or KEEPCHR.
+3. Win: when record selected by typing leading text, menus weren't set by selection. Fixed by adding selpars.shighlight = -1 in view_selectrec() so that menu test passes view_recordselect()
+4. Both: in fixpage() when suppressing leading parts of multi-part refs, ignored suppressrefs flag and looked at value of suppress string.
+-------
+3.0.11
+1. Both: On imported records now check record size *after* fully building records. Records that exceed MAXREC handled cleanly.
+2. Both: if crossref had some characters before prefix string (so no prefix recognized), the continuing style code that would have been captured from prefix was uninitialized. Led
+	to badly formatted cross-refs in Windows.
+3. Win: pasting text from Character map could contain spurious null on end, so would force field break in record; fix by detecting terminal null in modify->checkdroppaste
+-----
+3.1
+1. Both: 'Label sets change flag' is new preferences option for editing.
+2. Both: couldn't copy/paste small caps because
+	Mac: in convertToXString we were comparing NSColor for NSBackgroundColorAttributeName, and isEqual just compares pointers.
+	Win: normalizetext() in modify.c was all screwed up.
+3. Mac: drag/drop records from one index to another didn't work under 10.7/10.8. Fixed by implementing prepareForDragOperation in IRIndexView.
+4. Mac: Fix in _setScrollIndicator in IRIndexDocWCOntroller for OS10.9 scrolling.
+5. Win: buildhfstring in print.c returned count of chars, not unichars, so sometimes messed up header and footer strings.
+6. Win:	new keyboard shortcut (Ctrl+Q) for small caps.
+--------
+3.2
+1. Both: Fix in fs_findnext to deal with reverse order search hanging when target is in invisible heading
+2. Both: New function u8_normalize(), called to normalize imported ixml unicode. Also used to clean up Find and Replace strings.
+3. Both: Now offers Korean collation.
+4. Win: Undo 3.0.10 change for selpars.shighlight = -1. Cause bad selection in draft view. Change view_recordselect() so that it tests ehighlight instead of shighlight.
+3  Win: When normalizing after a paste, didn't display color for any label applied after record opened for editing. Fixed in modify->normalizetext();
+4. Win: Displayed title of program now taken from module name, not argv[0] (main.c)
+4. Win: (Pub Ed 3.2.1) new API.
+------
+3.2.1 [mac Aug 17 2014]
+1. Major changes to scroll management in IRIndexDocWController. Fix freeze for 10.9; much more precise movements on big steps, and better scroll bar positioning.
+2. Cleaned up all deprecated API calls
+---------
+Aug 23 2014
+Both: finished further cleanup of scrolling and precision of display in different view modes (includes rework of sort_findpos/sort_jump)
+Mac (3.2.2): fixed bug introduced by api cleanup in 3.2.1: protect against setDirectoryURL being set for nil directory ([fileURLWithPath: isDirectory] causes exception)
+Aug 30
+Mac: fixed crash from canCompleteRecord(): if new record introduced new font, the main font map wasn't updated before call to synchronizeWindowTitleWithDocumentName. Fixed by shifting call to synchronizeWindowTitleWithDocumentName
+Mac: fixed errors introduced in 3.2.2 whereby index view frame rect not sized properly if index contained no records
+Mac: fix panels and sheets to use keyboard navigation properly
+Both: fix astr_normalize() to allocate bigger conversion buffer and handle norm errors. Prev undetected norm errors corrupted astring (would lead to bad characters in record).
+Both: adopt ICU 53.1. Use reorder collation [warn users about changed symbol order; flag script order option]
+Both: fix status display to show fuller sort status (also corrects error where 'Letter' displayed when Simple sort).
+Win: new WinSparkle that will close down Cindex before update.
+--------
+Nov 2014 (for 3.4 release)
+Both: changes to provide user control of text alignment fir LtoR languages, and introduce enlarged collation set
+Both: scroll management: introduced exact counting of display index position when small displayable set of records
+Both: in setcaps() not do initial cap if previous character is opening paren.
+Add many languages, inc East & South Asian, Greek
+	New format specifier formpars.pf.alignment for alignment;
+		Mac: new Format menu item; changes in _configureParagraphs (IRDocWController))
+		Win: new Character menu item; changes in viewset.c (settextinfo)
+Win: undo disabled spell checking in demo and student (hangover from version2)
+Mac: in applicationWillFinishLaunching fix Update menu so it's disabled for Student and Demo (caused crash)
+Mac: various saving fixes in IRIndexDocument for file saving (inc SaveACopy fix for NSSaveAsOperation to NSSaveToOperation)
+Mac: now prevents overwriting of *any* open index (not just current doc)
+Win: in type_doattributes() in typestuff.h, fix baseline offsets for super/sub (cast as->soffset to int to prevent baseline drift)
+-----
+March 2015
+Both: fixed rtf writing so that files opened in Word can have spelling checked. New function LCIDforLocale captures local locale detail (en_US or en_UK) if local language is same as sort language
+Pub Ed: Fixed problem when writing tagged files on call from API: didn't replace default tag set with the one specified in the call.
+Pub Ed: Exporting formatted indexes via API would always set first exported record to 1, regardless of sort (command_saveas()).
+Pub Ed: Servicing API call to add record would cause crash because record text marked as CINARCHIVE rather than PLAINTEXT.
+------
+Apr/May 2015 (for 3.4.2)
+Mac: fix for new set of markup tags not being immediately available in menu. Change gettagsets() to do explicit file search in tagset directory.
+Both: fixed str_xfind() for miscalculated count of number of potential matches that target could have in source string (counting chars instead of unichars)
+-----
+(for 3.4.x)
+Both: change in textcomp() in collate.m to ignore secondary text when neither of comparison fields has main text.
+Win: Fixes to reinstate BNA special run-on (bnacont()) in PubEd.
+--------
+3.5
+Windows: fix MDI client window for smeared image on window movement
+------
+Aug 16
+Both: when labeled records displayed in formatted view, empty page fields were displayed with spurious lead and separator text
+Both: Fix crashable bug in col_loadUTF8string() for capturing numbers. (crashed on 64 bit Mac). Sort version 8 (just in case)
+-----
+Jan  2016  [all Windows builds now through Wi 10/32]
+Both: fixpage() in formstuff.c. Rewrite section on suppressparts to emit correctly organized text.
+Both: str_upr() and str_lwr() in strings_c didn't properly protect char after ~ if ~preceded by CODECHR sequence
+Both: buildcrossprefix() didn't properly handle "Don't Apply Prefix Style..."
+Both: in regex_textforgroup remove static from UText declaration (prevented UTEXT_INITIALIZER being deployed properly ??)
+-----
+Feb 2016
+Both: further fix in fixpage() in formstuff.c. to correct problem introduced in Jan 2016 (earlier fix messed up Chicago, etc abbreviation of refs)
+Mac (3.5.1): fix handling of language dics:
+	a) now will accept dic in Library/App support/Cindex
+	b) wasn't properly changing language dic when new language selected.
+----
+March 2016
+Both: change astr_toUTF8string in attributedstrings.m to catch unrepresentable (i.e., 32 bit) characters
+------
+May, July 2016
+Mac: fix App Transport Security Setting info.plist to allow Sparkle access to URL under El Capitan
+Mac: fix (via nib settings) to prevent full screen on Cindex windows
+Both: xml parser didn't check that any records were contained in a <records> block
+**NB: still building Win version with VisualStudio2010, under windows 10.**
+-----
+Aug 18, 2016
+Win: Fix serious bug in replace with regex: if did one find/replace manually, then replaceall, the replaceall used an (original) replace regex that didn't match the most recent find regex.
+	Could remove all matching text rather than replacing relevant parts. Fixed by ensuring that original regex not reset (fs_findnext doesn't do fcheck if target exists). Mac was OK on this.
+Both: more robust handling of regex errors in regex_groupcount and search_findrep.
+-----
+Apr 17, 2017
+Version 3.6
+Both: fix in sort_squeeze() SQSINGLE (expand), closing style codes would get carried from one ref into the next after the break. Largely cosmetic. Fixed by calling str_adjustcodes().
+Both: fix in writexmlrecords() in export.m, messed up non-default font handling because reset emitted font attributes at each codechr and never emitted a call to font 0.
+Both: in writexmlrecords() emit three new attrbutes in <records> for locator and xref separators, and locator range connector.
+Both: fix in _checkCompletion() in IRREcordView.m: if xref lead was accented (extra chars) autocomplete repeated initial char
+Both: fix in _checkCompletion() in IRREcordView.m: if initially successful autocomplete later failed, the typed text retained the attributes of the (failed) autocomplete text
+Both: in _incDec IRREcordView.m: if changed number was originally selected, didn't reselect it
+Both: when ranges had refs like 107t-109t, suffixes would prevent abbreviation by Chicago rules, etc. Fixed in fixpage().
+Mac: fix: when editing record, adding/removing small caps dealt with codes, but didn't show in display. Fixed in convertAttributes.
+Win: many other fixes per Dave Ream's "support issues" list.
+-----
+May 6, 2017
+Version 3.6.1
+Both: fix crashable bug from 3.6 introduced with the change that managed abbreviation of page refs with suffixes
+Both: improved autocompletion so that style specified at start of field (before typing characters) would be restored if autocomplee failed a match
+Mac: long-standing bug from 3.0: importing archive created on Mac did wrong date conversion (checkline() in import.m)
+------
+May 15
+Version 3.6.2
+Win: fix in modify.c (doeditkey()) to handle bad abbrev expansion on hitting return.
+Both: fix new problem cause by 3.6.1 change to restore initial text attributes after autocomplete failure
+Both: fix in fixpage for yet another problem caused by the 3.6 change to allow abbreviation of page refs with suffixes
+
+---
+May 19
+Mac: create new targets for 64 bit
+	in master headers redefine all longs as ints; change constants LONG_MAX, ULONG_MAX to int counterparts
+	define new types time_c (4 byte by equiv of time_t), IRPoint, IRSize, IRRect to manage 32 bit floats for doubles in 64 bit NS counterparts
+	add new utility functions to convert between IRSize, etc., and NSSize, and a string category for managing time_c conversions
+	deploy __LP64__ in a few places to manage special properties of 64 bit implementation
+	used #pragma pack(4) to manage alignment in GROUP structure
+	NB: Haven't done anything about Sparkle
+----
+May 19 (unrelated to 64 bit)
+Mac: fixes in prepareSavePanel in IRIndexDocument to change position of Options... button
+	added delegate method application:openFile to handle doubleclick for opening app with document (wouldn't otherwise override prefs setting of open last doc)
+----
+Dec 3 2017
+Mac: add [self close] in IRIndexDocument.m canCloseDocumentWithDelegate.... to make sure doc is closed before termination activity
+	fix getfilelist() in utilites.m to restore path as prefix to found file names
+	changes in IRIndexDocWController and IRIndexView to accommodate NSDraggingSession
+	changed handling of mouseDown loop in IRIndexView to give much smoother start to drag
+Jan 2018
+	changes to sheet and windowcontroller mgt to accommodate ARC.
+	changes for date management (generally better parsing, but need to update Guide to make clear it's not completely freeform)
+Mar 15. See 64 bit changes to IRIndexDocument initWithName, to catch creation errors....
+Apr 5/6 2018
+	fix failure to display check marks in View menu (from 10.12); add checkmark handling to depth menu
+	redo index close (in IRIndexDocument):
+		1. abandon canCloseDocumentWithDelegate....
+		2. close action through shouldCloseWindowController... (includes removing window notifications)
+		3. in IRIndexDocWController _sizemainView remove check on document open (now never called if doc closed)
+	fix prepareSavePanel in IRIndexDocument to use stack view for accessory
+	in StyleLayoutController awakeFromNib: shift position of 'variant' item initialization to prevent it being cleared erroneously
+	main view footer now indicates if index sorted by locator (IRIndexDocWController windowTitleForDocumentDisplayName)
+	major cleanup of abbrev management in abbrev panel and function key panel (abbrev preserves position)
+
+Apr 13
+	fixed printing: use modern calls; force main thread if printing from text view (fixes crash problem)
+	in search_convertcross protect recptr from memory moves
+	major changes to selecting record text: now allows precise (find/repace/spell) selection in draft view
+	properly implements Split Headings; added two items to Find/Replace regex menus
+Apr 14 (**BOTH**)
+	Fix ixml export to set 1970-01-01T00:00 for records with invalid dates (fixes Windows crash)
+Apr 20 (Windows)
+	New 64 bit system, Installed Visual Studio 2017. Updated code and built for Win32 and x64.
+	to do: prevent a move (as opposed to copy) drag out of the record window.
+May 1 New'Check Index' ; replaces Check References; orphans option of Reconcile.
+June 9 New main toolbar buttons; now includes nosort
+Jun x: misc fixes to ensure RECORD and LISTGROUP pointers always properly aligned
+July 6: (Mac) fix locator sort check boxes (inverted) in Locators tab of sort panel
+July 24: (Mac) change handling of document sheets to release sheet controller after no longer attached to Docwindow.
+Aug 4: in ref_adjust: fix to apply skip pattern so second component of range as well as first.
+Aug 13: fixes to prevent *all* style codes being active concurrently (code turning off all was same as EOCS). Now doesn't allow concurrent sub/super in replace; checks/fixes bad EOCS in index_checkintegrity/index_repair
+Aug 22: Both: fix in rec_checkfields() to set KEEPCS = 1 (wasn't flagging misused ~ in ixml export; led to Windows crash)
+	Both: fix in relevant editing module to set KEEPCS = 1, to catch dangling ~
+Aug 22: both. ixml writer emits record number as id. parser reads id and reports it in parsing error messages
+Aug 25: both.
+	xml formatted export now provides 'body' tag;
+	new title case formatting option for headings and crossref body.
+	now ensures xml element names for markup can't contain forbidden characters
+Aug 28 Both
+	Big changes in search_findbycontent to make text searching immune to unwanted style attributes
+	Big changes in search_reptext to clean up style/font handling when style/font change straddles matched text
+Sept 7: Major overhaul of find/replace to handle forbidden styles & fonts.
+Both:
+	in parserefs() capture text in <...> so that can use it as tie-breaker in ref_match()
+Oct 29: both configure for ICU 58.2; Hunspell 1.6
+Jan 1: (Mac) fix? crash associated with NSTimer: quick successive calls to set/invalidate/set timer don't seem to invalidate... caused crash by trying to save backup after index closed
+	(later): crashes all related to overretaining IRIndexDocument by other objects -- fix by using weak references where relevant.
+Apr 16: (Mac) fix _installIndex (IRIndexDocument) to ensure that save timer isn't started until all font checks are OK
+(Both) Simplify checks for unused fonts: button (name changed to 'Clear Unused') visible/enabled only if some fonts are unused; clicking now removes unused fonts directly.
+		(Win) definition of LIST structure used Unix __LP64__ to detect 64 bit, not _M_X64, so saved groups weren't compatible between Windows versions 3 & 4
+Apr 19: (Mac) fully implement readonly management for locked indexes.
+May 4: (both) significant fixes to autocompletion: in 'ignore s&c' mode, now adds any style from start of field to the completion text; restores more carefully
+-----------
+Version 4 release
+--------------
+May 5: (both): conflating doesn't work properly unless also suppressing redundant/overlapping refs. Fix in fixpage() in formattedtext.m
+May 6: (both): finding records by number in main view could fail because of new use of ucol_lookup(); fixed by checking for typed digits.
+		(Win): bad change in handling style override in autocomplete. Adopt Mac solution of putting required style in xstring.
+May 7: (both): 4.0.1 release
+May 11: (Win): 4.0.2 modify.c Fix crashing problem caused by not initializing new startfield & endfield members. Fixed in loadfields();
+May 27: (Win): fix Windows 7 install problem: remove linker call to mincore.lib
+May 28: (Mac): 4.0.2 cleanup printing calls in IRIndexDocument; gets rid of retain cycle after printing
+				Record Window: Fix initial state of propagate button to reflect preferences
+				Implement multiple changes to support dark mode
+May 29: (both): in tool_check() fix page ref check so that lowest page error not flagged if level above is cross-ref
+
+---------------
+V4 TO DOs
+*** Mac font menu in record window toolbar?
+** windows: richedit em dash;
+*** Implement undo for main window (global) operations
+** Windows: prevent a move (as opposed to copy) drag out of the record window.
+*** (Both?)	Completion of search gives gentler warning than alert
+*** Mac: for Replace panel, find way to remove patterns from field editor contextual menu
+*** Both: split (explode) heading from record window?
+*** Mac: fix info panels as sheets
+
+--------
+11/28/20 sort_squeeze clean up codes around separators
+6/4/21 fix in fixpage, to handle removal of duplicate refs when page order isn't ascending
+10/10/2021 fix writearchiverecords to ensure terminal '0' is added to end of font list string
+
+1/12/22 fixes in windows: a) introduce empoints to handle layout indentation in exports; b) fix for entering styled strings when box empty; c) correct message about record enlargement.

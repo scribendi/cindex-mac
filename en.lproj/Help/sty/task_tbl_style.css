@@ -1,0 +1,63 @@
+/*APD CSS Task Table Style 1.0h */
+
+p	      {
+	font-size: 9pt;
+	line-height: 12pt;
+	font-family: "Lucida Grande", Arial, sans-serif;
+	text-decoration: none }
+	
+a        {
+	color: blue;
+	font-size: 9pt;
+	line-height: 12pt;
+	font-family: "Lucida Grande", Arial, sans-serif;
+	text-decoration: none
+	}
+	
+a:hover  {
+	color: blue;
+	font-size: 9pt;
+	line-height: 12pt;
+	font-family: "Lucida Grande", Arial, sans-serif;
+	text-decoration: underline
+	}
+
+ol	      {
+	list-style-type: decimal;
+	padding-left: 30px;
+	font-size: 9pt;
+	line-height: 12pt;
+	font-family: "Lucida Grande", Arial, sans-serif;
+	text-decoration: none }
+
+ul	      {
+	list-style-type: disc;
+	padding-left: 30px;
+	font-size: 9pt;
+	line-height: 12pt;
+	font-family: "Lucida Grande", Arial, sans-serif;
+	text-decoration: none }
+
+#mainbox	      { background-color: #fff; margin-top: 30px; margin-right: 26px; margin-left: 0; position: absolute; top: 10px }
+	
+#taskbox  	       {
+	background-color: #eee;
+	list-style-type: decimal;
+	list-style-position: outside;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	border: solid 1px #444
+	}
+	
+#topic {
+	font-size: 12pt;
+	font-family: "Lucida Grande", Arial, sans-serif
+	}
+h1 { font-size: 12pt; margin: 0 }
+h2  { font-size: 14px; font-weight: bold; margin: 0 }
+
+h3{font-size: 100%;margin-top:.5em;margin-bottom: 0.2em}
+p{margin-top:3pt;margin-bottom:3pt;}
+li p{margin-top:.3em;margin-bottom:0em;}
+ol{margin-top:.5em;margin-bottom:0em}	
+ul{margin-top:.6em;margin-bottom:0em;margin-left:2.75em;}

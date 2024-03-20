@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Adding volumne numbers to page references</title>
+	<meta name="dategen" content="">
+	<meta name="generator" content="DB-5.9L, OSX-7.8gry">
+	<link href="../sty/task_tbl_style.css" rel="stylesheet" media="all">
+	<meta name="Keywords" content="regular expression">
+	<meta name="Description" content="How to adjust components of multi-part page references">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="pat4_Anchor-14210" id="pat4_Anchor-14210"></a>
+		<div id="mainbox" align="left">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td height="32">&nbsp;</td>
+	<td height="32"><img src="../gfx/Cindex_32.png" alt="" width="32" height="32" border="0"></td>
+	<td height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Adding volume numbers to page references</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>
+						<p>You have indexed a work in a single volume and have used simple page references, and now need to incorporate the index into a larger one in which references have to be tagged with the number of the volume in which they appear. Consider a series of references such as:</p>
+						<blockquote>
+							<p>45, 66, 89-91, 200</p>
+						</blockquote>
+						<p>that you want to convert to</p>
+						<blockquote>
+							<p>2:45, 2:66, 2:89-91, 2:200</p>
+						</blockquote>
+						<p>To convert one set of locators to the other, use Replace (Edit menu) to search for a pattern and then replace the text that matches pattern with a modified version of itself:</p>
+					</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="7" bgcolor="#eeeeee">
+	<tr valign="top" bgcolor="#eeeeee">
+						<td bgcolor="#eeeeee">
+								<table border="0" cellspacing="0" cellpadding="4">
+									<tr valign="top">
+										<td>
+											<p>Find</p>
+										</td>
+										<td>
+											<p>[1-9][0-9-]*</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td>
+											<p>Change&nbsp;to</p>
+										</td>
+										<td>
+											<p>2:\&amp;</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+					</tr>
+</table>
+			<p>The pattern tells Cindex to find (in the locator field) the longest sequence that contains one or more digits and possibly a hyphen. In other words the pattern describes a simple page reference or a range of references.</p>
+			<p>The characters \&amp; (backslash, ampersand) in the replacement sequence denote the text that matched the pattern. When Cindex makes the substitution it incorporates this text in the replacement sequence. Thus Cindex replaces each reference by itself, preceded by the characters 2:.</p>
+<div id="taskbox">
+</div>
+			<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>
+						<p><b>See also</b><br>
+								<a href="pat0.html">Defining patterns</a><br>
+								<a href="pat1.html">Replacing text that matches a pattern</a><br>
+							<a href="pat2.html">Sample patterns</a><br>
+							</p>
+					</td>
+	</tr>
+</table>
+			<table width="100%" height="35" border="0" cellspacing="0" cellpadding="3">
+	<tr valign="bottom" height="35">
+	<td align="left" height="35"></td>
+	<td align="right" valign="top" height="35"><a href="help:search='searching with patterns' bookID='Cindex 4 Help'">Tell me more</a></td>
+	</tr>
+	<tr height="35">
+	<td></td>
+	<td>&nbsp;</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>
