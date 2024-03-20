@@ -3,7 +3,7 @@ CINDEX is a software tool for professional indexers, enabling them to produce in
 
 CINDEX for Mac works on any Mac computer running macOS 10.9 (Mavericks) through macOS 13 (Ventura).
 
-## FAQ
+## FAQs
 
 **What kind of customer support do you provide?**
 No customer support is provided.
