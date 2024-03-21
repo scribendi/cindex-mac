@@ -5,5 +5,5 @@ CINDEX for Mac works on any Mac computer running macOS 10.9 (Mavericks) through 
 
 ## FAQs
 
-**What kind of customer support do you provide?**
+**What kind of customer support do you provide?**  
 No customer support is provided.
